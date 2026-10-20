@@ -1,0 +1,31 @@
+---
+title: "Vorlesung"
+page-layout: full
+toc: false
+title-block-style: none
+---
+
+::: hero
+# **Einführung in das Studium der Bildungswissenschaften**
+
+Sammlung von Folien, Übungsaufgaben und Organisatorischem.
+:::
+
+::: {.ut-cards}
+::: {.ut-card}
+### [Folien](folien.qmd)
+Hier finden Sie die interaktiven Folien zur Vorlesung. Über den Menü-Icon kommen Sie in eine Druckansicht und können so die Folien im Druckmenü Ihres Browsers (getestet Firefox & Chrome) als .pdf speichern.
+:::
+
+::: {.ut-card}
+### [Übungsaufgaben](uebungsaufgaben.qmd)
+Berichte, Daten und Analysen lassen sich als Quarto-Seiten ergänzen und erscheinen automatisch in der Navigation.
+:::
+
+::: {.ut-card}
+### [Organisatorisches](organisatorisches.qmd)
+Ansprechpersonen und Adressen finden Sie auf dieser Seite.
+:::
+:::
+
+Das Layout, die Farben und die Schriften dieser Website folgen dem Corporate Design der Universität Tübingen. Details stehen auf der Seite [Corporate Design](corporate-design.qmd).

@@ -1,0 +1,9 @@
+---
+title: "Folien"
+---
+
+## Sitzung 1: Bildungswissenschaften? It's a mess!
+
+{{< revealjs "folien/Sitzung 1 - It's mess.html" >}}
+
+Sie werden nach und nach ergänzt

@@ -1,0 +1,46 @@
+project:
+  type: website
+ # output-dir: _site
+  resources:
+    - _extensions/sammerk/unitue/ut-logo.png
+
+lang: de
+
+website:
+  title: "Vorlesung: Einführung in das Studium der Bildungswissenschaften"
+  favicon: images/favicon.png
+  back-to-top-navigation: true
+  search: true
+  navbar:
+    logo: images/wbm-rot.png
+    logo-alt: "Eberhard Karls Universität Tübingen"
+    title: false
+    pinned: true
+    collapse-below: lg
+    right:
+      - href: index.qmd
+        text: Startseite
+      - href: folien.qmd
+        text: Folien
+      - href: kontakt.qmd
+        text: Kontakt
+  page-footer:
+    border: false
+    left: "Universität Tübingen<br>Wirtschafts- und Sozialwissenschaftliche Fakultät<br>Institut für Erziehungswissenschaft"
+    right: "Made with quarto"
+
+format:
+  html:
+    # _brand.yml wird automatisch angewendet
+    theme: custom.scss
+    toc: true
+    toc-title: "Auf dieser Seite"
+    link-external-icon: false
+    date-format: "D. MMMM YYYY"
+    css: webex.css
+    include-after-body: webex.js
+
+glossary:
+  path: glossary.yml
+  popup: click
+  show: true

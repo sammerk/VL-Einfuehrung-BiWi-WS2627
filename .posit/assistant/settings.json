@@ -1,0 +1,16 @@
+{
+  "permission": {
+    "webfetch": {
+      "https://www.r-exams.org/*": "allow"
+    },
+    "bash": {
+      "curl *": "allow"
+    },
+    "edit": {
+      "*.bib": "allow"
+    },
+    "executeCode": {
+      "*": "allow"
+    }
+  }
+}

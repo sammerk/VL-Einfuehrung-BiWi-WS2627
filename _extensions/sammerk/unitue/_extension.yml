@@ -1,0 +1,39 @@
+title: unitue
+author: Samuel Merk
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    html:
+      lang: de
+      toc: true
+      toc-location: left
+      toc-title: " "
+      code-fold: true
+      code-summary: "Code"
+      code-annotations: hover
+      smooth-scroll: true
+      title-block-banner: true
+      theme: [cosmo, unitue.scss]
+      css: [style.css, webex.css]
+      template-partials:
+        - title-block.html
+      include-after-body: [footer.html, webex.js]
+      logo: ut-logo.png
+      faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+      institute: "Institut für Erziehungswissenschaft"
+    revealjs:
+      lang: de
+      theme: [default, unitue-revealjs.scss]
+      template-partials:
+        - title-slide.html
+      logo: ut-logo.png
+      title-image: alte-aula.jpg
+      title-image-alt: "Alte Aula der Universität Tübingen"
+      slide-number: true
+      transition: none
+      # Navigationspfeile (links/rechts unten) ein-/ausschalten:
+      # im Dokument mit `controls: false` überschreibbar
+      controls: true
+      faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+      institute: "Institut für Erziehungswissenschaft"

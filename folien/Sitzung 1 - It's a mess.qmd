@@ -1,0 +1,185 @@
+---
+title: "Bildungswissenschaften? It's a mess!"
+subtitle: "Sitzung 1: Einführung in das Studium der Bildungswissenschaften"
+author: "Prof. Dr. Samuel Merk"
+semester: "Wintersemester 2026/27"   # freier Text; alternativ date: last-modified
+bibliography: ../references.bib
+csl: ../apa.csl
+execute:
+  echo: false
+filters:
+ - timeline
+format:
+  unitue-revealjs:
+    # Alle folgenden Optionen sind optional
+    institute: "Institut für Erziehungswissenschaft"
+    faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+    footer: "Prof. Dr. Samuel Merk · Bildungswissenschaften? It's a mess!"
+    embed-resources: true
+    # titel-qr: "https://uni-tuebingen.de"   # QR-Code statt Titelbild
+    # title-image: "../test.png"
+---
+
+
+# Herzlich Willkommen!
+
+## Heute {{< iconify fa-solid:calendar-alt >}}
+* Mit wem haben Sie es zu tun?
+* Welchen Gestaltungsvorschlag haben wir für die Vorlesung?
+* Bildungswissenschaften? It's a mess!
+    * Strukturierungsvorschläge:
+        * Topologie beteiligter Disziplinen
+        * Erkenntnisinteressen
+
+## Mit wem haben Sie es zu tun?
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="text-align: center;"}
+![](../images/smerk_chemie_square.png){width=66%}
+
+![](../images/smerk_portrait.jpg){width=66%}
+:::
+
+:::
+
+::: {.column width="70%"}
+
+::: {.timeline .vertical}
+::: {.event data-label="2010" .tl-card}
+Zweites Staatsexamen Mathematik, Chemie, Erziehungswissenschaft
+:::
+::: {.event data-label="bis 2016" .tl-card}
+StR an der GSS Tübingen & wiss. Mitarbeiter UT
+:::
+::: {.event data-label="2020-2026" .tl-card}
+TT-Prof. für empirische Schul- und Unterrichtsforschung an der PHKA
+:::
+::: {.event data-label="seit 2026" .tl-card}
+Lehrstuhl Professionsforschung UT
+:::
+:::
+
+:::
+
+:::
+
+
+## Gestaltungsvorschlag für die Vorlesung
+* Modulhandbuch bindet uns an gewisse Inhalte, Lernziele und Prüfungsformen
+* Modulhandbuch bindet uns auch an eine Prüfungsform:
+    * 60 Minuten schriftliche Klausur (Multiple Choice, Kurzantworten, offene Fragen)
+    * 03.02.2027 14:15, E-Prüfung auf Chromebooks des E-Prüfungszentrums
+    * Zweittermin Anfang April 2027
+
+## Gestaltungsvorschlag für die Vorlesung {.smaller}
+* Mein Ziel: Nach der Vorlesung
+    * verfügen Sie über ein **Vokabular**, das Ihnen erlaubt gewisse **Perspektiven** von Bildungswissenschaftler:innen **nachzuvollziehen** und diese kompetent zu **kritisieren**
+    * können Sie **informiert entscheiden können** ob Sie sich für Bildungswissenschaften interessieren
+* Wie VL *gemeinsam* gestalten?
+    * Vorschlag: Mindestens zwei Sitzungen zu **Themen Ihrer Wahl**
+    * Vorschlag: Jede Woche (fakultative) Aufgaben während und nach der VL. Anschließend kurze Diskussion deren {{< glossary "constructive alignment" >}} [@biggs1996]
+    * Weitere Vorschläge von Ihnen?
+
+# Bildungswissenschaften?<br>It's a mess!
+
+## Bildungswissenschaften {footer='false'}
+```{r}
+#| label: fig-dwds-verlauf
+#| fig-cap: "Verlaufskurve „Bildungswissenschaften“ im DWDS-Zeitungskorpus [@dwds2026verlaufskurve]"
+#| fig.background: '#F2F4F4'
+#| lightbox: true
+#| out-width: "90%"
+#| fig-align: "left"
+#| fig-width: 10
+#| fig-height: 5
+
+library(ggplot2)
+
+# SVG-Quelle: eingeloggter Export der DWDS-Verlaufskurve (Zeitungskorpus,
+# 1946-2026), da die zugrunde liegende Zeitreihe nicht über eine offene
+# JSON-API verfügbar ist. Datenpunkte werden aus dem gnuplot-Pfad der
+# heruntergeladenen SVG-Datei zurückgerechnet (Pixel -> Jahr/Frequenz).
+svg_lines <- readLines("../images/bildungswissenschaften-v.svg")
+txt <- paste(svg_lines, collapse = " ")
+
+m <- regmatches(txt, regexpr("gnuplot_plot_2.*?stroke='rgb\\(  0, 135, 194\\)'\\s*d='([^']*)'", txt, perl = TRUE))
+path_d <- sub(".*d='([^']*)'.*", "\\1", m)
+
+coords <- regmatches(path_d, gregexpr("[0-9.]+,[0-9.]+", path_d))[[1]]
+xy <- do.call(rbind, lapply(strsplit(coords, ","), as.numeric))
+colnames(xy) <- c("x_px", "y_px")
+xy <- as.data.frame(xy)
+
+# Achsenkalibrierung anhand der Tick-Beschriftungen im SVG
+# X: Pixel 58.64 = 1950, Pixel 277.30 = 2025
+# Y: Pixel 156.00 = 0, Pixel 44.19 = 0.075
+y_px_to_freq <- function(y) 0 + (y - 156.00) * (0.075 - 0) / (44.19 - 156.00)
+xy$freq_per_mio <- y_px_to_freq(xy$y_px)
+
+# 81 Punkte entsprechen exakt den Jahren 1946-2026 (Pixelabstände sind
+# gleichmäßig, daher robuster als die noisy x-Pixel-Kalibrierung)
+xy$jahr <- 1946:(1946 + nrow(xy) - 1)
+
+df <- xy[, c("jahr", "freq_per_mio")]
+names(df) <- c("jahr", "frequenz_pro_mio")
+
+karminrot <- "#A51E37"
+anthrazit <- "#32414B"
+
+ggplot(df, aes(x = jahr, y = frequenz_pro_mio)) +
+  geom_line(color = karminrot, linewidth = 1) +
+  labs(
+    title = "Verlaufskurve Begriffsprävalenz: „Bildungswissenschaft“",
+    subtitle = "Relative Häufigkeit im DWDS-Zeitungskorpus",
+    x = NULL,
+    y = "Frequenz pro Mio. Tokens"
+  ) +
+  scale_x_continuous(breaks = seq(1950, 2025, by = 25)) +
+  theme_minimal(base_family = "Arial", base_size = 18) +
+  theme(
+    plot.title = element_text(family = "Arial", color = karminrot, face = "bold"),
+    plot.subtitle = element_text(color = anthrazit),
+    axis.text = element_text(color = anthrazit),
+    axis.title = element_text(color = anthrazit),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(color = "grey90"),
+    # Folienhintergrund: $ut-hintergrund = mix($ut-anthrazit, #ffffff, 6%)
+    plot.background = element_rect(fill = "#F2F4F4", color = NA),
+    panel.background = element_rect(fill = "#F2F4F4", color = NA)
+  )
+```
+
+## Bildungswissenschaften {.smaller}
+* Der Begriff der »Bildungswissenschaften« scheint ein recht junger zu sein (vgl. Verlaufskurve)
+* Er ist oft {{< glossary "institutionell" >}} oder {{< glossary "disziplinär" >}} {{< glossary "konnotiert" >}} [@terhart2012]
+*   Er wird recht heterogen verwendet [@cramer2019b], im Kontext der Lehrer:innnenbildung aber oft als
+
+    > *»diejenigen wissenschaftlichen Disziplinen und Teildisziplinen, die sich wissenschaftlich in jeder denkbaren theoretischen und methodischen Hinsicht [. . . ] auf Themen, Institutionen, Prozesse, Resultate von Bildung und Ausbildung beziehen«* [@terhart2012, S. 28]
+
+    definiert.
+
+## Bildungswissenschaften {.smaller}
+*   Damit dient der Begriff auch als Sammelbegriff für die verschiedenen am Lehramtsstudium beteiligten Disziplinen neben den {{< glossary "Fachdidaktiken" >}} und {{< glossary "Fachwissenschaften" >}} [@terhart2012].
+* Typischerweise gelten {{< glossary "Erziehungswissenschaft" >}}, {{< glossary "Psychologie" >}} und {{< glossary "Soziologie" >}} als die Kern-Disziplinen der Bildungswissenschaften [@cramer2019b].
+
+## Beispiele Bildungswissenschaftlicher Studien
+* Erziehungswissenschaft: @huebner2026a
+* Soziologie: @neugebauer2025
+* Psychologie: @basarkod2023
+
+## Paradigmatische Vielfalt in den BW {.smaller}
+* Die disziplinäre Vielfalt der BW bringt eine noch größere Vielfalt bzgl. der zugrunde liegenden {{< glossary "Paradigmen" >}} mit sich. Daher lohnt es sich ordnende Unterscheidungen zu kennen um Missverstädnnisse (und daraus resultierende Enttäuschungen) zu vermeiden.
+* Erkenntnisinteressen [@doering2016] :
+    * Normativ (Beispielforschungsfrage: *Warum sollte Schule (k)eine {{< glossary "Allokationsfunktion" >}} wahrnehmen?*)
+    * Deskriptiv (Beispielforschungsfrage: *Welcher Anteil männlicher 15-jähriger in Deutschland sind {{< glossary "funktionale Analphabeten" >}}?*)
+    * Kausal (Beispielforschungsfrage: *Welche Wirkung haben Lautleseverfahren auf die Leseflüssigkeit?*)
+    * Prädiktiv (Beispielforschungsfrage: *Wie kann mit administrativen {{< glossary "Studienverlaufsdaten" >}} das Abbruchrisiko vorhergesagt werden?*)
+
+
+## Glossar
+
+
+## Literatur

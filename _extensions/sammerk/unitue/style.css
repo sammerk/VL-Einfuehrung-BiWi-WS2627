@@ -1,0 +1,390 @@
+:root {
+  --ut-akzent: var(--ut-karminrot, #a51e37);
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* ---------------------------------------------------- Titelblock --- */
+#title-block-header.ut-header {
+  background: #fff;
+  color: var(--ut-anthrazit);
+  padding: 0;
+  margin-bottom: 3rem;
+}
+.ut-masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Markenfreiraum rund um die Wort-Bild-Marke */
+  padding: 28px 40px;
+}
+.ut-logo {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+.ut-logo-link {
+  text-decoration: none;
+}
+.ut-dachmarke {
+  text-align: right;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--ut-anthrazit);
+}
+.ut-dachmarke span {
+  display: block;
+}
+.ut-faculty {
+  opacity: 0.75;
+}
+.ut-institute {
+  font-weight: 700;
+}
+.ut-imagebar img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.ut-colorbar-red {
+  height: 10px;
+  background: var(--ut-karminrot);
+}
+.ut-colorbar-gold {
+  height: 4px;
+  background: var(--ut-mattgold);
+}
+/* Titelbereich mit optionalem Partikelnetz (nur unterhalb der Farbleiste,
+   die Wort-Bild-Marke bleibt auf reinem Weiß) */
+.ut-titlearea {
+  position: relative;
+  overflow: hidden;
+}
+#ut-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.ut-titlearea .title-block-content {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+.ut-titlearea .title-block-content a {
+  pointer-events: auto;
+}
+.title-block-content {
+  max-width: 752px;
+  margin: 0 auto;
+  padding: 80px 20px 40px 20px;
+}
+#title-block-header h1.title {
+  color: var(--ut-karminrot);
+  margin-top: 0;
+}
+#title-block-header .subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--ut-anthrazit);
+}
+#title-block-header p.author,
+#title-block-header p.date {
+  margin: 0.2rem 0;
+}
+.ut-keyword {
+  display: inline-block;
+  min-width: 4.5em;
+  color: var(--ut-mattgold);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+hr.ut-separator {
+  margin: 23px 0;
+  border: 0;
+  border-top: 3px solid var(--ut-karminrot);
+  opacity: 1;
+  width: 0;
+  animation: separator-width 1.5s ease-in-out forwards;
+}
+@keyframes separator-width {
+  0% { width: 0; }
+  100% { width: 120px; }
+}
+@media (max-width: 700px) {
+  .ut-masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .ut-dachmarke {
+    text-align: left;
+  }
+  .ut-logo {
+    height: 48px;
+  }
+}
+
+/* ---------------------------------------------------- Überschriften --- */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 1024px) {
+  h1 { font-size: 2.75rem; }
+}
+/* Großzügiger Abstand vor Überschriften (vgl. productive-r-workflow.com/quarto-tricks).
+   Quarto legt jede Überschrift in eine eigene <section>, daher wird nur die erste
+   Abschnittsüberschrift im Dokument ausgenommen. */
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 84px !important;
+}
+main > section.level2:first-of-type > h2,
+main > section.level1:first-of-type > h1 {
+  margin-top: 0 !important;
+}
+section.level2 > h2 + section.level3 > h3 {
+  margin-top: 2rem !important;
+}
+h2 {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e3e6e8;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+h2::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: var(--ut-mattgold);
+  margin-bottom: 0.6rem;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------- Text --- */
+p {
+  line-height: 1.75;
+}
+a {
+  color: var(--ut-akzent);
+  text-underline-offset: 0.25rem;
+}
+
+/* ---------------------------------------------------- Tabsets --- */
+.nav-pills .nav-link {
+  color: var(--ut-akzent);
+  background: #fff;
+  border: 1px solid var(--ut-akzent);
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin-right: 4px;
+}
+.nav-pills .nav-link.active {
+  color: #fff;
+  background: var(--ut-akzent);
+}
+.nav-tabs .nav-link.active {
+  border-top: 3px solid var(--ut-akzent);
+}
+
+/* ---------------------------------------------------- Inhaltsverzeichnis --- */
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
+  border-left: 2px solid var(--ut-akzent);
+  color: var(--ut-akzent) !important;
+}
+.sidebar nav[role="doc-toc"] ul > li > a:hover,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a:hover {
+  color: var(--ut-akzent) !important;
+}
+
+/* ---------------------------------------------------- Callouts --- */
+div.callout.callout {
+  border: none;
+  border-left: 4px solid;
+  border-radius: 0;
+  padding: 0.4em 0.7em;
+}
+div.callout-note.callout      { border-left-color: #0069aa; background: rgba(0, 105, 170, 0.05); }
+div.callout-tip.callout       { border-left-color: #7da54b; background: rgba(125, 165, 75, 0.06); }
+div.callout-warning.callout   { border-left-color: #d29600; background: rgba(210, 150, 0, 0.06); }
+div.callout-important.callout { border-left-color: #a51e37; background: rgba(165, 30, 55, 0.05); }
+div.callout-caution.callout   { border-left-color: #c8503c; background: rgba(200, 80, 60, 0.05); }
+
+/* ---------------------------------------------------- Code-Folding --- */
+details.code-fold > summary {
+  color: var(--ut-akzent);
+}
+
+/* ---------------------------------------------------- Tabellen --- */
+table.dataTable tbody th,
+table.dataTable tbody td {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+thead {
+  border-bottom: 2px solid var(--ut-anthrazit);
+}
+
+/* ------------------------------------------------ tt() / tinytable --- */
+.tinytable,
+.tabulator {
+  font-family: inherit;
+  color: var(--ut-anthrazit);
+}
+/* Statische tinytable-Ausgabe */
+table.tinytable {
+  font-size: 0.9em;
+  margin-bottom: 1.5rem;
+}
+table.tinytable thead th {
+  border-bottom: 2px solid var(--ut-akzent) !important;
+  color: var(--ut-akzent);
+  font-weight: 700;
+  background: #fff;
+}
+table.tinytable tbody td {
+  border-bottom: 1px solid #e3e6e8;
+}
+table.tinytable tbody tr:hover td {
+  background: rgba(165, 30, 55, 0.04);
+}
+/* Tabulator-Modus (theme_html(engine = "tabulator")) */
+.tabulator {
+  border: 1px solid var(--ut-akzent);
+  border-radius: 2px;
+  background: #fff;
+  font-size: 0.9em;
+}
+.tabulator .tabulator-header,
+.tabulator .tabulator-headers {
+  border-bottom: 2px solid var(--ut-akzent);
+  background: #fff;
+}
+.tabulator .tabulator-col,
+.tabulator .tabulator-col-content {
+  color: var(--ut-akzent);
+  font-weight: 700;
+  background: #fff;
+}
+.tabulator .tabulator-cell {
+  border-bottom: 1px solid #e3e6e8;
+  padding: 6px 10px;
+}
+.tabulator .tabulator-row {
+  background: #fff;
+  min-height: unset;
+}
+.tabulator .tabulator-row:nth-child(even) {
+  background: rgba(50, 65, 75, 0.03);
+}
+.tabulator .tabulator-row.tabulator-row-odd:hover,
+.tabulator .tabulator-row.tabulator-row-even:hover,
+.tabulator .tabulator-row:hover {
+  background: rgba(165, 30, 55, 0.05);
+}
+/* Suchfeld, Sortier- und Paginierungselemente in Karminrot */
+.tinytable-wrap input[id^="search_"],
+input[id^="search_"] {
+  border: 1px solid #e3e6e8;
+  border-radius: 2px;
+  max-width: 320px;
+  font-size: 0.85em;
+}
+input[id^="search_"]:focus {
+  outline: 2px solid var(--ut-akzent);
+  outline-offset: 1px;
+  box-shadow: none;
+  border-color: var(--ut-akzent);
+}
+.tabulator input.tabulator-input,
+.tabulator input[type="text"],
+.tabulator input[type="search"] {
+  border: 1px solid #e3e6e8;
+  border-radius: 2px;
+  padding: 3px 8px;
+  font-size: 0.85em;
+}
+.tabulator input.tabulator-input:focus,
+.tabulator input:focus-visible {
+  outline: 2px solid var(--ut-akzent);
+  outline-offset: 1px;
+}
+.tabulator .tabulator-page {
+  color: var(--ut-akzent);
+  border-color: var(--ut-akzent);
+  border-radius: 2px;
+  background: #fff;
+  margin-right: 4px;
+}
+.tabulator .tabulator-page:hover {
+  background: rgba(165, 30, 55, 0.08);
+}
+.tabulator .tabulator-page.active {
+  background: var(--ut-akzent);
+  border-color: var(--ut-akzent);
+  color: #fff;
+}
+.tabulator .tabulator-page:disabled {
+  color: var(--ut-akzent);
+  opacity: 0.4;
+}
+.tabulator .tabulator-arrow {
+  border-bottom-color: var(--ut-anthrazit);
+  border-top-color: var(--ut-anthrazit);
+}
+.tabulator .tabulator-sort-asc .tabulator-arrow,
+.tabulator .tabulator-sort-desc .tabulator-arrow {
+  border-bottom-color: var(--ut-akzent);
+  border-top-color: var(--ut-akzent);
+}
+
+/* ---------------------------------------------------- GitHub-Ecke --- */
+.octocat-container {
+  fill: var(--ut-anthrazit);
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%, 100% { transform: rotate(0); }
+  20%, 60% { transform: rotate(-25deg); }
+  40%, 80% { transform: rotate(10deg); }
+}
+
+/* ---------------------------------------------------- Fußzeile --- */
+.ut-footer {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ut-anthrazit);
+}
+.ut-footer p {
+  opacity: 0.75;
+  padding: 1.5rem 1rem 2.5rem 1rem;
+  margin: 0 auto;
+  max-width: 560px;
+}
+.grey-section {
+  background-color: #f4f5f6;
+  padding: 40px 0;
+  margin: 20px 0;
+}

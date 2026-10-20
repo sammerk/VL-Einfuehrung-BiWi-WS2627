@@ -1,0 +1,82 @@
+# brand.yml – Corporate Design der Universität Tübingen
+# Quelle: Leitfaden "So kommuniziert die Universität" (Corporate Design zum Nachschlagen)
+# Das CD darf nur von Beschäftigten im Namen der Universität verwendet werden.
+meta:
+  name:
+    short: Universität Tübingen
+    full: Eberhard Karls Universität Tübingen
+  link:
+    home: https://uni-tuebingen.de
+
+# Wort-Bild-Marke (WBM): darf nicht verändert werden, rote Variante nur auf weißem Untergrund.
+logo:
+  images:
+    wbm:
+      path: images/wbm-rot.png
+      alt: "Eberhard Karls Universität Tübingen"
+    bildmarke:
+      path: images/bildmarke-rot.png
+      alt: "Bildmarke der Universität Tübingen"
+  small: wbm
+  medium: wbm
+  large: wbm
+
+color:
+  palette:
+    # Primärfarben (Leitfaden S. 34)
+    karminrot: "#A51E37"   # Pantone 201
+    mattgold: "#B4A069"    # Pantone 873, RAL 1036 Perlgold
+    anthrazit: "#32414B"   # Pantone 431, RAL 7031 Blaugrau
+    white: "#FFFFFF"
+    sand: "#EEE9DD"        # helle Hintergrundfläche (aus Leitfaden-Layouts abgeleitet, kein offizieller Wert)
+    # Sekundärfarben (Leitfaden S. 35)
+    zinnober: "#C8503C"    # Pantone 180
+    flieder: "#AF6E96"     # Pantone 688
+    hellgruen: "#7DA54B"   # Pantone 7490
+    dunkelgruen: "#326E1E" # Pantone 364
+    indigo: "#415A8C"      # Pantone 653
+    blau: "#0069AA"        # Pantone 3015
+    cyan: "#50AAC8"        # Pantone 292
+    mint: "#82B9A0"        # Pantone 557
+    taupe: "#B4A096"       # Pantone 7530
+    sandgold: "#D7B469"    # Pantone 7508
+    ocker: "#D29600"       # Pantone 131
+    braun: "#916946"       # Pantone 7505
+  foreground: anthrazit
+  background: white
+  primary: karminrot
+  secondary: mattgold
+  success: dunkelgruen
+  info: blau
+  warning: ocker
+  danger: zinnober
+
+typography:
+  fonts:
+    # Trajan (Headlines) ist eine lizenzpflichtige Schrift und wird bei der Hochschulkommunikation
+    # bestellt (design@cd.uni-tuebingen.de). Cinzel dient hier als frei verfügbarer Ersatz.
+    # "bunny" statt "google": Bunny Fonts ist ein EU-Anbieter, kein Datenabfluss an Google (DSGVO).
+    - family: Cinzel
+      source: bunny
+      weight: [400, 600]
+    # Mit lizenzierten Trajan-Dateien stattdessen:
+    # - family: Trajan Pro
+    #   source: file
+    #   files:
+    #     - path: fonts/TrajanPro-Regular.otf
+  # Arial ist laut Leitfaden universell einsetzbar (Internet, PowerPoint, Formulare ...)
+  base:
+    family: Arial
+    line-height: 1.6
+  headings:
+    family: Cinzel
+    weight: 400
+    color: primary
+  link:
+    color: primary
+
+defaults:
+  bootstrap:
+    defaults:
+      # Das CD kennt keine abgerundeten Ecken
+      enable-rounded: false

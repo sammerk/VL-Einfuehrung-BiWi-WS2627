@@ -1,0 +1,31 @@
+---
+title: "Übungsaufgaben"
+---
+
+## Aufgaben zu Sitzung 1: Bildungswissenschaften? It's a mess!
+
+### Disziplinen in den Bildungswissenschaften
+```{r quiz1, echo = FALSE, message = FALSE, results = "asis"}
+library("exams2forms")
+
+# Verwenden Sie Beispiele aus dem exams-Paket
+exm <- list(
+  system.file("exercises", "swisscapital.Rmd", package = "exams")
+)
+
+# Generieren Sie das Quiz
+exams2forms(exm, n = 1, converter = "pandoc")
+```
+
+### Erkenntnisinteressen in den Bildungswissenschaften
+```{r quiz2, echo = FALSE, message = FALSE, results = "asis"}
+library("exams2forms")
+
+# Verwenden Sie Beispiele aus dem exams-Paket
+exm <- list(
+  system.file("exercises", "swisscapital.Rmd", package = "exams")
+)
+
+# Generieren Sie das Quiz
+exams2forms(exm, n = 1, converter = "pandoc")
+```

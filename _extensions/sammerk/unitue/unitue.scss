@@ -1,0 +1,50 @@
+/*-- scss:defaults --*/
+
+// Primärfarben (CD Universität Tübingen)
+$ut-karminrot: #A51E37;
+$ut-mattgold:  #B4A069;
+$ut-anthrazit: #32414B;
+
+// Sekundärfarben (CD Universität Tübingen)
+$ut-dunkelblau: #415A8C;
+$ut-blau:       #0069AA;
+$ut-hellblau:   #50AAC8;
+$ut-mint:       #82B9A0;
+$ut-hellgruen:  #7DA54B;
+$ut-gruen:      #326E1E;
+$ut-ziegel:     #C8503C;
+$ut-violett:    #AF6E96;
+$ut-taupe:      #B4A096;
+$ut-sand:       #D7B469;
+$ut-ocker:      #D29600;
+$ut-braun:      #916946;
+
+$primary:   $ut-karminrot;
+$secondary: $ut-anthrazit;
+$info:      $ut-blau;
+$success:   $ut-hellgruen;
+$warning:   $ut-ocker;
+$danger:    $ut-ziegel;
+
+$body-color:     $ut-anthrazit;
+$headings-color: $ut-anthrazit;
+$link-color:     $ut-karminrot;
+
+$font-family-sans-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$headings-font-family:   $font-family-sans-serif;
+$font-size-root: 16px;
+$code-color: $ut-anthrazit;
+
+$callout-color-note:      $ut-blau;
+$callout-color-tip:       $ut-hellgruen;
+$callout-color-warning:   $ut-ocker;
+$callout-color-important: $ut-karminrot;
+$callout-color-caution:   $ut-ziegel;
+
+/*-- scss:rules --*/
+
+:root {
+  --ut-karminrot: #{$ut-karminrot};
+  --ut-mattgold:  #{$ut-mattgold};
+  --ut-anthrazit: #{$ut-anthrazit};
+}

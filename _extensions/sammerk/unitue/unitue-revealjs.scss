@@ -1,0 +1,229 @@
+/*-- scss:defaults --*/
+
+// Layout angelehnt an die VL-Forschungsmethoden-Folien (C. Parrisius),
+// Farben, Schrift und Logo nach CD der Universität Tübingen (S. 23, 33, 34).
+
+// Primärfarben
+$ut-karminrot: #A51E37;
+$ut-mattgold:  #B4A069;
+$ut-anthrazit: #32414B;
+
+// Sekundärfarben für Callouts
+$ut-blau:      #0069AA;
+$ut-hellgruen: #7DA54B;
+$ut-ziegel:    #C8503C;
+$ut-ocker:     #D29600;
+
+$font-family-sans-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$presentation-font-size-root: 36px;
+$presentation-heading-font: $font-family-sans-serif;
+$presentation-heading-color: $ut-karminrot;
+$presentation-heading-font-weight: 700;
+$presentation-heading-text-transform: none;
+$presentation-heading-letter-spacing: -0.01em;
+$presentation-h2-font-size: 1.55em;
+$presentation-h3-font-size: 0.95em;
+
+// Leicht abgedunkelter Hintergrund: 6 % Anthrazit in Weiß.
+// Die rote Wort-Bild-Marke steht dabei auf einem eigenen weißen Feld (CD S. 5).
+$ut-hintergrund: mix($ut-anthrazit, #ffffff, 6%);
+$body-bg: $ut-hintergrund;
+$body-color: $ut-anthrazit;
+$link-color: $ut-karminrot;
+$selection-bg: $ut-mattgold;
+$code-block-bg: #ffffff;
+
+$callout-color-note:      $ut-blau;
+$callout-color-tip:       $ut-hellgruen;
+$callout-color-warning:   $ut-ocker;
+$callout-color-important: $ut-karminrot;
+$callout-color-caution:   $ut-ziegel;
+
+/*-- scss:rules --*/
+
+// Timeline: Schriften verkleinern, Linie und Punkte im Uni-Karminrot
+.timeline {
+  --tl-label-size: 0.9em;
+  --tl-content-size: 0.5em;
+  --tl-color-line: #{$ut-karminrot};
+  --tl-color-dot: #{$ut-karminrot};
+}
+
+// Inline gesetzte --tl-color-accent pro Event überschreiben
+.timeline .event::after {
+  border-color: $ut-karminrot;
+}
+
+// ---------------------------------------------------------- Titelfolie
+#title-slide {
+  text-align: center;
+}
+#title-slide .ut-ts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+}
+#title-slide .ut-ts-picture {
+  width: 35%;
+}
+#title-slide .ut-ts-text {
+  width: 65%;
+  text-align: center;
+}
+.reveal #title-slide img.picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 3pt solid $ut-karminrot;
+  border-radius: 50%;
+  padding: 5pt;
+  background: #fff;
+  margin: 0;
+  max-width: none;
+  max-height: none;
+}
+// QR-Code statt Titelbild (Option titel-qr): quadratischer Rahmen mit runden Ecken
+.reveal #title-slide .ut-qr-frame {
+  aspect-ratio: 1 / 1;
+  border: 3pt solid $ut-karminrot;
+  border-radius: 22px;
+  padding: 14pt;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.reveal #title-slide .ut-qr canvas {
+  display: none !important;
+}
+.reveal #title-slide .ut-qr img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0;
+  max-width: none;
+  max-height: none;
+}
+.reveal #title-slide h2.title {
+  color: $ut-karminrot;
+  font-size: 1.55em;
+  line-height: 1.15;
+  margin: 0 0 0.4em 0;
+}
+.reveal #title-slide .subtitle {
+  font-style: italic;
+  color: rgba($ut-anthrazit, 0.7);
+  font-size: 0.8em;
+  line-height: 1.35;
+  margin: 0;
+}
+.reveal #title-slide .author {
+  color: $ut-karminrot;
+  font-size: 0.85em;
+  margin: 0.9em 0 0.2em 0;
+}
+.reveal #title-slide .author::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: $ut-karminrot;
+  margin-bottom: 0.9em;
+}
+.reveal #title-slide .date {
+  color: $ut-anthrazit;
+  font-size: 0.85em;
+  margin: 0.2em 0;
+}
+.reveal #title-slide .institute {
+  font-style: italic;
+  color: rgba($ut-anthrazit, 0.85);
+  font-size: 0.55em;
+  margin-top: 1em;
+}
+
+// ---------------------------------------------------------- Kapiteltrennseiten
+.reveal .slides section.level1 h1 {
+  color: $ut-karminrot;
+  font-size: 1.9em;
+}
+
+// ---------------------------------------------------------- Inhaltsfolien
+.reveal .slides section.level2 h3 {
+  color: $ut-karminrot;
+}
+.reveal strong {
+  color: $ut-anthrazit;
+}
+.reveal ul li::marker {
+  color: $ut-karminrot;
+}
+.reveal .ut-rot {
+  color: $ut-karminrot;
+  font-weight: 700;
+}
+.reveal div.callout.callout-style-default div.callout-title p {
+  color: $ut-anthrazit;
+}
+
+// ---------------------------------------------------------- Logo, Fußzeile, Nummer
+// WBM auf der getönten Hintergrundfarbe (bewusste Abweichung von CD S. 5,
+// das für die rote WBM weißen Untergrund vorsieht)
+.reveal .slide-logo {
+  height: 36px !important;
+  max-height: 36px !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  background: transparent;
+  padding: 5px 10px 4px 10px;
+  box-sizing: border-box;
+}
+.reveal div.callout {
+  background: #ffffff;
+}
+.reveal .footer {
+  color: $ut-karminrot;
+  font-size: 13px !important;
+}
+.reveal .slide-number {
+  color: $ut-karminrot !important;
+  background: transparent !important;
+  font-size: 14px !important;
+  top: 8px !important;
+  bottom: auto !important;
+  right: 14px !important;
+}
+
+// ---------------------------------------------------------- Tabellen
+.reveal table thead {
+  border-bottom: 2px solid $ut-anthrazit;
+}
+
+// ---------------------------------------------------------- Eingebettete iframes
+// z. B. separat gerenderte Quiz-Seiten (siehe README, Abschnitt "Quiz").
+// Kein Standard-iframe-Rahmen; mit Klasse .quiz-slide auf dem Folien-Abschnitt
+// nutzt das iframe automatisch den nach Überschrift/Text verbleibenden Platz.
+// Achtung: Reveal.js setzt beim Aktivieren der Folie inline "display: block"
+// auf die Section – inline-Styles schlagen normalerweise jedem CSS-Regelsatz,
+// daher hier "display: flex !important" nötig.
+.reveal iframe {
+  border: 0;
+}
+.reveal .slides section.quiz-slide {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+}
+.reveal .slides section.quiz-slide iframe {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+}
+
+// Lightbox-Overlay liegt außerhalb von .reveal und erbt daher die Theme-Schrift nicht
+.glightbox-container .gslide-description,
+.glightbox-container .gslide-title,
+.glightbox-container .gslide-desc {
+  font-family: $font-family-sans-serif;
+}

@@ -1,0 +1,37 @@
+<section id="title-slide" class="center" data-state="ut-on-title"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$>
+  <div class="columns ut-ts">
+    $if(titel-qr)$
+    <div class="column ut-ts-picture">
+      <div class="ut-qr-frame">
+        <div class="ut-qr" data-url="$titel-qr$" role="img" aria-label="QR-Code: $titel-qr$"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+      (function () {
+        var el = document.querySelector("#title-slide .ut-qr");
+        if (!el || typeof QRCode === "undefined") return;
+        new QRCode(el, {
+          text: el.getAttribute("data-url"),
+          width: 600,
+          height: 600,
+          colorDark: "#A51E37",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.M
+        });
+      })();
+    </script>
+    $elseif(title-image)$
+    <div class="column ut-ts-picture">
+      <img class="picture" src="$title-image$" alt="$if(title-image-alt)$$title-image-alt$$else$Titelbild$endif$" />
+    </div>
+    $endif$
+    <div class="column ut-ts-text">
+      $if(title)$<h2 class="title">$title$</h2>$endif$
+      $if(subtitle)$<p class="subtitle">$subtitle$</p>$endif$
+      $if(by-author)$<p class="author">$for(by-author)$$it.name.literal$$sep$ &amp; $endfor$</p>$endif$
+      $if(semester)$<p class="date">$semester$</p>$elseif(date)$<p class="date">$date$</p>$endif$
+      $if(institute)$<p class="institute">$if(faculty)$$faculty$ · $endif$$institute$</p>$endif$
+    </div>
+  </div>
+</section>
