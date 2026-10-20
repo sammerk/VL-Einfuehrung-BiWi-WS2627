@@ -1,8 +1,6 @@
 project:
   type: website
- # output-dir: _site
-  site-url: https://sammerk.github.io/VL-Einfuehrung-BiWi-WS2627/
-  repo-url: https://github.com/sammerk/VL-Einfuehrung-BiWi-WS2627
+  output-dir: _site
   resources:
     - _extensions/sammerk/unitue/ut-logo.png
 
