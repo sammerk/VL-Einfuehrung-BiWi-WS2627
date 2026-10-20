@@ -1,0 +1,144 @@
+
+```{r, echo=FALSE, results='hide', message=FALSE}
+library(tidyverse)
+library(exams)
+
+data <- tibble(
+  Answers_and_Distractors = c(
+    "Deskriptive Studie",
+    "Explanative Studie",
+    "Explorative Studie",
+    "Normative Studie",
+    "Prädiktive Studie"
+  ),
+  `Ein Forscherteam geht der Frage nach, wie viele Studierende an Pädagogischen Hochschulen Eltern sind.` = c(
+    T,
+    F,
+    F,
+    F,
+    F
+  ), # adjust line 132 if coded 0/1
+  `Ein Forscherteam sucht nach möglichen Einflussfaktoren elterlicher Unterstützung auf die schulbezogene Motivation ihrer Kinder.` = c(
+    F,
+    F,
+    T,
+    F,
+    F
+  ),
+  `Ein Forscherteam untersucht, ob sich die positiven Effekte einer Lehrmethode bei der Anwendung in der Sekundarstufe auch für die Primarstufe replizieren lassen.` = c(
+    F,
+    T,
+    F,
+    F,
+    F
+  ),
+  `Ein Forscherteam erfasst die Altersstruktur der angestellten Lehrkräfte zum Stichtag 01.01.2022.` = c(
+    T,
+    F,
+    F,
+    F,
+    F
+  ),
+  `Ein Forscherteam geht der Frage nach, ob die simultane Präsentation von Bild und Ton entsprechend der Dual Code Theory auch den Erwerb von Wörtern einer Fremdsprache fördert.` = c(
+    F,
+    T,
+    F,
+    F,
+    F
+  ),
+  `Ein Forscherteam screent nach potentiellen personellen Faktoren, die mit Studienerfolg einhergehen.` = c(
+    F,
+    F,
+    T,
+    F,
+    F
+  ),
+  `Ein Forscherteam untersucht die Anzahl von Schüler*innen mit Deutsch als Zweitsprache in den verschiedenen Stadtteilen von Tübingen. ` = c(
+    T,
+    F,
+    F,
+    F,
+    F
+  ),
+  `Ein Forscherteam untersucht die Hypothese, ob das Lernen mit Pausen (spaced learning) entlang der Theory of Desirable Difficulties auch bei Kindern im Grundschulalter zu besseren Lernleistungen im Vergleich zu massiertem Lernen führt.` = c(
+    F,
+    T,
+    F,
+    F,
+    F
+  ),
+  `Ein Forscherteam sucht nach potentiellen Faktoren, die den Abbruch des Lehramtsstudiums in höheren Fachsemestern beeinflussen.` = c(
+    F,
+    F,
+    T,
+    F,
+    F
+  ),
+  `Ein Forscherteam begründet aus bildungstheoretischen Überlegungen, welche Funktionen Schule in der Gesellschaft haben soll.` = c(
+    F,
+    F,
+    F,
+    T,
+    F
+  ),
+  `Ein Forscherteam entwickelt Kriterien, anhand derer festgelegt werden soll, wann die Inklusion an einer Schule als gelungen gilt.` = c(
+    F,
+    F,
+    F,
+    T,
+    F
+  ),
+  `Ein Forscherteam leitet aus ethischen Prinzipien ab, welche Ziele Ganztagsschulen verfolgen sollten.` = c(
+    F,
+    F,
+    F,
+    T,
+    F
+  ),
+  `Ein Forscherteam entwickelt ein Modell, das anhand der Noten in Klasse 5 die Wahrscheinlichkeit eines erfolgreichen Schulabschlusses vorhersagt.` = c(
+    F,
+    F,
+    F,
+    F,
+    T
+  ),
+  `Ein Forscherteam prüft, wie gut die Ergebnisse eines Eignungstests den späteren Studienerfolg im Lehramt vorhersagen.` = c(
+    F,
+    F,
+    F,
+    F,
+    T
+  ),
+  `Ein Forscherteam schätzt anhand von Vorjahresdaten, wie viele Studienanfänger:innen im nächsten Semester das Lehramtsstudium abbrechen werden.` = c(
+    F,
+    F,
+    F,
+    F,
+    T
+  )
+)
+
+nth_task <- sample(2:ncol(data), 1)
+```
+
+
+Question
+========
+*`r names(data[,nth_task])`*
+
+Wird dabei eine deskriptive, explanative, explorative, normative oder prädiktive Studie durchgeführt?
+
+```{r questionlist, echo = FALSE, results='asis'}
+answerlist(
+  data |> pull(1),
+  markup = "markdown")
+```
+
+
+
+
+Meta-information
+================
+exname: Erkentnisinteresse in Forschungsfrage erkennen
+extype: schoice
+exsolution: `r mchoice2string(data |> pull(nth_task))`

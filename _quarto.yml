@@ -22,8 +22,8 @@ website:
         text: Startseite
       - href: folien.qmd
         text: Folien
-      - href: kontakt.qmd
-        text: Kontakt
+      - href: impressum.qmd
+        text: Impressum
   page-footer:
     border: false
     left: "Universität Tübingen<br>Wirtschafts- und Sozialwissenschaftliche Fakultät<br>Institut für Erziehungswissenschaft"

@@ -1,0 +1,64 @@
+
+```{r, echo=FALSE, results='hide', message=FALSE}
+library(tidyverse)
+library(exams)
+
+data <- tibble(
+  Answers_and_Distractors = c(
+    "Psychologie",
+    "Soziologie",
+    "Erziehungswissenschaft"
+  ),
+  `Der Beitrag rekonstruiert den bildungstheoretischen Antagonismus
+einer affirmatio des Herkommens versus einer affirmatio des Fortschritts zwischen Litt
+und Spranger auf der einen und Blankertz auf der anderen Seite. Dabei wird zunächst
+die Verhältnisbestimmung von Herkommen und Fortschritt bei Litt und Spranger rekonstruiert
+und gezeigt, welche bildungstheoretische Beurteilung sie nach sich zieht. Sodann
+wird die gleichsam konträre Beurteilung dieser Verhältnisbestimmung bei Blankertz in die
+Sicht genommen. Abschließend wird gezeigt, inwiefern beide affirmativen Fluchtpunkte
+zu theoretischen und legitimatorischen Problemstellungen führen, und als Fazit eine bildungstheoretische
+Perspektive in Aussicht gestellt, die sich zu beiden Fluchtpunkten gleichermaßen
+abständig verhält.` = c(
+    F,
+    F,
+    T
+  ),
+  `Die vorliegende Untersuchung ist ein empirischer Beitrag zur Erklärung der klassenspezifischen Bildungsungleichheit beim Übergang von der Grundschule auf die weiterführenden Schullaufbahnen in der Sekundarstufe I. Neueren Erklärungsansätzen zufolge basiert die Bildungsungleichheit neben historischen Bedingungen und institutionellen Regelungen des Bildungssystems vor allem auf Entscheidungen der Eltern. Demnach hängen klassendifferenzierende Bildungschancen mit klassenspezifischen Unterschieden in der Kosten-Nutzen-Abwägung für höhere Bildung und darauf basierenden Bildungsentscheidungen zusammen, die dann — vermittelt über die Selektions- und Allokationsfunktion des Bildungssystems und den Ressourcen des Elternhauses — zur sozialen Ungleichheit von Bildungschancen führen. Für die empirische Überprüfung der Modellaussagen wird ein zweistufiges Entscheidungs- und Prozessmodell vorgeschlagen. Mit Hilfe von Paneldaten und logistischen Regressionen wird unter besonderer Berücksichtigung von sozialer Herkunft zunächst die Entstehung von Bildungsabsichten und danach der tatsächliche Bildungsübergang detailliert untersucht. Insgesamt bestätigen die empirischen Befunde die von den werterwartungs- und entscheidungstheoretischen Erklärungsansätzen angenommenen Mechanismen und Prozesse der Bildungsentscheidung und des Bildungsübergangs. Weitgehend offen ist jedoch die Frage nach der historischen Dauerhaftigkeit der klassenspezifischen Bildungsungleichheit trotz Bildungsexpansion und Schulreformen.` = c(
+    F,
+    T,
+    F
+  ),
+
+  `Parental expectations (i.e., predictions) and aspirations (i.e., wishes and desires) for their children’s academic attainment have been considered important in children’s academic success. The present study tested the hypothesis that parents’ expectations and aspirations influence students’ positive and negative achievement emotions. We applied contemporaneous and lagged predictive effects models to five annual waves of data from secondary school students in Germany on achievement emotions in mathematics. Results indicated that when parents have higher expectations, students experience more positive emotions and less negative emotions (except for boredom) during the same year. In contrast, higher parents’ expectations predicted higher levels of negative emotions, particularly anxiety, in the subsequent year. We also found that parents’ aspirations are only weakly linked to achievement emotions, once parents’ expectations are controlled for. However, when parents’ aspirations exceeded their own expectations, this overaspiration was predictive of greater anxiety and lower levels of pride in the same year. These findings highlight the complex relations between parental expectations and achievement emotions that differently manifest over time. Our results are also consistent with recent notions that parents’ unrealistically high aspirations may be maladaptive for students.` = c(
+    F,
+    F,
+    T
+  ),
+)
+
+
+nth_task <- sample(2:ncol(data), 1)
+
+```
+
+
+Question
+========
+Im Folgenden sehen Sie einen Abstract eines Beitrags in einem wissenschaftlichen Journal. Schätzen Sie ein, ob das Journal von eine Gesellschaft für Psychologie, Erziehungswissenschaft oder Soziologie getragen wird.
+
+> `r names(data[,nth_task])`
+
+```{r questionlist, echo = FALSE, results='asis'}
+answerlist(
+  data |> pull(1),
+  markup = "markdown")
+```
+
+
+
+
+Meta-information
+================
+exname: Erkentnisinteresse in Forschungsfrage erkennen
+extype: schoice
+exsolution: `r mchoice2string(data |> pull(nth_task))`

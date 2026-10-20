@@ -24,8 +24,6 @@ Berichte, Daten und Analysen lassen sich als Quarto-Seiten ergänzen und erschei
 
 ::: {.ut-card}
 ### [Organisatorisches](organisatorisches.qmd)
-Ansprechpersonen und Adressen finden Sie auf dieser Seite.
+Organisatorisches finden Sie auf dieser Seite.
 :::
 :::
-
-Das Layout, die Farben und die Schriften dieser Website folgen dem Corporate Design der Universität Tübingen. Details stehen auf der Seite [Corporate Design](corporate-design.qmd).
