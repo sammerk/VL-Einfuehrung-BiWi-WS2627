@@ -77,7 +77,7 @@ Lehrstuhl Professionsforschung UT
 ## Gestaltungsvorschlag für die Vorlesung {.smaller}
 * Mein Ziel: Nach der Vorlesung
     * verfügen Sie über ein **Vokabular**, das Ihnen erlaubt gewisse **Perspektiven** von Bildungswissenschaftler:innen **nachzuvollziehen** und diese kompetent zu **kritisieren**
-    * können Sie **informiert entscheiden können** ob Sie sich für Bildungswissenschaften interessieren
+    * können Sie **informiert entscheiden können,** ob Sie sich für Bildungswissenschaften interessieren
 * Wie VL *gemeinsam* gestalten?
     * Vorschlag: Mindestens zwei Sitzungen zu **Themen Ihrer Wahl**
     * Vorschlag: Jede Woche (fakultative) Aufgaben während und nach der VL. Anschließend kurze Diskussion deren {{< glossary "constructive alignment" >}} [@biggs1996]
@@ -165,21 +165,32 @@ ggplot(df, aes(x = jahr, y = frequenz_pro_mio)) +
 *   Damit dient der Begriff auch als Sammelbegriff für die verschiedenen am Lehramtsstudium beteiligten Disziplinen neben den {{< glossary "Fachdidaktiken" >}} und {{< glossary "Fachwissenschaften" >}} [@terhart2012].
 * Typischerweise gelten {{< glossary "Erziehungswissenschaft" >}}, {{< glossary "Psychologie" >}} und {{< glossary "Soziologie" >}} als die Kern-Disziplinen der Bildungswissenschaften [@cramer2019b].
 
-## Beispiele Bildungswissenschaftlicher Studien
+## Beispiele bildungswissenschaftlicher Studien
 * Erziehungswissenschaft: @huebner2026a
 * Soziologie: @neugebauer2025
 * Psychologie: @basarkod2023
 
+:::footer
+Passende Übungsaufgabe: *Disziplinen in den Bildungswissenschaften*
+:::
+
 ## Paradigmatische Vielfalt in den BW {.smaller}
-* Die disziplinäre Vielfalt der BW bringt eine noch größere Vielfalt bzgl. der zugrunde liegenden {{< glossary "Paradigmen" >}} mit sich. Daher lohnt es sich ordnende Unterscheidungen zu kennen um Missverstädnnisse (und daraus resultierende Enttäuschungen) zu vermeiden.
-* Erkenntnisinteressen [@doering2016] :
-    * Normativ (Beispielforschungsfrage: *Warum sollte Schule (k)eine {{< glossary "Allokationsfunktion" >}} wahrnehmen?*)
-    * Deskriptiv (Beispielforschungsfrage: *Welcher Anteil männlicher 15-jähriger in Deutschland sind {{< glossary "funktionale Analphabeten" >}}?*)
-    * Kausal (Beispielforschungsfrage: *Welche Wirkung haben Lautleseverfahren auf die Leseflüssigkeit?*)
-    * Prädiktiv (Beispielforschungsfrage: *Wie kann mit administrativen {{< glossary "Studienverlaufsdaten" >}} das Abbruchrisiko vorhergesagt werden?*)
+> Die disziplinäre Vielfalt der BW bringt eine noch größere Vielfalt bzgl. der zugrunde liegenden {{< glossary "Paradigmen" >}} mit sich. Daher lohnt es sich ordnende Unterscheidungen zu kennen um Missverständnisse (und daraus resultierende Enttäuschungen) zu vermeiden.
+
+## Erkenntnisinteressen in den BW {.smaller}
+Idealtypisch können in den Bildungswissenschaften die folgenden Erkenntnisinteressen unterschieden werden [@doering2016; @patry2023a]:
+
+* **{{< glossary "Normative Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Warum sollte Schule (k)eine {{< glossary "Allokationsfunktion" >}} wahrnehmen?*)
+* **{{< glossary "Deskriptive Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Welcher Anteil männlicher 15-jähriger in Deutschland sind {{< glossary "funktionale Analphabeten" >}}?*)
+* **{{< glossary "Kausale (Explanative) Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Welche Wirkung haben Lautleseverfahren auf die Leseflüssigkeit?*)
+* **{{< glossary "Explorative Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Was könnten Ursachen für Studienabbruch bei Lehramtsstudierenden sein?*)
+* **{{< glossary "Prädiktive Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Wie kann mit administrativen {{< glossary "Studienverlaufsdaten" >}} das Abbruchrisiko vorhergesagt werden?*)
+
+:::footer
+Passende Übungsaufgabe: *Erkenntnisinteressen in den Bildungswissenschaften*
+:::
 
 
-## Glossar
 
 
 ## Literatur

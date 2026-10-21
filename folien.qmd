@@ -6,4 +6,4 @@ title: "Folien"
 
 {{< revealjs "folien/Sitzung 1 - It's a mess.html" >}}
 
-## Sitzung 2: Einführung in die Bildungswissenschaften
+## Sitzung 2:

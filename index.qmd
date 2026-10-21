@@ -14,7 +14,7 @@ Sammlung von Folien, Übungsaufgaben und Organisatorischem.
 ::: {.ut-cards}
 ::: {.ut-card}
 ### [Folien](folien.qmd)
-Hier finden Sie die interaktiven Folien zur Vorlesung. Über den Menü-Icon kommen Sie in eine Druckansicht und können so die Folien im Druckmenü Ihres Browsers (getestet Firefox & Chrome) als .pdf speichern.
+Hier finden Sie die interaktiven Folien zur Vorlesung. Über das Menü-Icon kommen Sie in eine Druckansicht und können so die Folien im Druckmenü Ihres Browsers (getestet mit Firefox & Chrome) als .pdf speichern.
 :::
 
 ::: {.ut-card}

@@ -6,7 +6,7 @@ title: "Organisatorisches"
 ::: {.ut-card}
 * Modulnummer: 1
 * Modultitel: Bildungswissenschaft I
-* ECTS-Punkte:  6
+* ECTS-Punkte: 6
 * Arbeitsaufwand
     * Kontaktzeit: 30 h / 2 SWS
     * Selbststudium: 150h
@@ -34,13 +34,13 @@ title: "Organisatorisches"
 
 ## Kontaktaufnahme
 ::: {.ut-card}
-Versuchen Sie Dinge immer zunächst über Kommiliton:innen bzw. online zu klären. So bleibt mir mehr Zeit und Kraft für komplexere Fälle, die es tatsächlich gibt. Um es konkret zu machen Mails wie
+Versuchen Sie Dinge immer zunächst über Kommiliton:innen bzw. online zu klären. So bleibt mir mehr Zeit und Kraft für komplexere Fälle, die es tatsächlich gibt. Um es konkret zu machen: Mails wie
 
-> *Betreff: Sehr wichtig!!!!!! Text: Hallo Merk, was ist ILIAS-Passwort?*"
+> *Betreff: Sehr wichtig!!!!!! Text: Hallo Merk, was ist ILIAS-Passwort?*
 
-sind irgendwie lustig aber auch gleichzeitig auch unprofessionell und anstrengend.
+sind irgendwie lustig aber gleichzeitig auch unprofessionell und anstrengend.
 
-Wenn sie mehr als 2 Kommiliton:innen gefragt haben, fragen Sie gerne in der VL. Wir machen in jeder Sitzung einen kurzen Frage-Antwort Slot.
+Wenn Sie mehr als 2 Kommiliton:innen gefragt haben, fragen Sie gerne in der VL. Wir machen in jeder Sitzung einen kurzen Frage-Antwort Slot.
 
-Kommen Sie nach der Vorlesung nach vorne für Fragen die Sie direkt klären müssen. Schrieben Sie Mails am besten nur für Anliegen die eine Schriftform sinnvoll/notwendig machen.
+Kommen Sie nach der Vorlesung nach vorne für Fragen, die Sie direkt klären müssen. Schreiben Sie Mails am besten nur für Anliegen, die eine Schriftform sinnvoll/notwendig machen.
 :::
