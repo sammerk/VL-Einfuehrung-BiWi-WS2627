@@ -121,16 +121,16 @@ data <- tibble(
 # Kopie k aus exams2webexercises() erhält Forschungsfrage k; Zufall nur beim direkten Knit
 iter <- exams::match_exams_iteration()
 nth_task <- if (is.null(iter)) {
-  sample(2:ncol(data), 1)
+  sample(1:(ncol(data) - 1), 1)
 } else {
-  (iter - 1) %% (ncol(data) - 1) + 2
+  iter
 }
 ```
 
 
 Question
 ========
-*`r names(data[,nth_task])`*
+*`r names(data[,nth_task+1])`*
 
 Wird dabei eine deskriptive, explanative, explorative, normative oder prädiktive Studie durchgeführt?
 
@@ -147,4 +147,4 @@ Meta-information
 ================
 exname: Erkentnisinteresse in Forschungsfrage erkennen
 extype: schoice
-exsolution: `r mchoice2string(data |> pull(nth_task))`
+exsolution: `r mchoice2string(data |> pull(nth_task+1))`

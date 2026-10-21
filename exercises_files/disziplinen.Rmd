@@ -30,9 +30,9 @@ abständig verhält.` = c(
   ),
 
   `Parental expectations (i.e., predictions) and aspirations (i.e., wishes and desires) for their children’s academic attainment have been considered important in children’s academic success. The present study tested the hypothesis that parents’ expectations and aspirations influence students’ positive and negative achievement emotions. We applied contemporaneous and lagged predictive effects models to five annual waves of data from secondary school students in Germany on achievement emotions in mathematics. Results indicated that when parents have higher expectations, students experience more positive emotions and less negative emotions (except for boredom) during the same year. In contrast, higher parents’ expectations predicted higher levels of negative emotions, particularly anxiety, in the subsequent year. We also found that parents’ aspirations are only weakly linked to achievement emotions, once parents’ expectations are controlled for. However, when parents’ aspirations exceeded their own expectations, this overaspiration was predictive of greater anxiety and lower levels of pride in the same year. These findings highlight the complex relations between parental expectations and achievement emotions that differently manifest over time. Our results are also consistent with recent notions that parents’ unrealistically high aspirations may be maladaptive for students.` = c(
+    T,
     F,
-    F,
-    T
+    F
   ),
 )
 
@@ -40,9 +40,9 @@ abständig verhält.` = c(
 # Kopie k aus exams2webexercises() erhält Abstract k; Zufall nur beim direkten Knit
 iter <- exams::match_exams_iteration()
 nth_task <- if (is.null(iter)) {
-  sample(2:ncol(data), 1)
+  sample(1:(ncol(data)-1), 1)
 } else {
-  (iter - 1) %% (ncol(data) - 1) + 2
+  iter
 }
 
 ```
@@ -52,7 +52,7 @@ Question
 ========
 Im Folgenden sehen Sie einen Abstract eines Beitrags in einem wissenschaftlichen Journal. Schätzen Sie ein, ob das Journal von eine Gesellschaft für Psychologie, Erziehungswissenschaft oder Soziologie getragen wird.
 
-> `r names(data[,nth_task])`
+> `r names(data[,nth_task+1])`
 
 ```{r questionlist, echo = FALSE, results='asis'}
 answerlist(
@@ -67,4 +67,4 @@ Meta-information
 ================
 exname: Erkentnisinteresse in Forschungsfrage erkennen
 extype: schoice
-exsolution: `r mchoice2string(data |> pull(nth_task))`
+exsolution: `r mchoice2string(data |> pull(nth_task+1))`
