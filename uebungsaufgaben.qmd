@@ -9,14 +9,14 @@ title: "Übungsaufgaben"
 library("exams2forms")
 exams2forms(
   "exercises_files/disziplinen.Rmd",
-  n = 5,
+  n = 3,
   converter = "pandoc"
 )
 ```
 
 ### Erkenntnisinteressen in den Bildungswissenschaften
 ```{r quiz2, echo = FALSE, message = FALSE, results = "asis"}
-exams2forms("exercises_files/erkenntnisinteressen.Rmd", n = 18, converter = "pandoc")
+exams2forms("exercises_files/erkenntnisinteressen.Rmd", n = 15, converter = "pandoc")
 ```
 
 ### Experimentelle
