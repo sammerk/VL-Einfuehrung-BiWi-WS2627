@@ -1,15 +1,46 @@
 ---
-title: "Impressum"
+title: "Organisatorisches"
 ---
+## Aus dem [Modulhandbuch](https://uni-tuebingen.de/securedl/sdl-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTI1NjQzMzIsImV4cCI6MTc5MjY1NDMzMiwidXNlciI6MTUzLCJncm91cHMiOlswLC0yLDIsMTA3XSwiZmlsZSI6ImZpbGVhZG1pbi9VbmlfVHVlYmluZ2VuL0Zha3VsdGFldGVuL1NvemlhbFZlcmhhbHRlbi9JbnNpdHV0X2ZcdTAwZmNyX0VyemllaHVuZ3N3aXNzZW5zY2hhZnQvRG9rdW1lbnRlL0d5bW5hc2lhbGVzX0xlaHJhbXQvQldTX0JhY2hlbG9yX29mX0VkdWNhdGlvbl9hYl9XU18yMDE1LTIwMTYvTW9kdWxoYW5kYnVjaF9CYWNoZWxvcl9vZl9FZHVjYXRpb25fTGVocmFtdF9HeW1uYXNpdW1fQmlsZHVuZ3N3aXNzZW5zY2hhZnRsaWNoZXNfU3R1ZGl1bV9fQldTX19hYl9XU18yMDIwLTIwMjEucGRmIiwicGFnZSI6NjI0Mjd9.Cg1hUXEn69aaFWSzvtOYv-UIXwCFuNj9l6SeXNWBsYk/Modulhandbuch_Bachelor_of_Education_Lehramt_Gymnasium_Bildungswissenschaftliches_Studium__BWS__ab_WS_2020-2021.pdf):
 
-Angaben gemäß § 18 Abs. 1 Medienstaatsvertrag (MStV):
+::: {.ut-card}
+* Modulnummer: 1
+* Modultitel: Bildungswissenschaft I
+* ECTS-Punkte:  6
+* Arbeitsaufwand
+    * Kontaktzeit: 30 h / 2 SWS
+    * Selbststudium: 150h
+    * Arbeitsaufwand: 180 h
+* Lehr- /Lernformen: Vorlesung, Praktikum, Portfolio
+* Lehrveranstaltungen
+    * Vorlesung »*Einführung in das Studium der Bildungswissenschaften*«
+* Modulinhalt: Die Vorlesung führt in das Tübinger Lehramtsstudium (Themen und Organisation) und in das Studium der Bildungswissenschaften ein. Dabei werden ausgewählte Themen- und Aufgabenbereiche des Lehrerberufs (z.B. Arbeitsplatz Schule, Aufgaben des Lehrerberufs, Professionalisierungstheorien) sowie zentrale Themenbereiche der Mikro-, Meso- und Makroebene (Unterricht, Schule, Schulsystem) vertieft. Zur Einführung zählen grundlegende Begriffe und Theorien (z.B. Unterrichtstheorie/Didaktik, Bildung, Bildungsungleichheit, Erziehung, Sozialisation, Anthropologie). Die Vorlesung leistet eine Hinführung zum Orientierungspraktikum (z.B. Kriterien und Methoden der Beobachtung und Dokumentation) sowie zu theoriebezogenem, empirischem und entwicklungsbezogenem Arbeiten in den Bildungswissenschaften. Das verpflichtende Portfolio wird anhand spezifischer Ziele, Funktionen und Verfahren der Dokumentation eingeführt.
+* Qualifikationsziele: Die Studierenden...
+    * kennen die Konzeption des Tübinger Lehramtsstudiums
+    * sind in der Lage, grundlegende bildungswissenschaftliche Begriffe und Theorien wiederzugeben und voneinander abzugrenzen
+    * erkennen anhand ausgewählter Themen die für Bildungsprozesse und Qualitätsentwicklung an Schulen relevanten Ebenen des Bildungssystems
+    * sind in der Lage, anhand ausgewählter Themen- und Aufgabenbereiche des Lehrerberufs zwischen theoriebezogenen und empirischen Forschungsarbeiten sowie praktischen Herausforderungen zu unterscheiden
+    * kennen Ziele, Themenbereiche und die Organisation des Orientierungspraktikums sowie ihre Aufgaben im Praktikum
+    * können ihr Portfolio anlegen und bedeutsame Erfahrungen, Erkenntnisse und Einsichten strukturiert dokumentieren
+:::
 
-Samuel Merk\
-Münzgasse 30\
-72074 Tübingen\
+## Unsere Klausur
+::: {.ut-card}
+* Findet am 03.02.2027 um 14:15 im Kupferbau auf Chromebooks des E-Prüfungszentrums statt
+* Dauert 60 Minuten
+* Enthält Multiple Choice Fragen, Single Choice Fragen, Kurzantworten, offene Fragen
+* Enthält einen Zweittermin (bei nicht-Bestehen, Terminüberschneidung) Anfang April 2027
+:::
 
-Kontakt
-E-Mail: `samuel.merk@uni-tuebingen.de`
+## Kontaktaufnahme
+::: {.ut-card}
+Versuchen Sie Dinge immer zunächst über Kommiliton:innen bzw. online zu klären. So bleibt mir mehr Zeit und Kraft für komplexere Fälle, die es tatsächlich gibt. Um es konkret zu machen Mails wie
 
-Hinweis zum Angebot:
-Diese Website stellt Lehrmaterialien und Präsentationsfolien für wissenschaftliche und didaktische Zwecke bereit.
+> *Betreff: Sehr wichtig!!!!!! Text: Hallo Merk, was ist ILIAS-Passwort?*"
+
+sind irgendwie lustig aber auch gleichzeitig auch unprofessionell und anstrengend.
+
+Wenn sie mehr als 2 Kommiliton:innen gefragt haben, fragen Sie gerne in der VL. Wir machen in jeder Sitzung einen kurzen Frage-Antwort Slot.
+
+Kommen Sie nach der Vorlesung nach vorne für Fragen die Sie direkt klären müssen. Schrieben Sie Mails am besten nur für Anliegen die eine Schriftform sinnvoll/notwendig machen.
+:::
