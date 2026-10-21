@@ -180,7 +180,7 @@ Passende Übungsaufgabe: *Disziplinen in den Bildungswissenschaften*
 ## Erkenntnisinteressen in den BW {.smaller}
 Idealtypisch können in den Bildungswissenschaften die folgenden Erkenntnisinteressen unterschieden werden [@doering2016; @patry2023a]:
 
-* **{{< glossary "Normative Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Warum sollte Schule (k)eine {{< glossary "Allokationsfunktion" >}} wahrnehmen?*)
+* **{{< glossary "Präskriptive/Normative Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Warum sollte Schule (k)eine {{< glossary "Allokationsfunktion" >}} wahrnehmen?*)
 * **{{< glossary "Deskriptive Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Welcher Anteil männlicher 15-jähriger in Deutschland sind {{< glossary "funktionale Analphabeten" >}}?*)
 * **{{< glossary "Kausale (Explanative) Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Welche Wirkung haben Lautleseverfahren auf die Leseflüssigkeit?*)
 * **{{< glossary "Explorative Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Was könnten Ursachen für Studienabbruch bei Lehramtsstudierenden sein?*)

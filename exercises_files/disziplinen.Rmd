@@ -37,7 +37,13 @@ abständig verhält.` = c(
 )
 
 
-nth_task <- sample(2:ncol(data), 1)
+# Kopie k aus exams2webexercises() erhält Abstract k; Zufall nur beim direkten Knit
+iter <- exams::match_exams_iteration()
+nth_task <- if (is.null(iter)) {
+  sample(2:ncol(data), 1)
+} else {
+  (iter - 1) %% (ncol(data) - 1) + 2
+}
 
 ```
 
