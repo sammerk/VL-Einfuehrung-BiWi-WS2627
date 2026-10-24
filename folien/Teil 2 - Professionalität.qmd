@@ -1,0 +1,29 @@
+---
+title: "Professionalität von Lehrer:innen"
+subtitle: "Teil 2 der Einführung in das Studium der Bildungswissenschaften"
+author: "Prof. Dr. Samuel Merk"
+semester: "Wintersemester 2026/27"   # freier Text; alternativ date: last-modified
+bibliography: ../references.bib
+csl: ../apa.csl
+execute:
+  echo: false
+filters:
+ - timeline
+format:
+  unitue-revealjs:
+    auto-stretch: false
+    institute: "Institut für Erziehungswissenschaft"
+    faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+    footer: "Prof. Dr. Samuel Merk · Bildungswissenschaften? It's a mess!"
+    embed-resources: true
+    # titel-qr: "https://uni-tuebingen.de"   # QR-Code statt Titelbild
+    # title-image: "../test.png"
+---
+
+
+## In diesem Teil {{< iconify fa-solid:calendar-alt >}}
+* Charakteristika des Lehrer:innenberufs
+* Profession - Professionalität - Professionalisierung
+* Struktur- und kompetenztheoretischer Ansatz der Professionalität von Lehrer:innen
+
+##

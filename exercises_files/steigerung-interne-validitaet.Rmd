@@ -1,0 +1,33 @@
+Question
+========
+Eine Forscherin untersucht, ob die Verwendung dynamischer Geometriesoftware (z.B. GeoGebra) den Erwerb von konzeptuellem Wissen fördert. Dazu erfasst sie Schülerleistungen der 7. Klasse $N = 63$ anhand eines entsprechenden Tests nach der Durchführung der Unterrichtseinheit zum "Satz vom Umkreis" bei Lehrerinnen, die **von sich aus** entweder mit oder ohne die dynamische Geometriesoftware arbeiten und über diesen Einsatz auch selbst entscheiden konnten. Es konnte ein bedeutsamer Unterschied zugunsten der Lernenden, die GeoGebra genutzt haben, nachgewiesen werden.
+Eine Forschergruppe möchte sich die Vorteile der Verwendung von dynamischer Geometriesoftware genauer anschauen. Sie nutzt diese Studie als Grundlage für weitere Forschungsbemühungen. Sie möchte jedoch die _interne Validität_ erhöhen. Welche Maßnahmen sind hierzu zielführend?
+
+
+```{r questionlist, echo = FALSE, results = "asis"}
+library(exams)
+answerlist(c(
+  "Wahl eines randomiserten experimentellen Forschungsdesigns mit Kontrollgrupe",
+  "Alle Mädchen mit GeoGebra unterrichten und alle Jungen ohne",
+  "Alle Lehrerinnen unterrichten mit GeoGebra und alle Lehrer ohne",
+  "Kontrolle von Störvariablen, wie Vorwissen der Schüler:innen",
+  "Die Studie im Labor durchführen"),
+  markup = "markdown")
+```
+
+
+Solution
+========
+
+```{r exsolutiongeneration, echo = F, results='hide'}
+ex_solution <- c(T,F,F,T,T)
+```
+
+
+
+Meta-information
+================
+exname: Steigerung_interne_Validitaet
+extype: mchoice
+exsolution: `r mchoice2string(ex_solution)`
+exshuffle: 3

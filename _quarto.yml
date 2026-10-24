@@ -6,6 +6,10 @@ project:
 
 lang: de
 
+extensions:
+  iconify:
+    style: "color:#A51E37;"
+
 website:
   title: "Vorlesung: Einführung in das Studium der Bildungswissenschaften"
   favicon: images/favicon.png
@@ -24,6 +28,10 @@ website:
         text: Folien
       - href: impressum.qmd
         text: Impressum
+      - href: uebungsaufgaben.qmd
+        text: Übungsaufgaben
+      - href: glossar.qmd
+        text: Glossar
   page-footer:
     border: false
     left: "Universität Tübingen<br>Wirtschafts- und Sozialwissenschaftliche Fakultät<br>Institut für Erziehungswissenschaft"

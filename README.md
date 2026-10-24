@@ -11,13 +11,13 @@ Benötigt wird Quarto ab Version 1.6 (getestet mit 1.8).
 
 ## Aufbau
 
-| Datei | Zweck |
-|---|---|
-| `_brand.yml` | Marke nach brand.yml: Logo, Farben, Schriften |
-| `_quarto.yml` | Website-Konfiguration (Navigation, Footer, Titel) |
-| `custom.scss` | Feinschliff: Kopfleiste, Hero-Bereich, Karten, Footer |
-| `images/` | Wort-Bild-Marke, Bildmarke, Favicon |
-| `index.qmd`, `corporate-design.qmd`, `kontakt.qmd` | Beispielseiten |
+| Datei                                                    | Zweck                                                 |
+| -------------------------------------------------------- | ----------------------------------------------------- |
+| `_brand.yml`                                           | Marke nach brand.yml: Logo, Farben, Schriften         |
+| `_quarto.yml`                                          | Website-Konfiguration (Navigation, Footer, Titel)     |
+| `custom.scss`                                          | Feinschliff: Kopfleiste, Hero-Bereich, Karten, Footer |
+| `images/`                                              | Wort-Bild-Marke, Bildmarke, Favicon                   |
+| `index.qmd`, `corporate-design.qmd`, `kontakt.qmd` | Beispielseiten                                        |
 
 Quarto wendet `_brand.yml` im Projektordner automatisch an.
 

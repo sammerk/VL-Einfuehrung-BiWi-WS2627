@@ -4,10 +4,14 @@
       "https://www.r-exams.org/*": "allow"
     },
     "bash": {
-      "curl *": "allow"
+      "curl *": "allow",
+      "cd *": "allow",
+      "cat *": "allow",
+      "tail *": "allow"
     },
     "edit": {
-      "*.bib": "allow"
+      "*.bib": "allow",
+      "*.qmd": "allow"
     },
     "executeCode": {
       "*": "allow"

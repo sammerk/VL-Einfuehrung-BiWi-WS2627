@@ -2,8 +2,10 @@
 title: "Folien"
 ---
 
-## Sitzung 1: Bildungswissenschaften? It's a mess!
+## Teil 1: Bildungswissenschaften? It's a mess!
 
-{{< revealjs "folien/Sitzung 1 - It's a mess.html" >}}
+{{< revealjs "folien/Teil 1 - It's a mess.html" >}}
 
-## Sitzung 2:
+## Teil 2: Professionalität
+
+## Teil 3: Unterricht

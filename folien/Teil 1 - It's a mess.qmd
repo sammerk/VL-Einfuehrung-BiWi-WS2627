@@ -1,6 +1,6 @@
 ---
 title: "Bildungswissenschaften? It's a mess!"
-subtitle: "Sitzung 1: Einführung in das Studium der Bildungswissenschaften"
+subtitle: "Teil 1 der Einführung in das Studium der Bildungswissenschaften"
 author: "Prof. Dr. Samuel Merk"
 semester: "Wintersemester 2026/27"   # freier Text; alternativ date: last-modified
 bibliography: ../references.bib
@@ -11,7 +11,7 @@ filters:
  - timeline
 format:
   unitue-revealjs:
-    # Alle folgenden Optionen sind optional
+    auto-stretch: false
     institute: "Institut für Erziehungswissenschaft"
     faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     footer: "Prof. Dr. Samuel Merk · Bildungswissenschaften? It's a mess!"
@@ -23,7 +23,7 @@ format:
 
 # Herzlich Willkommen!
 
-## Heute {{< iconify fa-solid:calendar-alt >}}
+## In diesem Teil {{< iconify fa-solid:calendar-alt >}}
 * Mit wem haben Sie es zu tun?
 * Welchen Gestaltungsvorschlag haben wir für die Vorlesung?
 * Bildungswissenschaften? It's a mess!
@@ -178,9 +178,9 @@ Passende Übungsaufgabe: *Disziplinen in den Bildungswissenschaften*
 > Die disziplinäre Vielfalt der BW bringt eine noch größere Vielfalt bzgl. der zugrunde liegenden {{< glossary "Paradigmen" >}} mit sich. Daher lohnt es sich ordnende Unterscheidungen zu kennen um Missverständnisse (und daraus resultierende Enttäuschungen) zu vermeiden.
 
 ## Erkenntnisinteressen in den BW {.smaller}
-Idealtypisch können in den Bildungswissenschaften die folgenden Erkenntnisinteressen unterschieden werden [@doering2016; @patry2023a]:
+Erkenntisinteressen können in den Bildungswissenschaften auf die unterscheidlichsten Weisen gegliedert werden. Für eine erste Orientierung können die folgenden Unterscheidungen dienen [@doering2016; @patry2023a; @habermas2019]:
 
-* **{{< glossary "Präskriptive/Normative Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Warum sollte Schule (k)eine {{< glossary "Allokationsfunktion" >}} wahrnehmen?*)
+### Tend. naturwiss. Erkenntnisinteressen:
 * **{{< glossary "Deskriptive Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Welcher Anteil männlicher 15-jähriger in Deutschland sind {{< glossary "funktionale Analphabeten" >}}?*)
 * **{{< glossary "Kausale (Explanative) Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Welche Wirkung haben Lautleseverfahren auf die Leseflüssigkeit?*)
 * **{{< glossary "Explorative Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Was könnten Ursachen für Studienabbruch bei Lehramtsstudierenden sein?*)
@@ -190,7 +190,168 @@ Idealtypisch können in den Bildungswissenschaften die folgenden Erkenntnisinter
 Passende Übungsaufgabe: *Erkenntnisinteressen in den Bildungswissenschaften*
 :::
 
+## {.smaller}
+### Tend. geisteswiss. Erkenntnisinteressen:
+* **{{< glossary "Verstehende/Praktische Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Wie erlebt Kind A den Übergang von einer behüteten Grundschule in ein großen Gymnasium*)
+* **{{< glossary "Emanzipatorische Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Wie reproduzieren Hidden Curricula soziale Ungleichheit*)
 
 
+## Beispiel unklarer Erkenntnisinteressen
 
-## Literatur
+::: {.columns style="display: flex !important; align-items: center;"}
+
+::: {.column width="30%"}
+<iframe src="https://www.instagram.com/reel/Det3hxcq7S3/embed"
+        width="300" height="500"
+        frameborder="0" scrolling="no" allowtransparency="true"
+        allowfullscreen></iframe>
+:::
+
+::: {.column width="70%"}
+<center>
+{{< iconify fa6-solid:brain >}} - {{< iconify fa6-solid:dice-two >}} - {{< iconify fa6-solid:users >}}
+
+Wie beurteilen Sie die Passung der Erkenntnisinteressen der Influencerin zum Erkentnisinteresse der Forschenden?
+</center>
+:::
+
+:::
+
+## »Studien« in den BW {.smaller}
+Die vielfältigen Erkentnissinteressen in den BW führen zu noch größerer Vielfalt an Forschungsmethoden. Eine sehr grobe Gliederung liefert die folgende Abbbildung:
+
+:::{style="text-align:center"}
+![Grobe Gliederung der Forschungsmethoden in den BW nach @seel2015a](../images/bw-methoden.svg){width=100%}
+:::
+```{mermaid}
+%%| eval: false
+
+---
+config:
+  flowchart:
+    theme: redux-color
+    curve: linear
+    useMaxWidth: false
+    nodeSpacing: 10
+    rankSpacing: 30
+---
+flowchart TD
+    A[Forschungsmethoden<br/>in den Bildungswissenschaften]
+
+    A --> B[Nicht-empirische Methoden]
+    A --> C[Empirische Methoden]
+
+    B --> B1[Hermeneutik]
+    B --> B2[Phänomenologie]
+    B --> B3[Kritische Theorie]
+    B --> B4[..]
+
+    C --> D[Qualitative Methoden]
+    C --> E[Quantitative Methoden]
+
+    D --> D1[Kasuistik]
+    D --> D3[Dokumentarische Methode]
+    D --> D4[Grounded Theory]
+    D --> D5[Qualitative Inhaltsanalyse]
+    D --> D2[...]
+
+    E --> F[Experimentelle Methoden]
+    E --> G[Nicht-experimentelle Methoden]
+
+    F --> F1[Quasi-Experiment]
+    F --> F2[Randomisiertes Experiment]
+    F --> F3[Randomisiert Kontrolliertes Experiment]
+    F --> F4[...]
+
+    G --> G1[Survey]
+    G --> G2[Beobachtung]
+    G --> G3[Trendstudie]
+    G --> G4[Panelstudie]
+    G --> G5[...]
+
+
+    classDef root fill:#32414B,color:#fff,stroke:#32414B
+    classDef nonemp fill:#B4A069,color:#fff,stroke:#B4A069
+    classDef emp fill:#a51e37,color:#fff,stroke:#a51e37
+    classDef qual fill:#a51e3795,color:#fff,stroke:#a51e37
+    classDef quant fill:#a51e3770,color:#32414B,stroke:#a51e37
+
+    class A root
+    class B,B1,B2,B3,B4 nonemp
+    class C emp
+    class D,D1,D2,D3,D4,D5 qual
+    class E,F,G,F1,F2,F3,F4,G1,G2,G3,G4,G5 quant
+```
+
+## Gütekriterien für »Studien« in den BW {.smaller}
+Während für die nicht-empirischen und qualitativen Forschungsmethoden keine Einigung über einen Kanon an Gütekriterien besteht [@doering2016], gelten in der Community der
+quantitativen Forschungsmethoden die folgenden Kriterien [erweiterte Campbelltradition, @campbell1963] als vergleichsweise unumstritten:
+
+::: {.columns}
+
+::: {.column width=16%}
+
+![](../images/card-interne-rot.png){.lightbox}
+
+:::
+
+::: {.column width=16%}
+
+![](../images/card-construct-rot.png){.lightbox}
+
+:::
+
+::: {.column width=16%}
+
+![](../images/card-externe-rot.png){.lightbox}
+
+:::
+
+
+::: {.column width=16%}
+
+![](../images/card-statistical-rot.png){.lightbox}
+
+:::
+
+::: {.column width=16%}
+
+![](../images/card-ecological-rot.png){.lightbox}
+
+:::
+
+::: {.column width=16%}
+
+![](../images/card-consequential-rot.png){.lightbox}
+
+:::
+:::
+
+::: footer
+✨ Passende Übungsaufgaben: *Disziplinen in den Bildungswissenschaften*
+:::
+
+
+## Steigerung der internen Validität {.smaller}
+:::{.incremental}
+* {{< glossary "Experimentelle Studiendesigns" >}}
+* {{< glossary "Randomisierung" >}}
+* {{< glossary "Verblindung" >}}
+* {{< glossary "Kontroll- und Vergleichsgruppen" >}}
+* {{< glossary "Längsschnittliche Studiendesigns" >}}
+* {{< glossary "Matching Studien" >}}
+* {{< glossary "Laborstudien" >}}
+* {{< glossary "Direkte Replikationen" >}}
+:::
+
+## Steigerung der externen Validität {.smaller}
+:::{.incremental}
+* {{< glossary "Große, möglichst repräsentative Stichproben" >}}
+* {{< glossary "Zufallsstichproben" >}}
+* {{< glossary "Feldstudien" >}}
+* {{< glossary "Metaanalysen" >}}
+* {{< glossary "Konzeptuelle Replikationsstudien" >}}
+:::
+
+
+## Literatur {.smaller}

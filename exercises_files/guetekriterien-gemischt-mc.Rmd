@@ -1,0 +1,61 @@
+Question
+========
+Welche Aussagen zu Qualitätskriterien von Studien sind korrekt?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+library(exams)
+welche_der_weiteren_antworten <- sample(1:10, 3)
+item01 <- c("Eine Erhöhung der internen Validität führt nicht zwangsläufig zu einer Erhöhung der externen Validität, eher im Gegenteil.", T)
+item02 <- c("Auch ohne interne Validität kann ein hohes Maß an externer Validität einer Studie gegeben sein.", T)
+item03 <- c("Eine Erhöhung der internen Validität führt automatisch zu einer Erhöhung der externen Validität.", F)
+item04 <- c("Eine Studie ist nur dann als ökologisch valide zu bezeichnen, wenn eine neue Theorie aus ihr abgeleitet werden kann.", F)
+item05 <- c("Durch die Erhöhung der Stichprobengröße in einer Untersuchung erhöht sich tendenziell die externe Validität.", T)
+item06 <- c("Experimenten wird eine höhere interne Validität zugeschrieben als Quasi-Experimenten", T)
+item07 <- c("Randomisiert-kontrollierten Experimenten wird eine höhere interne Validität zugeschrieben als Trendstudien", T)
+item08 <- c("PISA stellt eine Trendstudie dar", T)
+item09 <- c("Konstruktvalidität ist für deskriptive Studien irrelevant", F)
+item10 <- c("Interne Validität ist für deskriptive Studien irrelevant", T)
+
+answerlist(
+  c(
+    item01[1],
+    item02[1],
+    item03[1],
+    item04[1],
+    item05[1],
+    item06[1],
+    item07[1],
+    item08[1],
+    item09[1],
+    item10[1]
+  )[welche_der_weiteren_antworten],
+  markup = "markdown"
+)
+```
+
+Solution
+========
+
+```{r exsolutiongeneration, echo = F, results='hide'}
+ex_solution <- c(
+  item01[2],
+  item02[2],
+  item03[2],
+  item04[2],
+  item05[2],
+  item06[2],
+  item07[2],
+  item08[2],
+  item09[2],
+  item10[2]
+)[welche_der_weiteren_antworten]
+```
+
+
+
+Meta-information
+================
+exname: Guetekriterien_MC_gemischt
+extype: mchoice
+exsolution: `r mchoice2string(as.logical(ex_solution))`
+exshuffle: 3

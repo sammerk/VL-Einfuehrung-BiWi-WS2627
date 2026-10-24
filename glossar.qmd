@@ -1,0 +1,98 @@
+---
+title: "Glossar"
+---
+
+Hier finden Sie alphabetisch sortiert die Glossareinträge aus den Folien.
+
+### Allokationsfunktion:
+Die Funktion von Bildungssystemen, gesellschaftliche Positionen und Chancen (z. B. Schulabschlüsse, Studienplätze, Berufswege) nach bestimmten Kriterien zuzuteilen. Schule wirkt dabei nicht nur bildend, sondern auch selektierend. ✨
+
+### constructive alignment:
+Der Prozess der Gestaltung von Lernerfahrungen und Leistungsüberprüfungen, die auf die angestrebten Lernergebnisse abgestimmt sind. ✨
+
+institutionell: |
+  Bezieht sich auf die Strukturen, Regeln und Organisationen von Institutionen (z. B. Schulen, Universitäten). Institutionelle Fragen in der Bildung betreffen etwa Gesetze, Curricula, Verwaltung und organisatorische Rahmenbedingungen. ✨
+
+disziplinär: |
+  Bezieht sich auf eine akademische oder wissenschaftliche Disziplin (z. B. Psychologie, Soziologie, Eriehungswissenschaft). Disziplinäre Perspektiven bringen jeweils eigene Theorien, Methoden und Fragestellungen mit. ✨
+
+konnotiert: |
+  Mit Nebenbedeutungen oder emotionalen Bedeutungen aufgeladen. ✨
+
+Fachdidaktiken: |
+  Wissenschaftliche Disziplinen, die sich damit beschäftigen, wie man ein Fach (z. B. Mathematik, Geschichte, Deutsch) lehrt und lernt. Sie verbinden Fachwissen mit Erkenntnissen über Lernprozesse und Vermittlungsmethoden. ✨
+
+Fachwissenschaften: |
+  Akademische Disziplinen, die sich mit dem Inhalt eines Faches auseinandersetzen (z. B. Mathematik, Geschichtswissenschaft, Germanistik). Im Lehramtsstudium bilden sie die Grundlage für das fachspezifische Wissen. ✨
+
+Erziehungswissenschaft: |
+  Die Wissenschaft, die sich mit Erziehung, Bildung und Lernen befasst. Sie untersucht Ziele, Methoden und Bedingungen von Erziehungs- und Lernprozessen aus historischer, systematischer und praktischer Perspektive. ✨
+
+Psychologie: |
+  Die Wissenschaft des menschlichen Verhaltens und der psychischen Prozesse. In Bildungswissenschaften relevant etwa als Entwicklungspsychologie, Lernpsychologie oder Pädagogische Psychologie. ✨
+
+Soziologie: |
+  Die Wissenschaft der Gesellschaft und sozialer Prozesse. In Bildungswissenschaften relevant etwa für die Analyse von Ungleichheit, Sozialisation, Institutionen und gesellschaftlichen Bedingungen von Bildung. ✨
+
+Paradigmen: |
+  Ein Paradigma ist eine thematische, methodische und erkenntnisbezogene Gemeinsamkeit einer Scientific Community. ✨
+
+Studienverlaufsdaten: |
+  Daten, die den Verlauf eines Studiums abbilden — z. B. Studienfachwechsel, Studienform (Vollzeit/Teilzeit), Studiendauer, Leistungspunkte, Prüfungsversuche, Unterbrechungen oder Studienabbruch.  ✨
+
+funktionale analphabeten: |
+  Erwachsene, die zwar lesen und schreiben können, dies aber nicht ausreichend beherrschen, um am gesellschaftlichen, beruflichen oder alltagsbezogenen Schriftsprachgebrauch teilzuhaben — etwa keine zusammenhängenden Texte verstehen oder einfache schriftliche Aufgaben selbstständig bewältigen. ✨
+
+präskriptive/normative erkenntnisinteressen: |
+  Erkenntnisinteressen, die fragen, wie etwas sein sollte. Sie begründen Ziele, Werte und Normen, etwa was Schule leisten soll, und können nicht allein empirisch entschieden werden. ✨
+
+deskriptive erkenntnisinteressen: |
+  Erkenntnisinteressen, die Merkmale, Häufigkeiten oder Verteilungen eines Phänomens beschreiben, ohne sich für dessen Ursachen oder Wirkungen zu erklären. ✨
+
+kausale (explanative) erkenntnisinteressen: |
+  Erkenntnisinteressen, die prüfen, ob eine Hypothese, dass eine Größe eine andere beeinflusst, zutrifft. ✨
+
+explorative erkenntnisinteressen: |
+  Erkenntnisinteressen, die potentielle Ursachen eingrenzen wollen. ✨
+
+prädiktive erkenntnisinteressen: |
+  Erkenntnisinteressen, die auf die Vorhersage zukünftiger oder unbekannter Ausprägungen abzielen. Im Mittelpunkt steht die Treffsicherheit einer Vorhersage, nicht die Erklärung ihrer Ursachen. ✨
+
+Experimentelle Studiendesigns: |
+  Studien, in denen Forschende eine unabhängige (beeinflussende)Variable gezielt variieren (z.B. Medikament vs. Placebo; dynamische vs. statische Geometriedarstellung). ✨
+
+Randomisierung: |
+  Zufällige Zuweisung der Teilnehmenden zu den Versuchsbedingungen. Sie sorgt dafür, dass sich die Gruppen vor dem Treatment (im Mittel) in allen Variablen (auch in den nicht erfassten/gemessenen) nicht unterscheiden. Wenn nach dem Treament ein Unterschied zwischen den Gruppen (im Mittel) festgestellt wird, kann dieser deshalb als kausaler Effekt des Treatments interpretiert werden. ✨
+
+Verblindung: |
+  Maßnahme, bei der Teilnehmende (Single-Blind) und gegebenenfalls auch Versuchsleitende (Double-Blind) nicht wissen, welcher Bedingung eine Person zugeteilt ist. Sie soll Erwartungseffekte und verzerrte Messungen verringern. ✨
+
+Kontroll- und Vergleichsgruppen: |
+  Gruppen, die keine Intervention (Kontrollgruppe) oder eine andere Intervention (Vergleichsgruppe) erhalten. ✨
+
+Längsschnittliche Studiendesigns: |
+  Studien, in denen dieselben Personen oder Einheiten zu mehreren Zeitpunkten untersucht werden. ✨
+
+Matching Studien: |
+  Nicht-randomisierte Studien, in denen (z.B.) für jede Teilnehmende Person eine »statistische Zwillingsperson« zugeordnet wird, die sich in relevanten Merkmalen (z.B. Alter, Vorwissen) möglichst ähnlich sind. ✨
+
+Laborstudien: |
+  Untersuchungen in einer kontrollierten, künstlichen Umgebung, in der Störeinflüsse weitgehend ausgeschaltet werden können (z.B. Lehr- Lernlabor). ✨
+
+Direkte Replikationen: |
+  Wiederholung einer Studie mit denselben Methoden, Materialien und Operationalisierungen, um zu prüfen, ob ein Befund erneut auftritt. ✨
+
+Große, möglichst repräsentative Stichproben: |
+  Stichproben mit einer hohen Fallzahl, deren Zusammensetzung die Grundgesamtheit möglichst gut abbildet, also dieselbe Verteilung in möglichst vielen Variablen hat. ✨
+
+Zufallsstichproben: |
+  Stichproben, bei denen jede Einheit der Grundgesamtheit die gleiche Auswahlwahrscheinlichkeit besitzt (z.B. Random Digit Dialling). ✨
+
+Feldstudien: |
+  Untersuchungen in der natürlichen Umgebung der Teilnehmenden (z. B. Schule, Unterricht). Sie haben eine höhere ökologische Validität, oft - lassen sich die Bedingungen jedoch weniger stark kontrollieren. ✨
+
+Metaanalysen: |
+  Verfahren, das die Ergebnisse mehrerer Studien zu einer Fragestellung quantitativ zusammenfasst, um eine gemeinsame Effektgröße zu schätzen. ✨
+
+Konzeptuelle Replikationsstudien: |
+  Wiederholung eines Befunds mit anderen Methoden, Operationalisierungen oder Stichproben. Sie prüfen, ob die zugrunde liegende theoretische Aussage über unterschiedliche Umsetzungen hinweg gilt. ✨

@@ -53,7 +53,7 @@ data <- tibble(
     F,
     F
   ),
-  `Ein Forscherteam untersucht die Anzahl von Schüler*innen mit Deutsch als Zweitsprache in den verschiedenen Stadtteilen von Tübingen. ` = c(
+  `Ein Forscherteam untersucht die Anzahl von Schüler:innen mit Deutsch als Zweitsprache in den verschiedenen Stadtteilen von Tübingen. ` = c(
     T,
     F,
     F,

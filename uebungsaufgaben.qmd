@@ -2,7 +2,7 @@
 title: "Übungsaufgaben"
 ---
 
-## Aufgaben zu Sitzung 1: Bildungswissenschaften? It's a mess!
+## Aufgaben zu Teil 1: Bildungswissenschaften? It's a mess!
 
 ### Disziplinen in den Bildungswissenschaften
 ```{r quiz1, echo = FALSE, message = FALSE, results = "asis"}
@@ -19,4 +19,49 @@ exams2forms(
 exams2forms("exercises_files/erkenntnisinteressen.Rmd", n = 15, converter = "pandoc")
 ```
 
-### Experimentelle
+### Guetkriterien quantitativer Studien erkennen
+```{r quiz3, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms("exercises_files/quantiguetekrit-erkennen.Rmd",
+  n = 19,
+  converter = "pandoc"
+)
+```
+
+### Experimente in den Bildungswissenschaften
+```{r quiz4, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms("exercises_files/exp_quasiexp_nichtexp_studien_r.Rmd", n = 9, converter = "pandoc")
+```
+
+### Fragen zu Gütekriterien und Experimenten
+```{r quiz5, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms("exercises_files/guetekriterien-gemischt-mc.Rmd", n = 9, converter = "pandoc")
+```
+
+
+### Fragen zur Validität von Beispielstudien
+```{r quiz6, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/dem-design-interne-validitaet-zuordnen.Rmd",
+  n = 9,
+  converter = "pandoc"
+)
+```
+
+### Fragen zur Steigerung der internen Validität
+```{r quiz7, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/steigerung-interne-validitaet.Rmd",
+  n = 9,
+  converter = "pandoc"
+)
+```
+
+
+### Fragen zur Steigerung der externen Validität
+```{r quiz8, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/steigerung-externe-validitaet.Rmd",
+  n = 9,
+  converter = "pandoc"
+)
+```
