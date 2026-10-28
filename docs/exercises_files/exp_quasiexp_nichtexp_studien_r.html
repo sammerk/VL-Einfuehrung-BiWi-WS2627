@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>exp_quasiexp_nichtexp_studien_r – Vorlesung: Einführung in das Studium der Bildungswissenschaften</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -32,19 +38,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4ced4f1a4625a48d29fb5bd4e2682e48.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-4ced4f1a4625a48d29fb5bd4e2682e48.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-4ced4f1a4625a48d29fb5bd4e2682e48.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-07c9b6495f3d7b66cf495790bd0419e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-07c9b6495f3d7b66cf495790bd0419e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-07c9b6495f3d7b66cf495790bd0419e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -105,10 +110,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Folien</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../impressum.html"> 
-<span class="menu-text">Impressum</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../uebungsaufgaben.html"> 
 <span class="menu-text">Übungsaufgaben</span></a>
   </li>  
@@ -145,12 +146,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="question" class="level1">
 <h1>Question</h1>
-<p>Der Ankereffekt tritt ein, wenn Menschen mit neuen Informationen (z. B. Zahlenwerten) konfrontiert werden, die sie unbewusst als Anker nutzen, um daran ihre eigene Einschätzung zu orientieren. Es soll untersucht werden, ob die Zweitkorrektur von Abituraufsätzen im Fach Deutsch durch den Ankereffekt verfälscht wird, wenn die Erstkorrekturnote bekannt ist. Dazu werden Lehrer:innen zufällig in zwei Experimentalgruppen eingeteilt. Eine Gruppe erhält Deutschaufsätze mit einer angeblich guten Erstkorrekturnote (Note 2). Die andere Gruppe erhält dieselben Deutschaufsätze jedoch unter Angabe einer schlechten Erstkorrekturnote (Note 5). Es wird untersucht, ob eine bessere Note für Arbeiten mit der angeblichen guten Erstkorrekturnote als mit der angeblich schlechten Erstkorrekturnote vergeben werden.</p>
+<p>Es sollen genauere Erkenntnisse darüber gewonnen werden, wie sich die Stressbewältigung bei Lehrkräften verbessern lässt. Dazu werden umfangreiche Fragebögen zu Persönlichkeitsmerkmalen, Wissen zu Stressbewältigungsstrategien sowie eigenem Stressempfinden bei Lehrkräften mit und ohne vorherige Burnout-Diagnose miteinander verglichen.</p>
 <p><strong>Welches Untersuchungsdesign liegt vor?</strong></p>
 </section>
 <section id="meta-information" class="level1">
 <h1>Meta-information</h1>
-<p>exname: Erkentnisinteresse in Forschungsfrage erkennen extype: schoice exsolution: 100</p>
+<p>exname: Erkentnisinteresse in Forschungsfrage erkennen extype: schoice exsolution: 001</p>
 
 
 </section>
