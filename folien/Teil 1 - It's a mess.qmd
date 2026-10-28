@@ -9,6 +9,9 @@ execute:
   echo: false
 filters:
  - timeline
+glossary:
+  path: ../glossary.yml
+  popup: click
 format:
   unitue-revealjs:
     auto-stretch: false
@@ -284,7 +287,7 @@ flowchart TD
 ```
 
 ## Gütekriterien für »Studien« in den BW {.smaller}
-Während für die nicht-empirischen und qualitativen Forschungsmethoden keine Einigung über einen Kanon an Gütekriterien besteht [@doering2016], gelten in der Community der
+Während für die nicht-empirischen und qualitativen Forschungsmethoden keine Einigung über einen Kanon an Gütekriterien besteht [@flick2010; @steinke1999], gelten in der Community der
 quantitativen Forschungsmethoden die folgenden Kriterien [erweiterte Campbelltradition, @campbell1963] als vergleichsweise unumstritten:
 
 ::: {.columns}
@@ -339,7 +342,7 @@ quantitativen Forschungsmethoden die folgenden Kriterien [erweiterte Campbelltra
 * {{< glossary "Verblindung" >}}
 * {{< glossary "Kontroll- und Vergleichsgruppen" >}}
 * {{< glossary "Längsschnittliche Studiendesigns" >}}
-* {{< glossary "Matching Studien" >}}
+* {{< glossary "Matching-Studien" >}}
 * {{< glossary "Laborstudien" >}}
 * {{< glossary "Direkte Replikationen" >}}
 :::

@@ -26,8 +26,6 @@ website:
         text: Startseite
       - href: folien.qmd
         text: Folien
-      - href: impressum.qmd
-        text: Impressum
       - href: uebungsaufgaben.qmd
         text: Übungsaufgaben
       - href: glossar.qmd
@@ -35,7 +33,7 @@ website:
   page-footer:
     border: false
     left: "Universität Tübingen<br>Wirtschafts- und Sozialwissenschaftliche Fakultät<br>Institut für Erziehungswissenschaft"
-    right: 'Made by [Samuel Merk](https://uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/fachbereich-sozialwissenschaften/erziehungswissenschaft/abteilungen/schulpaedagogik/personal/merk-samuel-prof-dr/) with {{< iconify andrsrxn:heart style="color:#A51E37;" >}} and  quarto {{< iconify simple-icons:quarto >}}'
+    right: 'Made by [Samuel Merk](https://uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/fachbereich-sozialwissenschaften/erziehungswissenschaft/abteilungen/schulpaedagogik/personal/merk-samuel-prof-dr/) with {{< iconify andrsrxn:heart style="color:#A51E37;" >}} and  quarto {{< iconify simple-icons:quarto >}}<br>[Impressum](impressum.qmd)'
 
 format:
   html:

@@ -7,14 +7,25 @@
       "curl *": "allow",
       "cd *": "allow",
       "cat *": "allow",
-      "tail *": "allow"
+      "tail *": "allow",
+      "sed *": "allow",
+      "echo *": "allow",
+      "grep *": "allow",
+      "head *": "allow",
+      "find *": "allow",
+      "python3 *": "allow",
+      "cut *": "allow"
     },
     "edit": {
       "*.bib": "allow",
-      "*.qmd": "allow"
+      "*.qmd": "allow",
+      "*.yml": "allow"
     },
     "executeCode": {
       "*": "allow"
+    },
+    "positronCommand": {
+      "positronSettings.findSettings": "allow"
     }
   }
 }
