@@ -80,7 +80,7 @@ Lehrstuhl Professionsforschung UT
 ## Gestaltungsvorschlag für die Vorlesung {.smaller}
 * Mein Ziel: Nach der Vorlesung
     * verfügen Sie über ein **Vokabular**, das Ihnen erlaubt gewisse **Perspektiven** von Bildungswissenschaftler:innen **nachzuvollziehen** und diese kompetent zu **kritisieren**
-    * können Sie **informiert entscheiden,** ob Sie sich für Bildungswissenschaften interessieren
+    * können Sie **informiert entscheiden können,** ob Sie sich für Bildungswissenschaften interessieren
 * Wie VL *gemeinsam* gestalten?
     * Vorschlag: Mindestens zwei Sitzungen zu **Themen Ihrer Wahl**
     * Vorschlag: Jede Woche (fakultative) Aufgaben während und nach der VL. Anschließend kurze Diskussion deren {{< glossary "constructive alignment" >}} [@biggs1996]
@@ -158,7 +158,7 @@ ggplot(df, aes(x = jahr, y = frequenz_pro_mio)) +
 ## Bildungswissenschaften {.smaller}
 * Der Begriff der »Bildungswissenschaften« scheint ein recht junger zu sein (vgl. Verlaufskurve)
 * Er ist oft {{< glossary "institutionell" >}} oder {{< glossary "disziplinär" >}} {{< glossary "konnotiert" >}} [@terhart2012]
-*   Er wird recht heterogen verwendet [@cramer2019b], im Kontext der Lehrer:innenbildung aber oft als
+*   Er wird recht heterogen verwendet [@cramer2019b], im Kontext der Lehrer:innnenbildung aber oft als
 
     > *»diejenigen wissenschaftlichen Disziplinen und Teildisziplinen, die sich wissenschaftlich in jeder denkbaren theoretischen und methodischen Hinsicht [. . . ] auf Themen, Institutionen, Prozesse, Resultate von Bildung und Ausbildung beziehen«* [@terhart2012, S. 28]
 
@@ -178,13 +178,13 @@ Passende Übungsaufgabe: *Disziplinen in den Bildungswissenschaften*
 :::
 
 ## Paradigmatische Vielfalt in den BW {.smaller}
-> Die disziplinäre Vielfalt der BW bringt eine noch größere Vielfalt bzgl. der zugrunde liegenden {{< glossary "Paradigmen" >}} mit sich. Daher lohnt es sich, ordnende Unterscheidungen zu kennen, um Missverständnisse (und daraus resultierende Enttäuschungen) zu vermeiden.
+> Die disziplinäre Vielfalt der BW bringt eine noch größere Vielfalt bzgl. der zugrunde liegenden {{< glossary "Paradigmen" >}} mit sich. Daher lohnt es sich ordnende Unterscheidungen zu kennen um Missverständnisse (und daraus resultierende Enttäuschungen) zu vermeiden.
 
 ## Erkenntnisinteressen in den BW {.smaller}
-Erkenntnisinteressen können in den Bildungswissenschaften auf die unterschiedlichsten Weisen gegliedert werden. Für eine erste Orientierung können die folgenden Unterscheidungen dienen [@doering2016; @patry2023a; @habermas2019]:
+Erkenntisinteressen können in den Bildungswissenschaften auf die unterscheidlichsten Weisen gegliedert werden. Für eine erste Orientierung können die folgenden Unterscheidungen dienen [@doering2016; @patry2023a; @habermas2019]:
 
 ### Tend. naturwiss. Erkenntnisinteressen:
-* **{{< glossary "Deskriptive Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Welcher Anteil männlicher 15-Jähriger in Deutschland ist {{< glossary "funktionale Analphabeten" >}}?*)
+* **{{< glossary "Deskriptive Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Welcher Anteil männlicher 15-jähriger in Deutschland sind {{< glossary "funktionale Analphabeten" >}}?*)
 * **{{< glossary "Kausale (Explanative) Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Welche Wirkung haben Lautleseverfahren auf die Leseflüssigkeit?*)
 * **{{< glossary "Explorative Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Was könnten Ursachen für Studienabbruch bei Lehramtsstudierenden sein?*)
 * **{{< glossary "Prädiktive Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Wie kann mit administrativen {{< glossary "Studienverlaufsdaten" >}} das Abbruchrisiko vorhergesagt werden?*)
@@ -195,8 +195,8 @@ Passende Übungsaufgabe: *Erkenntnisinteressen in den Bildungswissenschaften*
 
 ## {.smaller}
 ### Tend. geisteswiss. Erkenntnisinteressen:
-* **{{< glossary "Verstehende/Praktische Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Wie erlebt Kind A den Übergang von einer behüteten Grundschule in ein großes Gymnasium?*)
-* **{{< glossary "Emanzipatorische Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Wie reproduzieren Hidden Curricula soziale Ungleichheit?*)
+* **{{< glossary "Verstehende/Praktische Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Wie erlebt Kind A den Übergang von einer behüteten Grundschule in ein großen Gymnasium*)
+* **{{< glossary "Emanzipatorische Erkenntnisinteressen" >}}** (Beispielforschungsfrage: *Wie reproduzieren Hidden Curricula soziale Ungleichheit*)
 
 
 ## Beispiel unklarer Erkenntnisinteressen
@@ -221,7 +221,7 @@ Wie beurteilen Sie die Passung der Erkenntnisinteressen der Influencerin zum Erk
 :::
 
 ## »Studien« in den BW {.smaller}
-Die vielfältigen Erkenntnisinteressen in den BW führen zu noch größerer Vielfalt an Forschungsmethoden. Eine sehr grobe Gliederung liefert die folgende Abbildung:
+Die vielfältigen Erkentnissinteressen in den BW führen zu noch größerer Vielfalt an Forschungsmethoden. Eine sehr grobe Gliederung liefert die folgende Abbbildung:
 
 :::{style="text-align:center"}
 ![Grobe Gliederung der Forschungsmethoden in den BW nach @seel2015a](../images/bw-methoden.svg){width=100%}
