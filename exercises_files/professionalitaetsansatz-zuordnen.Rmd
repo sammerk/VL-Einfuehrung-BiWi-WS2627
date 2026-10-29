@@ -1,0 +1,65 @@
+```{r sampling}
+#| include: false
+library(exams)
+
+saetze <- data.frame(
+  ansatz = c("KO", "KO", "KO", "KO", "ST", "ST",
+             "ST", "ST", "ST", "KO", "KO", "KO"),
+  satz = c(
+    "ist von lernförderlichen Konzepten des Lehrens und Lernens überzeugt, die wissenschaftlich belegt sind.",
+    "verfügt über fachliches Wissen als Voraussetzung für den Wissenserwerb ihrer Schülerinnen und Schüler.",
+    "verfügt über fachdidaktische Fähigkeiten, um den Lernerfolg ihrer Schülerinnen und Schüler wahrscheinlicher zu machen.",
+    "kann ihre Absichten durch zielgerichtetes Handeln im Unterricht verwirklichen.",
+    "weiß um die Ungewissheit des Erfolges ihres Handelns im Beruf.",
+    "erkennt, dass berufliche Situationen Widersprüche und Spannungen für das eigene Handeln mit sich bringen.",
+    "akzeptiert, dass pädagogisches Handeln nicht technologisch steuerbar ist und Erfolg nicht garantiert werden kann.",
+    "geht reflektiert mit Spannungen wie Nähe und Distanz zu den Schülerinnen und Schülern um.",
+    "baut mit ihren Schülerinnen und Schülern ein tragfähiges Arbeitsbündnis auf, das auf Vertrauen beruht.",
+    "verfügt über pädagogisch-psychologisches Wissen, zum Beispiel über Lernprozesse und Leistungsbeurteilung.",
+    "ist hoch motiviert und von der eigenen Wirksamkeit im Unterricht überzeugt.",
+    "kann ihre Klasse effektiv führen und beugt Unterrichtsstörungen vor."
+  )
+)
+
+# Feste Zufallspaarung (ST/KO gemischt), damit über alle Kopien jeder Satz genau einmal
+# vorkommt; Kopie k zeigt Paar k. Zufall nur beim direkten Knit.
+alter_seed <- if (exists(".Random.seed", globalenv())) get(".Random.seed", globalenv())
+set.seed(7316)
+paarung <- matrix(sample(nrow(saetze)), ncol = 2, byrow = TRUE)
+if (is.null(alter_seed)) rm(".Random.seed", envir = globalenv()) else assign(".Random.seed", alter_seed, globalenv())
+
+iter <- exams::match_exams_iteration()
+k <- if (is.null(iter)) sample(nrow(paarung), 1) else ((iter - 1) %% nrow(paarung)) + 1
+wahl <- saetze[paarung[k, ], ]
+optionen <- c("strukturtheoretisch", "kompetenztheoretisch")
+loesung <- ifelse(wahl$ansatz == "ST", optionen[1], optionen[2])
+```
+
+Question
+========
+> Welchem Ansatz zur Beschreibung der Professionalität von Lehrer:innen ist die jeweilige Aussage zuzuordnen?
+
+Eine *professionelle* Lehrkraft ...
+
+1. ... `r wahl$satz[1]`
+   Zuordnung: `r add_cloze(loesung[1], optionen)`
+2. ... `r wahl$satz[2]`
+   Zuordnung: `r add_cloze(loesung[2], optionen)`
+
+`r format_metainfo("answerlist")`
+
+Solution
+========
+Der **strukturtheoretische Ansatz** betont Ungewissheit, Widersprüche und Spannungen im beruflichen Handeln sowie den Umgang mit Krisen und die Bedeutung des Handelns für die Biografie der Schüler:innen. Der **kompetenztheoretische Ansatz** betont Wissen, Fähigkeiten und Überzeugungen, die den Unterrichtserfolg wahrscheinlicher machen.
+
+```{r solutiontext, echo = FALSE, results = "asis"}
+cat(sprintf("%d. ... %s: *%s*\n", 1:2, wahl$satz, loesung), sep = "\n")
+```
+
+Meta-information
+================
+exname: professionalitaetsansatz-zuordnen
+extype: cloze
+exclozetype: `r format_metainfo("type")`
+exsolution: `r format_metainfo("solution")`
+exshuffle: TRUE

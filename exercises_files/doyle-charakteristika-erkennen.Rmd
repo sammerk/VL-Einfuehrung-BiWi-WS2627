@@ -1,0 +1,47 @@
+```{r data generation, echo = FALSE, results = "hide"}
+library(tidyverse)
+library(exams)
+Begriffe <- c("Multidimensionalität", "Simultanität", "Unmittelbarkeit",
+              "Unvorhersehbarkeit", "Öffentlichkeit", "Historizität",
+              "Intransparenz", "Informalität")
+
+Definitionen <-
+  c("Welches Charakteristikum von Unterricht nach Doyle beschreibt, dass viele, sehr verschiedene Ereignisse aufgrund der vielen Personen im Klassenraum stattfinden?", #1
+    "Welches Charakteristikum von Unterricht nach Doyle beschreibt, dass viele Dinge gleichzeitig im Unterricht geschehen?", #2
+    "Welches Charakteristikum von Unterricht nach Doyle beschreibt, dass aufgrund des schnellen Ablaufes von Ereignissen ein sofortiges Lehrer:innenhandeln gefordert ist, welches eine Reflexion erschwert?", #3
+    "Welches Charakteristikum von Unterricht nach Doyle beschreibt, dass Unterricht nicht sicher vorhergesehen und nur beschränkt geplant werden kann?", #4
+    "Welches Charakteristikum von Unterricht nach Doyle beschreibt, dass Interaktionen in einem über den Kreis der direkt Beteiligten hinausgehen?", #5
+    "Welches Charakteristikum von Unterricht nach Doyle beschreibt, dass gegenwärtiges Handeln im Klassenzimmer immer Wurzeln in der Vergangenheit und Auswirkungen in die Zukunft hat?", #6
+    "Welches Charakteristikum von Unterricht nach Doyle beschreibt, dass Lehrperson und Schüler:innen gegenseitig nur erahnen können, was im jeweils anderen vor sich geht, und nur über (störanfällige) Kommunikation aufeinander Einfluss nehmen können?", #7
+    "Welches Charakteristikum von Unterricht nach Doyle beschreibt, dass Unterrichten situativ und nur in geringem Ausmaß standardisierbar oder reglementierbar ist?") #8
+
+# Kopie k erhält Definition k; Zufall nur beim direkten Knit
+iter <- exams::match_exams_iteration()
+wievielte_Definition <- if (is.null(iter)) sample(1:8, 1) else ((iter - 1) %% 8) + 1
+```
+
+
+Question
+========
+`r paste(Definitionen[wievielte_Definition])`
+
+
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(Begriffe, markup = "markdown")
+```
+
+Solution
+========
+
+```{r exsolutiongeneration, echo = F, results='hide'}
+ex_solution <- seq_along(Begriffe) == wievielte_Definition
+```
+
+
+Meta-information
+================
+exname: doyle-charakteristika-erkennen
+extype: schoice
+exsolution: `r mchoice2string(ex_solution)`
+exshuffle: true

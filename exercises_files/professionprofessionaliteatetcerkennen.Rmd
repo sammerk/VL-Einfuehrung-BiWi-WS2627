@@ -1,0 +1,44 @@
+```{r data generation, echo = FALSE, results = "hide"}
+library(tidyverse)
+library(exams)
+Definitionen <-
+  c("Welcher Begriff bezeichnet aus berufssoziologischer Perspektive einen besonderen, herausgehobenen Beruf, der durch Risiken und Ungewissheit in der Ausübung durch Professionelle charakterisiert ist?", #1
+    "Welcher Begriff beschreibt die spezifische Qualität des beruflichen Handelns?", #2
+    "Welcher Begriff bezeichnet das, was eine Profession (emergent und kollektiv) unter Professionalität versteht?", #3
+    "Welcher Begriff bezeichnet entweder den Transformationsprozess eines gewöhnlichen Berufes hin zur Profession oder das individuelle Hervorbringen von Professionalität (Professionellwerden)?") #4
+
+# Kopie k erhält Definition k; Zufall nur beim direkten Knit
+iter <- exams::match_exams_iteration()
+wievielte_Definition <- if (is.null(iter)) sample(1:4, 1) else ((iter - 1) %% 4) + 1
+```
+
+
+Question
+========
+`r paste(Definitionen[wievielte_Definition])`
+
+
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(c("Profession",
+             "Professionalität",
+             "Professionalismus",
+             "Professionalisierung",
+             "Professionelle"),
+           markup = "markdown")
+```
+
+Solution
+========
+
+```{r exsolutiongeneration, echo = F, results='hide'}
+ex_solution <- (1:5) == wievielte_Definition
+```
+
+
+Meta-information
+================
+exname: professionprofessionaliteatetcerkennen
+extype: schoice
+exsolution: `r mchoice2string(ex_solution)`
+exshuffle: true

@@ -1,0 +1,46 @@
+```{r data generation, echo = FALSE, results = "hide"}
+library(exams)
+
+aspekte <- c("Professionswissen", "Motivationale Orientierungen",
+             "Selbstregulative Fähigkeiten", "Überzeugungen und Werthaltungen")
+
+facetten <- list(
+  c("Pädagogisches Wissen", "Fachwissen", "Fachdidaktisches Wissen", "Diagnostisches Wissen"),
+  c("Kontrollüberzeugungen", "Enthusiasmus", "Selbstwirksamkeit"),
+  c("Engagement", "Distanzierungsfähigkeit"),
+  c("Epistemische Überzeugungen", "Lehr-Lerntheoretische Überzeugungen")
+)
+
+# Regulärer Ausdruck pro Aspekt: toleriert Groß-/Kleinschreibung (usecase = FALSE),
+# Singular/Plural, ae/oe/ue-Schreibweisen, "&" statt "und" und Kurzformen
+regex <- c(
+  "^(Professionswissen|Professions-Wissen|Professions Wissen|Professionelles Wissen)$",
+  "^(Motivationale Orientierung(en)?|Motivation|Motivationale Aspekte)$",
+  "^(Selbstregulative F(ä|ae)higkeit(en)?|Selbstregulation|Selbstregulative Kompetenz(en)?)$",
+  "^((Ü|Ue)berzeugung(en)? (und|&|u\\.) Werthaltung(en)?|(Ü|Ue)berzeugungen|Werthaltungen)$"
+)
+
+# Kopie k fragt Aspekt k ab; Zufall nur beim direkten Knit
+iter <- exams::match_exams_iteration()
+k <- if (is.null(iter)) sample(length(aspekte), 1) else ((iter - 1) %% length(aspekte)) + 1
+```
+
+Question
+========
+Nach dem Modell professioneller Kompetenz im Lehrer:innenberuf gibt es vier Aspekte professioneller Kompetenz. Einem dieser Aspekte werden die folgenden Facetten zugeordnet:
+
+`r paste0("* ", facetten[[k]], collapse = "\n")`
+
+Wie heißt dieser Aspekt professioneller Kompetenz?
+
+Solution
+========
+Die Facetten `r paste(facetten[[k]], collapse = ", ")` gehören zum Aspekt **`r aspekte[k]`**.
+
+Die vier Aspekte professioneller Kompetenz sind: `r paste(aspekte, collapse = ", ")`.
+
+Meta-information
+================
+exname: kompetenzaspekte-nennen
+extype: string
+exsolution: `r regex[k]`

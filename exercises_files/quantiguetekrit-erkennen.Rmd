@@ -21,8 +21,7 @@ Question
 answerlist(c("Konstruktvalidität",
              "Interne Validität",
              "Externe Validität",
-             "Statistische Validität",
-             "Ökologische Validität"),
+             "Statistische Validität"),
            markup = "markdown")
 ```
 
@@ -30,10 +29,10 @@ Solution
 ========
 
 ```{r exsolutiongeneration, echo = F, results='hide'}
-ex_solution <- case_when(wievielte_Definition == 1 ~ c(T,F,F,F,F),
-                         wievielte_Definition == 2 ~ c(F,T,F,F,F),
-                         wievielte_Definition == 3 ~ c(F,F,T,F,F),
-                         wievielte_Definition == 4 ~ c(F,F,F,T,F))
+ex_solution <- case_when(wievielte_Definition == 1 ~ c(T,F,F,F),
+                         wievielte_Definition == 2 ~ c(F,T,F,F),
+                         wievielte_Definition == 3 ~ c(F,F,T,F),
+                         wievielte_Definition == 4 ~ c(F,F,F,T))
 ```
 
 

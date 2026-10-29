@@ -65,3 +65,44 @@ exams2forms(
   converter = "pandoc"
 )
 ```
+
+## Aufgaben zu Teil 2: Professionalität
+
+### Charakteristika von Unterricht nach Doyle erkennen
+```{r quiz10, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/doyle-charakteristika-erkennen.Rmd",
+  n = 8,
+  converter = "pandoc"
+)
+```
+
+
+### Profession, Professionalität, Professionalismus und Professionalisierung unterscheiden
+```{r quiz9, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/professionprofessionaliteatetcerkennen.Rmd",
+  n = 4,
+  converter = "pandoc"
+)
+```
+
+### Professionalitätsansätze zuordnen
+```{r quiz11, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/professionalitaetsansatz-zuordnen.Rmd",
+  n = 6,
+  converter = "pandoc"
+)
+```
+
+### Aspekte professioneller Kompetenz nennen
+```{r quiz12, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/kompetenzaspekte-nennen.Rmd",
+  n = 4,
+  regex = TRUE,
+  usecase = FALSE,
+  converter = "pandoc"
+)
+```

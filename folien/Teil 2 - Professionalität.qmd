@@ -79,8 +79,8 @@ Diese Charakteristika [@doyle1986] des Kerngeschäfts Unterricht [@tenorth2006c]
 #set text(size: 18pt)
 $
   "gute Lehrer:innenpersönlichkeit" &==> "erfolgreiche Lehrer:in" \
-  &approx.eq \
-  "gute Lehrer:innenpersönlichkeit" &==> "erfolgreiche Lehrer:in"
+  &arrow.l.r.double.long \
+  "erfolgreiche Lehrer:in" &==> "erfolgreiche Lehrer:in"
 $
 ```
 
