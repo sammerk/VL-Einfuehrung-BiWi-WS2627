@@ -14,7 +14,8 @@
       "head *": "allow",
       "find *": "allow",
       "python3 *": "allow",
-      "cut *": "allow"
+      "cut *": "allow",
+      "awk *": "allow"
     },
     "edit": {
       "*.bib": "allow",

@@ -56,7 +56,7 @@ Nach Doyle [-@doyle1986] ist Unterricht durch die folgenden Eigenschaften in sei
 |                        | in die Zukunft.                                                                                |
 +------------------------+------------------------------------------------------------------------------------------------+
 | Intransparenz          | Lehrperson und Schüler:innen können gegenseitig nur erahnen, was im jeweils anderen vor sich   |
-|                        | gehen und nur über (störanfällige) Kommunikation aufeinander Einfluss nehmen.                  |
+|                        | geht und nur über (störanfällige) Kommunikation aufeinander Einfluss nehmen.                   |
 +------------------------+------------------------------------------------------------------------------------------------+
 | Informalität           | Unterrichten ist situativ und nur in geringem Ausmaß standardisierbar oder reglementierbar.    |
 +------------------------+------------------------------------------------------------------------------------------------+
@@ -68,9 +68,9 @@ Nach Doyle [-@doyle1986] ist Unterricht durch die folgenden Eigenschaften in sei
 
 
 ## Anforderungen an Lehrer:innen
-Diese Charakteristika [@doyle1986] des Kerngeschäfts Unterricht [@tenorth2006c] stehen teilweise im Widerspruch zu personalistischen und praktizistischen Metaphern der Lehrer:innenberufs, nach denen professionelle Lehrer:innen »gute, erfahrene Handwerker«, bzw. »begnadete Erzieher« [@terhart2019] sind:
+Diese Charakteristika [@doyle1986] des Kerngeschäfts Unterricht [@tenorth2006c] stehen teilweise im Widerspruch zu personalistischen und praktizistischen Metaphern des Lehrer:innenberufs, nach denen professionelle Lehrer:innen »gute, erfahrene Handwerker«, bzw. »begnadete Erzieher« [@terhart2019] sind:
 
-* Die Tragfähigkeit der praktizistischen Metapher wird vorallem bzgl. des sehr großen Möglichkeitsraumes kritisiert: Im Gegensatz zu etwa der Tätigkeit einer Pilotin, sind einige Tätigkeiten von LuL wesentlich weniger standardisierbar, weshalb »Checklisten« so umfangreich wären, dass sie nicht mehr hilfreich sind
+* Die Tragfähigkeit der praktizistischen Metapher wird vor allem bzgl. des sehr großen Möglichkeitsraumes kritisiert: Im Gegensatz zu etwa der Tätigkeit einer Pilotin, sind einige Tätigkeiten von LuL wesentlich weniger standardisierbar, weshalb »Checklisten« so umfangreich wären, dass sie nicht mehr hilfreich sind
 * Personalistische Metaphern werden als {{< glossary trivial display="trivial" >}} kritisiert [@bromme2008d], da {{< glossary Prämisse display="Prämisse" >}} und {{< glossary Konklusion display="Konklusion" >}} fast gleich sind:
 
 ```{typst}
@@ -136,7 +136,7 @@ Hervorbringen von Professionalität (Professionellwerden). Heute wird unter Prof
 
 ##  Topologische Ansätze
 :::{style="font-size: 80%;"}
-Seit den 70er Jahren untersuchen Bildungswissenschaftler:innen [@bromme2008d], in welchen Ausmaß sich Unterrichtserfolge (meist Schüler:innenleistung) durch Merkmale der Lehrer:innen prädizieren lassen. Diese Merkmale werden dann entlang psychologischer Theorien {{< glossary "Topologie" display="topologisiert">}} [@baumert2006; @shulman1986]. Weil angenommen wird, dass die (topologisierten) Merkmale bei höherer Ausprägung die erfolgreiche Bewältigung charakteristischer Anforderung der Profession wahrscheinlicher machen, werden die topologischen Ansätze auch als kompetenztheoretische Ansätze bezeichnet.
+Seit den 70er Jahren untersuchen Bildungswissenschaftler:innen [@bromme2008d], in welchem Ausmaß sich Unterrichtserfolge (meist Schüler:innenleistung) durch Merkmale der Lehrer:innen prädizieren lassen. Diese Merkmale werden dann entlang psychologischer Theorien {{< glossary "Topologie" display="topologisiert">}} [@baumert2006; @shulman1986]. Weil angenommen wird, dass die (topologisierten) Merkmale bei höherer Ausprägung die erfolgreiche Bewältigung charakteristischer Anforderungen der Profession wahrscheinlicher machen, werden die topologischen Ansätze auch als kompetenztheoretische Ansätze bezeichnet.
 :::
 ```{typst}
 //| label: fig-topologie
@@ -252,7 +252,7 @@ Seit den 70er Jahren untersuchen Bildungswissenschaftler:innen [@bromme2008d], i
 
   // Überzeugungen und Werthaltungen
   #lbl(-470, 5, "Epistemische", "Überzeugungen")
-  #lbl(-420, -30, "Lehr- lerntheoretische", "Überzeugungen")
+  #lbl(-420, -30, "Lehr-Lerntheoretische", "Überzeugungen")
   #lbl(-370, 10, "…")
 
   // Professionswissen

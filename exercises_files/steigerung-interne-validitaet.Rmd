@@ -7,7 +7,7 @@ Eine Forschergruppe möchte sich die Vorteile der Verwendung von dynamischer Geo
 ```{r questionlist, echo = FALSE, results = "asis"}
 library(exams)
 answerlist(c(
-  "Wahl eines randomiserten experimentellen Forschungsdesigns mit Kontrollgrupe",
+  "Wahl eines randomisierten experimentellen Forschungsdesigns mit Kontrollgruppe",
   "Alle Mädchen mit GeoGebra unterrichten und alle Jungen ohne",
   "Alle Lehrerinnen unterrichten mit GeoGebra und alle Lehrer ohne",
   "Kontrolle von Störvariablen, wie Vorwissen der Schüler:innen",

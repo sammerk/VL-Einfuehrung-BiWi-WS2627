@@ -9,9 +9,9 @@ title: "Organisatorisches"
 * ECTS-Punkte: 6
 * Arbeitsaufwand
     * Kontaktzeit: 30 h / 2 SWS
-    * Selbststudium: 150h
+    * Selbststudium: 150 h
     * Arbeitsaufwand: 180 h
-* Lehr- /Lernformen: Vorlesung, Praktikum, Portfolio
+* Lehr-/Lernformen: Vorlesung, Praktikum, Portfolio
 * Lehrveranstaltungen
     * Vorlesung »*Einführung in das Studium der Bildungswissenschaften*«
 * Modulinhalt: Die Vorlesung führt in das Tübinger Lehramtsstudium (Themen und Organisation) und in das Studium der Bildungswissenschaften ein. Dabei werden ausgewählte Themen- und Aufgabenbereiche des Lehrerberufs (z.B. Arbeitsplatz Schule, Aufgaben des Lehrerberufs, Professionalisierungstheorien) sowie zentrale Themenbereiche der Mikro-, Meso- und Makroebene (Unterricht, Schule, Schulsystem) vertieft. Zur Einführung zählen grundlegende Begriffe und Theorien (z.B. Unterrichtstheorie/Didaktik, Bildung, Bildungsungleichheit, Erziehung, Sozialisation, Anthropologie). Die Vorlesung leistet eine Hinführung zum Orientierungspraktikum (z.B. Kriterien und Methoden der Beobachtung und Dokumentation) sowie zu theoriebezogenem, empirischem und entwicklungsbezogenem Arbeiten in den Bildungswissenschaften. Das verpflichtende Portfolio wird anhand spezifischer Ziele, Funktionen und Verfahren der Dokumentation eingeführt.
@@ -29,7 +29,7 @@ title: "Organisatorisches"
 * Findet am 03.02.2027 um 14:15 im Kupferbau auf Chromebooks des E-Prüfungszentrums statt
 * Dauert 60 Minuten
 * Enthält Multiple Choice Fragen, Single Choice Fragen, Kurzantworten, offene Fragen
-* Enthält einen Zweittermin (bei nicht-Bestehen, Terminüberschneidung) Anfang April 2027
+* Enthält einen Zweittermin (bei Nichtbestehen, Terminüberschneidung) Anfang April 2027
 :::
 
 ## Kontaktaufnahme

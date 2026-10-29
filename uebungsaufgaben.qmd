@@ -19,7 +19,7 @@ exams2forms(
 exams2forms("exercises_files/erkenntnisinteressen.Rmd", n = 15, converter = "pandoc")
 ```
 
-### Guetkriterien quantitativer Studien erkennen
+### Gütekriterien quantitativer Studien erkennen
 ```{r quiz3, echo = FALSE, message = FALSE, results = "asis"}
 exams2forms("exercises_files/quantiguetekrit-erkennen.Rmd",
   n = 19,
