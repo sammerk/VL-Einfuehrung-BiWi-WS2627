@@ -6,7 +6,7 @@ title-block-style: none
 ---
 
 ::: hero
-# **Einführung in das Studium der Bildungswissenschaften**
+# **Einführung in das Studium der Bildungs&shy;wissen&shy;schaften**
 
 Sammlung von Folien, Übungsaufgaben und Organisatorischem.
 :::
