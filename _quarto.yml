@@ -33,7 +33,8 @@ website:
   page-footer:
     border: false
     left: "Universität Tübingen<br>Wirtschafts- und Sozialwissenschaftliche Fakultät<br>Institut für Erziehungswissenschaft"
-    right: 'Made by [Samuel Merk](https://uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/fachbereich-sozialwissenschaften/erziehungswissenschaft/abteilungen/schulpaedagogik/personal/merk-samuel-prof-dr/) with {{< iconify andrsrxn:heart style="color:#A51E37;" >}} and  quarto {{< iconify simple-icons:quarto >}}<br>[Impressum](impressum.qmd)'
+    right: 'Made by [Samuel Merk](https://uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/fachbereich-sozialwissenschaften/erziehungswissenschaft/abteilungen/schulpaedagogik/personal/merk-samuel-prof-dr/) with {{< iconify andrsrxn:heart style="color:#A51E37;" >}} and  quarto {{< iconify simple-icons:quarto >}}<br>
+    Alle Materialien sind quelloffen [{{< iconify fa-brands:github >}}](https://github.com/sammerk/VL-Einfuehrung-BiWi-WS2627) und {{< iconify fa-brands:creative-commons >}}{{< iconify fa-brands:creative-commons-by >}} lizensiert<br>[Impressum](impressum.qmd)'
 
 format:
   html:
