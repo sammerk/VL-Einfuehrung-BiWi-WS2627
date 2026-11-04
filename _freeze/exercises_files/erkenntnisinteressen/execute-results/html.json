@@ -1,0 +1,15 @@
+{
+  "hash": "39cb5f7254a1101118899eb0252329ed",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n\n::: {.cell}\n\n:::\n\n\n\nQuestion\n========\n*Ein Forscherteam erfasst die Altersstruktur der angestellten Lehrkräfte zum Stichtag 01.01.2022.*\n\nWird dabei eine deskriptive, explanative, explorative, normative oder prädiktive Studie durchgeführt?\n\n\\begin{answerlist}\n  \\item Deskriptive Studie\n  \\item Explanative Studie\n  \\item Explorative Studie\n  \\item Normative Studie\n  \\item Prädiktive Studie\n\\end{answerlist}\n\n\n\n\nMeta-information\n================\nexname: Erkenntnisinteresse in Forschungsfrage erkennen\nextype: schoice\nexsolution: 10000\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

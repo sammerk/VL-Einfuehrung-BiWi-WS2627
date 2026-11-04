@@ -1,0 +1,15 @@
+{
+  "hash": "70945dcc09f09ed712dec9d30597f697",
+  "result": {
+    "engine": "knitr",
+    "markdown": "Question\n========\nEine Forscherin untersucht, ob die Verwendung dynamischer Geometriesoftware (z.B. GeoGebra) den Erwerb von konzeptuellem Wissen fördert. Dazu erfasst sie Schülerleistungen der 7. Klasse $N = 63$ anhand eines entsprechenden Tests nach der Durchführung der Unterrichtseinheit zum \"Satz vom Umkreis\" bei Lehrerinnen, die entweder mit oder ohne die dynamische Geometriesoftware arbeiten und über diesen Einsatz auch selbst entscheiden konnten. Es konnte ein statistisch bedeutsamer Unterschied zugunsten der Lernenden, die GeoGebra genutzt haben, nachgewiesen werden.\nEine Forschergruppe möchte sich die Vorteile der Verwendung von dynamischer Geometriesoftware genauer anschauen. Sie nutzt diese Studie als Grundlage für weitere Forschungsbemühungen. Sie will jedoch die _externe Validität_ erhöhen. Welche Maßnahmen sind hierzu zielführend?\n\n\n\n\n\\begin{answerlist}\n  \\item Erhöhung der Stichprobengröße\n  \\item Die Studie im Labor durchführen\n  \\item Randomisierte Zuteilung der Teilnehmenden zu Lehrer:innen mit und ohne Nutzung der dynamischen Geometriesoftware\n  \\item Alle Mädchen mit GeoGebra unterrichten und alle Jungen ohne\n\\end{answerlist}\n\nSolution\n========\n\n\n::: {.cell}\n\n:::\n\n\n\nMeta-information\n================\nexname: Steigerung_externe_Validitaet\nextype: mchoice\nexsolution: 1000\nexshuffle: true\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

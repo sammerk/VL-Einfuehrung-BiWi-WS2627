@@ -1,0 +1,15 @@
+{
+  "hash": "2daa6e589f287d960ba7bf7c79a9104f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "Question\n========\nEine Forscherin untersucht, ob die Verwendung dynamischer Geometriesoftware (z.B. GeoGebra) den Erwerb von konzeptuellem Wissen fördert. Dazu erfasst sie Schülerleistungen der 7. Klasse $N = 63$ anhand eines entsprechenden Tests nach der Durchführung der Unterrichtseinheit zum \"Satz vom Umkreis\" bei Lehrerinnen, die **von sich aus** entweder mit oder ohne die dynamische Geometriesoftware arbeiten und über diesen Einsatz auch selbst entscheiden konnten. Es konnte ein bedeutsamer Unterschied zugunsten der Lernenden, die GeoGebra genutzt haben, nachgewiesen werden.\nEine Forschergruppe möchte sich die Vorteile der Verwendung von dynamischer Geometriesoftware genauer anschauen. Sie nutzt diese Studie als Grundlage für weitere Forschungsbemühungen. Sie möchte jedoch die _interne Validität_ erhöhen. Welche Maßnahmen sind hierzu zielführend?\n\n\n\\begin{answerlist}\n  \\item Wahl eines randomisierten experimentellen Forschungsdesigns mit Kontrollgruppe\n  \\item Alle Mädchen mit GeoGebra unterrichten und alle Jungen ohne\n  \\item Alle Lehrerinnen unterrichten mit GeoGebra und alle Lehrer ohne\n  \\item Kontrolle von Störvariablen, wie Vorwissen der Schüler:innen\n  \\item Die Studie im Labor durchführen\n\\end{answerlist}\n\n\nSolution\n========\n\n\n::: {.cell}\n\n:::\n\n\n\n\nMeta-information\n================\nexname: Steigerung_interne_Validitaet\nextype: mchoice\nexsolution: 10011\nexshuffle: 3\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

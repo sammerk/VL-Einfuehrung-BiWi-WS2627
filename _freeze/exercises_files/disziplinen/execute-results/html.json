@@ -1,0 +1,15 @@
+{
+  "hash": "8f672f8968581d06ccb6ca5a11316419",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n\n::: {.cell}\n\n:::\n\n\n\nQuestion\n========\nIm Folgenden sehen Sie einen Abstract eines Beitrags in einem wissenschaftlichen Journal. Schätzen Sie ein, ob das Journal von einer Gesellschaft für Psychologie, Erziehungswissenschaft oder Soziologie getragen wird.\n\n> Die vorliegende Untersuchung ist ein empirischer Beitrag zur Erklärung der klassenspezifischen Bildungsungleichheit beim Übergang von der Grundschule auf die weiterführenden Schullaufbahnen in der Sekundarstufe I. Neueren Erklärungsansätzen zufolge basiert die Bildungsungleichheit neben historischen Bedingungen und institutionellen Regelungen des Bildungssystems vor allem auf Entscheidungen der Eltern. Demnach hängen klassendifferenzierende Bildungschancen mit klassenspezifischen Unterschieden in der Kosten-Nutzen-Abwägung für höhere Bildung und darauf basierenden Bildungsentscheidungen zusammen, die dann — vermittelt über die Selektions- und Allokationsfunktion des Bildungssystems und den Ressourcen des Elternhauses — zur sozialen Ungleichheit von Bildungschancen führen. Für die empirische Überprüfung der Modellaussagen wird ein zweistufiges Entscheidungs- und Prozessmodell vorgeschlagen. Mit Hilfe von Paneldaten und logistischen Regressionen wird unter besonderer Berücksichtigung von sozialer Herkunft zunächst die Entstehung von Bildungsabsichten und danach der tatsächliche Bildungsübergang detailliert untersucht. Insgesamt bestätigen die empirischen Befunde die von den werterwartungs- und entscheidungstheoretischen Erklärungsansätzen angenommenen Mechanismen und Prozesse der Bildungsentscheidung und des Bildungsübergangs. Weitgehend offen ist jedoch die Frage nach der historischen Dauerhaftigkeit der klassenspezifischen Bildungsungleichheit trotz Bildungsexpansion und Schulreformen.\n\n\\begin{answerlist}\n  \\item Psychologie\n  \\item Soziologie\n  \\item Erziehungswissenschaft\n\\end{answerlist}\n\n\n\n\nMeta-information\n================\nexname: Erkenntnisinteresse in Forschungsfrage erkennen\nextype: schoice\nexsolution: 010\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

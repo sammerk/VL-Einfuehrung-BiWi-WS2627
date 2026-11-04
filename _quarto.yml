@@ -52,3 +52,6 @@ glossary:
   path: glossary.yml
   popup: click
   show: true
+
+execute:
+  freeze: auto

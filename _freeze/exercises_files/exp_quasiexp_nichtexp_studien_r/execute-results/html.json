@@ -1,0 +1,15 @@
+{
+  "hash": "14ef53d17e613a9a69432c2db32ca799",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n\n::: {.cell}\n\n:::\n\n\n\nQuestion\n========\nEs soll untersucht werden, welchen Zusammenhang es zwischen Pausen beim Lernen und der Lernleistung gibt. Dazu werden Studentinnen und Studenten eines Seminars miteinander verglichen. Die Studentinnen werden aufgefordert nach jeweils 30 Minuten Lernzeit eine Pause von 5 Minuten einzulegen. Die Studenten sollen die Zeit ohne Unterbrechung zum Lernen nutzen. Zusätzlich wird die Lernzeit erfasst. Die Lernleistung wird anhand der erreichten Punktzahl in einer Abschlussklausur bewertet.\n\n**Welches Untersuchungsdesign liegt vor?**\n\n\n\\begin{answerlist}\n  \\item Eine experimentelle Studie\n  \\item Eine quasi-experimentelle Studie\n  \\item Eine nicht-experimentelle Studie\n\\end{answerlist}\n\n\n\n\nMeta-information\n================\nexname: Erkenntnisinteresse in Forschungsfrage erkennen\nextype: schoice\nexsolution: 010\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

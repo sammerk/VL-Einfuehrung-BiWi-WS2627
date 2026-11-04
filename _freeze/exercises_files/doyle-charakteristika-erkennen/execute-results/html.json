@@ -1,0 +1,15 @@
+{
+  "hash": "8e4b29b0cc81a5a63a3210f4799f336e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.1     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.3     ✔ tibble    3.3.1\n✔ lubridate 1.9.5     ✔ tidyr     1.3.2\n✔ purrr     1.2.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n```\n\n\n:::\n:::\n\n\n\nQuestion\n========\nWelches Charakteristikum von Unterricht nach Doyle beschreibt, dass Lehrperson und Schüler:innen gegenseitig nur erahnen können, was im jeweils anderen vor sich geht, und nur über (störanfällige) Kommunikation aufeinander Einfluss nehmen können?\n\n\n\n\\begin{answerlist}\n  \\item Multidimensionalität\n  \\item Simultanität\n  \\item Unmittelbarkeit\n  \\item Unvorhersehbarkeit\n  \\item Öffentlichkeit\n  \\item Historizität\n  \\item Intransparenz\n  \\item Informalität\n\\end{answerlist}\n\nSolution\n========\n\n\n::: {.cell}\n\n:::\n\n\n\nMeta-information\n================\nexname: doyle-charakteristika-erkennen\nextype: schoice\nexsolution: 00000010\nexshuffle: true\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

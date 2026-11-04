@@ -1,0 +1,15 @@
+{
+  "hash": "66cb744d4db7d13629d277019807c883",
+  "result": {
+    "engine": "knitr",
+    "markdown": "Question\n========\n\n\n::: {.cell}\n\n:::\n\n\n\nIm Folgenden werden drei verschiedene Studien zum selben Thema vorgestellt. Welche zeigt die höchste/niedrigste interne Validität?\n\n**Studie A**\n*Es soll untersucht werden, welchen Zusammenhang es zwischen Pausen beim Lernen und der Lernleistung gibt. Dazu werden die Studierenden in einem Seminar zufällig zwei Gruppen zugeteilt. Die Gesamtlernzeit wird für beide Gruppen auf 3 h begrenzt. Gruppe 1 soll nach jeweils 30 Minuten eine Pause von 5 Minuten machen, Gruppe 2 soll die Zeit ohne Unterbrechung zum Lernen nutzen. Die Lernleistung wird anhand der erreichten Punktzahl in einer Abschlussklausur bewertet.*\n\n**Studie B**\n*Es soll untersucht werden, welchen Zusammenhang es zwischen Pausen beim Lernen und der Lernleistung gibt. Dazu werden die Studierenden eines Seminars während ihrer Lernzeit beobachtet. Es wird registriert, wie viel Zeit sie für das Lernen der Inhalte aufwenden und wie viele Lernpausen sie machen. Die Lernleistung wird anhand der erreichten Punktzahl in einer Abschlussklausur bewertet.*\n\n**Studie C**\n*Es soll untersucht werden, welchen Zusammenhang es zwischen Pausen beim Lernen und der Lernleistung gibt. Dazu werden Studentinnen und Studenten eines Seminars miteinander verglichen. Die Studentinnen werden aufgefordert nach jeweils 30 Minuten Lernzeit eine Pause von 5 Minuten einzulegen. Die Studenten sollen die Zeit ohne Unterbrechung zum Lernen nutzen. Zusätzlich wird die Lernzeit erfasst. Die Lernleistung wird anhand der erreichten Punktzahl in einer Abschlussklausur bewertet.*\n\n\n\\begin{answerlist}\n  \\item Studie A = höchste interne Validität & Studie B niedrigste interne Validität\n  \\item Studie A = höchste interne Validität & Studie C niedrigste interne Validität\n  \\item Studie B = höchste interne Validität & Studie A niedrigste interne Validität\n  \\item Studie B = höchste interne Validität & Studie C niedrigste interne Validität\n  \\item Studie C = höchste interne Validität & Studie A niedrigste interne Validität\n  \\item Studie C = höchste interne Validität & Studie B niedrigste interne Validität\n\\end{answerlist}\n\nSolution\n========\n\n\nMeta-information\n================\nexname: IntVal_Exp_Quasiexp_Nichtexp_zuordnen\nextype: schoice\nexsolution: 100000\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

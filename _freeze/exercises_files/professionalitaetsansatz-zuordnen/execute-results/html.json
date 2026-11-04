@@ -1,0 +1,15 @@
+{
+  "hash": "d1d9ff2855684c8f2e498e2859378629",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n\nQuestion\n========\n> Welchem Ansatz zur Beschreibung der Professionalität von Lehrer:innen ist die jeweilige Aussage zuzuordnen?\n\nEine *professionelle* Lehrkraft ...\n\n1. ... akzeptiert, dass pädagogisches Handeln nicht technologisch steuerbar ist und Erfolg nicht garantiert werden kann.\n   Zuordnung: ##ANSWER1##\n2. ... weiß um die Ungewissheit des Erfolges ihres Handelns im Beruf.\n   Zuordnung: ##ANSWER2##\n\n\\begin{answerlist}\n  \\item strukturtheoretisch\n  \\item kompetenztheoretisch\n  \\item strukturtheoretisch\n  \\item kompetenztheoretisch\n\\end{answerlist}\n\nSolution\n========\nDer **strukturtheoretische Ansatz** betont Ungewissheit, Widersprüche und Spannungen im beruflichen Handeln sowie den Umgang mit Krisen und die Bedeutung des Handelns für die Biografie der Schüler:innen. Der **kompetenztheoretische Ansatz** betont Wissen, Fähigkeiten und Überzeugungen, die den Unterrichtserfolg wahrscheinlicher machen.\n\n1. ... akzeptiert, dass pädagogisches Handeln nicht technologisch steuerbar ist und Erfolg nicht garantiert werden kann.: *strukturtheoretisch*\n\n2. ... weiß um die Ungewissheit des Erfolges ihres Handelns im Beruf.: *strukturtheoretisch*\n\nMeta-information\n================\nexname: professionalitaetsansatz-zuordnen\nextype: cloze\nexclozetype: schoice|schoice\nexsolution: 10|10\nexshuffle: TRUE\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
