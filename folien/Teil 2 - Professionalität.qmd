@@ -62,11 +62,13 @@ Nach Doyle [-@doyle1986] ist Unterricht durch die folgenden Eigenschaften in sei
 +------------------------+------------------------------------------------------------------------------------------------+
 :::
 
+
+## {.center}
 ### Charakteristika des Unterrichts $\overset{?}{\Rightarrow}$ Anforderungen an LuL
 > Welche Anforderungen an die Qualitäten von Lehrkräften lassen sich aus diesen Charakteristika ableiten?
 
+> Formulieren Sie  Eigenschaften von Lehrkräften, die diese Anforderungen notwendig machen unter [https://bab.si/biwi-merk-2627](https://bab.si/biwi-merk-2627) und »voten« Sie die Vorschläge Ihrer Kommiliton:innen.
 
-## {background-iframe="../apps/effsize-teacherqual.html" background-interactive=true}
 
 # Anforderungen an Lehrer:innen
 ## Anforderungen an Lehrer:innen
@@ -104,17 +106,17 @@ Profession (Professionwerdung); wird er hingegen auf die Professionellen bezogen
 Hervorbringen von Professionalität (Professionellwerden). Heute wird unter Professionalisierung
 überwiegend die (individuelle) Entwicklung von Professionalität verstanden.*« [@cramer2025professionalitaet]
 
-# Drei wiss. Ansätze zur Beschreibung der Professionalität von Lehrer:innen
+# Zwei wiss. Ansätze zur Beschreibung der Professionalität von Lehrer:innen
 
 ## Studien zur Lehrer:innenexpertise
-
 
 <center>
 [![Unterrichtsvideo: Funktionales und sicheres Experimentieren](../images/thumbnail-video-experimentieren.png){width=80%}](https://tetfolio.fu-berlin.de/tet/focus-video?vid=184)
 </center>
 
 
-> Beschreiben Sie das beobachtete Unterrichtsgeschehen *charakterisierend* unter https://bab.si/biwi-merk-2627
+
+> Beschreiben Sie das beobachtete Unterrichtsgeschehen *charakterisierend* unter [https://bab.si/biwi-merk-2627](https://bab.si/biwi-merk-2627)
 
 
 
@@ -124,7 +126,7 @@ Hervorbringen von Professionalität (Professionellwerden). Heute wird unter Prof
 
 
 
-
+## {background-iframe="../apps/effsize-teacherqual.html" background-interactive=true}
 
 
 ## Studien zur Lehrer:innenexpertise
