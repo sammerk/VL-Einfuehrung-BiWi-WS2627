@@ -62,10 +62,11 @@ Nach Doyle [-@doyle1986] ist Unterricht durch die folgenden Eigenschaften in sei
 +------------------------+------------------------------------------------------------------------------------------------+
 :::
 
-##
 ### Charakteristika des Unterrichts $\overset{?}{\Rightarrow}$ Anforderungen an LuL
 > Welche Anforderungen an die Qualitäten von Lehrkräften lassen sich aus diesen Charakteristika ableiten?
 
+
+## {background-iframe="../apps/effsize-teacherqual.html" background-interactive=true}
 
 ## Anforderungen an Lehrer:innen
 Diese Charakteristika [@doyle1986] des Kerngeschäfts Unterricht [@tenorth2006c] stehen teilweise im Widerspruch zu personalistischen und praktizistischen Metaphern des Lehrer:innenberufs, nach denen professionelle Lehrer:innen »gute, erfahrene Handwerker«, bzw. »begnadete Erzieher« [@terhart2019] sind:
