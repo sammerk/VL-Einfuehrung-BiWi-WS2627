@@ -78,7 +78,7 @@ ui <- page_fillable(
      .c-btn    { grid-column: 1 / span 2; grid-row: 2; }
      .c-plot-a { grid-column: 3;          grid-row: 1 / span 3; }
      .c-plot-b { grid-column: 4;          grid-row: 1 / span 3; }
-     @media (max-width: 800px) {
+     @media (max-width: 400px) {
        body.bslib-page-fill { height: auto !important; min-height: 100dvh; overflow-y: auto !important; }
        .app-grid { flex: none; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: auto; }
        .c-sl-a   { grid-column: 1 / span 2; grid-row: 1; }

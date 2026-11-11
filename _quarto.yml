@@ -3,7 +3,8 @@ project:
   output-dir: docs
   resources:
     - _extensions/sammerk/unitue/ut-logo.png
-    - apps/effsize-teacherqual.html
+    - images/
+    - apps/
 
 lang: de
 
@@ -52,6 +53,3 @@ glossary:
   path: glossary.yml
   popup: click
   show: true
-
-execute:
-  freeze: auto

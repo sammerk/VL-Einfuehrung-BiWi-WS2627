@@ -12,6 +12,7 @@ execute:
 glossary:
   path: ../glossary.yml
   popup: click
+engine: knitr
 format:
   unitue-revealjs:
     auto-stretch: false
@@ -24,11 +25,19 @@ format:
     # title-image: "../test.png"
 ---
 
+```{r}
+#| include: false
+knitr::knit_engines$set(typst = function(options) {
+  knitr::asis_output(paste0("\n```{.typst-render-cell}\n", paste(options[["code"]], collapse = "\n"), "\n```\n"))
+})
+```
+
 ## In diesem Teil {{< iconify fa-solid:calendar-alt >}} {.center}
 * Charakteristika des Lehrer:innenberufs
 * Profession - Professionalität - Professionalisierung
 * Struktur- und kompetenztheoretischer Ansatz der Professionalität von Lehrer:innen
 * Einblicke in Forschungsergebnisse
+
 
 ##  {background-iframe="https://cdn.wordart.com/iframe/hhnsou380o8n" background-interactive=true}
 
@@ -106,41 +115,293 @@ Profession (Professionwerdung); wird er hingegen auf die Professionellen bezogen
 Hervorbringen von Professionalität (Professionellwerden). Heute wird unter Professionalisierung
 überwiegend die (individuelle) Entwicklung von Professionalität verstanden.*« [@cramer2025professionalitaet]
 
-# Zwei wiss. Ansätze zur Beschreibung der Professionalität von Lehrer:innen
+# 1. Ansatz: Expertiseforschung
 
-## Studien zur Lehrer:innenexpertise
+## Expertiseforschung
+### Liveexperiment
 
-<center>
-[![Unterrichtsvideo: Funktionales und sicheres Experimentieren](../images/thumbnail-video-experimentieren.png){width=80%}](https://tetfolio.fu-berlin.de/tet/focus-video?vid=184)
-</center>
-
+[![](../images/thumbnail-video-experimentieren.png){width=50%}](https://tetfolio.fu-berlin.de/tet/focus-video?vid=184)
 
 
-> Beschreiben Sie das beobachtete Unterrichtsgeschehen *charakterisierend* unter [https://bab.si/biwi-merk-2627](https://bab.si/biwi-merk-2627)
-
-
-
+> Beschreiben Sie das beobachtete Unterrichtsgeschehen *charakterisierend* unter [https://bab.si/biwi-merk-2627](https://bab.si/biwi-merk-2627). Verwenden Sie dazu mindestens zwei vollständige Sätze 😇. Ihre Ergebnisse werden später aufgegriffen.
 
 
 <!-- https://tetfolio.fu-berlin.de/tet/focus-video?vid=184 -->
 
+## Expertiseforschung
+
+::: {.columns}
+
+::: {.column width="29%"}
+
+```{typst}
+//| label: fig-aufstellunglogisch
+//| fig-align: left
+// Aufstellung 4-2-3-1 im UT-Farbschema
+#let karminrot = rgb("#A51E37")
+#let mattgold = rgb("#B4A069")
+#let anthrazit = rgb("#32414B")
+#let sand = rgb("#EEE9DD")
+
+#set text(font: ("Helvetica Neue", "Arial", "Liberation Sans"), fill: anthrazit)
+
+#let W = 8cm
+#let H = 11cm
+#set page(width: auto, height: auto, margin: 0pt)
+#let line-style = 1.2pt + mattgold
+
+#let player(x, y, name, pos, gk: false) = place(
+  top + left,
+  dx: x * W - 2.5cm,
+  dy: y * H - 0.6cm,
+  box(width: 5cm, align(center, box(
+    fill: if gk { mattgold } else { sand },
+    radius: 4pt,
+    inset: (x: 6pt, y: 4pt),
+    text(size: 10pt, weight: "bold", fill: anthrazit, name),
+  ))),
+)
+
+#align(center)[
+  #box(width: W, height: H, {
+    // Spielfeld
+    place(top + left, rect(width: W, height: H, fill: anthrazit, stroke: 2pt + mattgold, radius: 4pt))
+    // Mittellinie und Mittelkreis
+    place(top + left, dy: H / 2, line(length: W, stroke: line-style))
+    place(top + left, dx: W / 2 - 1.6cm, dy: H / 2 - 1.6cm, circle(radius: 1.6cm, stroke: line-style))
+    place(top + left, dx: W / 2 - 0.1cm, dy: H / 2 - 0.1cm, circle(radius: 0.1cm, fill: mattgold, stroke: none))
+    // Strafräume
+    place(top + left, dx: (W - 8cm) / 2, dy: 0cm, rect(width: 8cm, height: 3cm, stroke: line-style))
+    place(top + left, dx: (W - 8cm) / 2, dy: H - 3cm, rect(width: 8cm, height: 3cm, stroke: line-style))
+    // Fünfmeterräume
+    place(top + left, dx: (W - 3.6cm) / 2, dy: 0cm, rect(width: 3.6cm, height: 1cm, stroke: line-style))
+    place(top + left, dx: (W - 3.6cm) / 2, dy: H - 1cm, rect(width: 3.6cm, height: 1cm, stroke: line-style))
+
+    // Sturm
+    player(0.5, 0.09, "Havertz", "ST")
+    // Offensives Mittelfeld
+    player(0.2, 0.27, "Wirtz", "LA")
+    player(0.5, 0.27, "Gnabry", "ZOM")
+    player(0.8, 0.27, "Sané", "RA")
+    // Defensives Mittelfeld
+    player(0.36, 0.47, "Stiller", "ZDM")
+    player(0.64, 0.47, "Goretzka", "ZDM")
+    // Abwehr
+    player(0.14, 0.68, "Raum", "LV")
+    player(0.38, 0.70, [Schlotter-#linebreak()beck], "IV")
+    player(0.62, 0.70, "Tah", "IV")
+    player(0.86, 0.68, "Kimmich", "RV")
+    // Tor
+    player(0.5, 0.91, "Baumann", "TW", gk: true)
+  })
+]
+
+```
+
+:::
+
+::: {.column width="29%"}
+
+```{typst}
+//| label: fig-aufstellung-zufall
+//| fig-align: left
+// Aufstellung 4-2-3-1 im UT-Farbschema, zufällige Positionen
+#let mattgold = rgb("#B4A069")
+#let anthrazit = rgb("#32414B")
+#let sand = rgb("#EEE9DD")
+
+#set text(font: ("Helvetica Neue", "Arial", "Liberation Sans"), fill: anthrazit)
+
+#let W = 8cm
+#let H = 11cm
+#set page(width: auto, height: auto, margin: 0pt)
+#let line-style = 1.2pt + mattgold
+
+#let player(x, y, name, pos, gk: false) = place(
+  top + left,
+  dx: x * W - 2.5cm,
+  dy: y * H - 0.6cm,
+  box(width: 5cm, align(center, box(
+    fill: if gk { mattgold } else { sand },
+    radius: 4pt,
+    inset: (x: 6pt, y: 4pt),
+    text(size: 10pt, weight: "bold", fill: anthrazit, name),
+  ))),
+)
+
+#align(center)[
+  #box(width: W, height: H, {
+    // Spielfeld
+    place(top + left, rect(width: W, height: H, fill: anthrazit, stroke: 2pt + mattgold, radius: 4pt))
+    // Mittellinie und Mittelkreis
+    place(top + left, dy: H / 2, line(length: W, stroke: line-style))
+    place(top + left, dx: W / 2 - 1.6cm, dy: H / 2 - 1.6cm, circle(radius: 1.6cm, stroke: line-style))
+    place(top + left, dx: W / 2 - 0.1cm, dy: H / 2 - 0.1cm, circle(radius: 0.1cm, fill: mattgold, stroke: none))
+    // Strafräume
+    place(top + left, dx: (W - 8cm) / 2, dy: 0cm, rect(width: 8cm, height: 3cm, stroke: line-style))
+    place(top + left, dx: (W - 8cm) / 2, dy: H - 3cm, rect(width: 8cm, height: 3cm, stroke: line-style))
+    // Fünfmeterräume
+    place(top + left, dx: (W - 3.6cm) / 2, dy: 0cm, rect(width: 3.6cm, height: 1cm, stroke: line-style))
+    place(top + left, dx: (W - 3.6cm) / 2, dy: H - 1cm, rect(width: 3.6cm, height: 1cm, stroke: line-style))
+
+    // Positionen wie in Abbildung 1, Namen vertauscht
+    player(0.5, 0.09, "Stiller", "ST")
+    player(0.2, 0.27, "Kimmich", "LA")
+    player(0.5, 0.27, "Havertz", "ZOM")
+    player(0.8, 0.27, "Tah", "RA")
+    player(0.36, 0.47, "Raum", "ZDM")
+    player(0.64, 0.47, "Baumann", "ZDM")
+    player(0.14, 0.68, "Goretzka", "LV")
+    player(0.38, 0.70, "Wirtz", "IV")
+    player(0.62, 0.70, "Gnabry", "IV")
+    player(0.86, 0.68, [Schlotter-#linebreak()beck], "RV")
+    player(0.5, 0.91, "Sané", "TW", gk: true)
+  })
+]
+
+```
+
+:::
 
 
-## {background-iframe="../apps/effsize-teacherqual.html" background-interactive=true}
+::: {.column width="42%"}
+Angenommen in einem Quasiexperiment schauen **50 Fußballexpert:innen** und **50 Fußballdesinteressierte** 5 Sekunden lang auf entweder Abbildung 1 oder Abbildung 2 und müssen danach die Aufstellung der Spieler rekonstruieren. Welche Daten würden Sie erwarten? Weshalb machen [diese Daten](../images/dotplot-erwartung.png) Sinn?
+:::
+
+:::
 
 
-## Studien zur Lehrer:innenexpertise
-* Quasi-experimentelle Forschung zur Expertise von Berliner et al. [-@berliner1992]
-  * Experten, Anfänger und Anwärter beschrieben und interpretierten z.B. Videoaufzeichnungen oder Assessments und Karteikarten
-* Expert:innen: Achten z.B. weniger auf unwesentliche Details; haben **Konzepte** typischer Unterrichtsereignisse; betrachten komplexere Analyseeinheiten
-* Anfänger:innen: Fokussieren **beobachtbare** Details wie Haarfarbe, Raumanordnung oder Material; beschreiben kleinteiliger
 
-> $\Rightarrow$ Expert:innenwissen führt zu „Veränderung der kategorialen Wahrnehmung von Unterrichtssituationen“ [@bromme2014c]
+## Studien zur Schachexpertise ✨{.scrollable}
+In berühmten Experimenten von Adriaan de Groot [@degroot1965], William Chase und Herbert Simon [@chase1973a; @chase1973b] wurde die Expertise von Schachspieler:innen untersucht.
+
+### Der Versuchsaufbau
+
+- **Probandengruppen:** Verglichen wurden drei Spieler unterschiedlicher Kompetenzstufen – ein **Schachmeister** (unter den Top 25 der USA), ein **guter Vereinsspieler** und ein **Anfänger**.
+
+- **Darbietung:** Den Probanden wurde ein Schachbrett mit einer Stellung aus einer echten Partie (Mittel- oder Endspiel) für genau **5 Sekunden** gezeigt.
+
+- **Reproduktion:** Direkt im Anschluss mussten die Spieler versuchen, die gesehene Stellung aus dem Gedächtnis auf einem zweiten, leeren Schachbrett aufzustellen.
+
+- **Wiederholung & Kriterium:** Nach jedem Versuch durften die Probanden erneut für 5 Sekunden auf die Vorlage blicken. Dieser Vorgang wurde so lange wiederholt, bis die Position korrekt reproduziert war. Als Gütekriterium galt die Anzahl der benötigten 5-Sekunden-Betrachtungen.
+
+- **Testmaterial:** Das Experiment wurde mit **20 echten Spielstellungen** durchgeführt. Ergänzend wurden **8 Zufallsaufstellungen** mit einer identischen Anzahl an Figuren einbezogen, bei denen die Figuren völlig beliebig auf dem Brett verteilt waren.
+
+### Die Ergebnisse
+
+- **Bei echten Schachstellungen:**
+  - Der **Schachmeister** konnte bereits nach dem ersten 5-sekündigen Hinsehen durchschnittlich **16 Figuren** korrekt platzieren und benötigte insgesamt nur 3 bis 4 Betrachtungen für eine fehlerfreie Rekonstruktion.
+  - Der **gute Spieler** platzierte beim ersten Blick durchschnittlich **8 Figuren** (und benötigte 1–2 Betrachtungen mehr als der Meister).
+  - Der **Anfänger** schaffte beim ersten Mal nur **4 Figuren** und brauchte bis zu 14 Betrachtungen.
+
+- **Bei Zufallsaufstellungen:**
+  - Sobald die Figuren zufällig verteilt waren und keine sinnvolle Schachstruktur bildeten, verschwanden die Leistungsunterschiede vollständig; der Meister schnitt nicht besser ab als der Anfänger.
 
 
+### Theoretische Erklärung
+Chase und Simon folgerten aus den Ergebnissen, dass Schachmeister weder über ein generell besseres Kurzzeitgedächtnis noch über eine höhere allgemeine Gedächtniskapazität verfügen. De Groot stellte zudem fest, dass Meister nicht wesentlich mehr Züge vorausdenken (etwa 2–3 Züge) oder mehr Alternativen erwägen (30–50 bei einer schwierigen Stellung) als schwächere Spieler.
+Der entscheidende Vorteil liegt in der visuell-perzeptiven Wahrnehmung: Experten verfügen über ein im Langzeitgedächtnis gespeichertes Repertoire an typischen Konstellationen und Bedeutungseinheiten (sogenannten »Chunks«). Sie erfassen das Brett nicht als Ansammlung einzelner Figuren, sondern in dicht gepackten Mustern. Längere Pausen beim Aufstellen der Figuren (über 2 Sekunden) gaben den Forschern dabei Aufschluss über die Grenzen zwischen diesen einzelnen Chunks.
+
+:::{.footer}
+:::
+
+## Studien zur Physikexpertise ✨{.scrollable}
+### Der Versuchsaufbau
+- **Probandengruppen:** Chi et al [-@chi1981] verglichen **Physik-Experten** (Doktoranden oder Hochschullehrer der Physik) und **Anfänger** (Studenten nach einem einführenden Kurs in Mechanik).
+- **Aufgabenstellung:** Den Probanden wurden Textaufgaben aus der Mechanik oder Thermodynamik vorgelegt, die sie in einem Experiment frei nach Ähnlichkeit sortieren sollten. In weiteren Experimenten wurden Verbalprotokolle des Lauten Denkens beim eigentlichen Problemlösen erhoben.
+
+### Die Ergebnisse
+- **Anfänger** sortierten die Textaufgaben nach **Oberflächenmerkmalen**, also nach den konkret genannten physischen Objekten (z. B. schiefe Ebene, Rollen, Seile). Beim Lösen dachten sie vom Ziel her („Rückwärts-Arbeiten") und ersetzten Variablen Schritt für Schritt.
+- **Experten** gruppierten die Aufgaben nach **Tiefenstrukturen bzw. physikalischen Prinzipien** (z. B. Erhaltung der Energie, 2. Newtonsches Gesetz). Sie sahen physikalische Objekte sofort im Kontext von Lösungsprozeduren und mathematischen Gleichungen. Beim Problemlösen arbeiteten sie datengeleitet von den gegebenen Werten aus („Vorwärts-Arbeiten") und setzten Zahlen direkt in das passende Prinzip ein.
+
+### Theoretische Erklärung
+Experten besitzen kein generell überlegenes Gedächtnis, sondern verfügen über ein Wissen, das um **abstrakte physikalische Gesetze** herum kohärent organisiert ist. Die Fachstruktur und das funktionale Problemverständnis verschmelzen bei ihnen, was ein unmittelbares, intuitives Erkennen des Problemtyps ermöglicht.
+
+
+:::{.footer}
+:::
+
+## Studien zur Lehrer:innenexpertise ✨{.scrollable}
+### Der Versuchsaufbau:
+- **Probandengruppen:** Berliner und Mitarbeiter [-@berliner1992] verglichen drei Gruppen: **Experten** (Lehrkräfte mit mindestens 5 Jahren Berufserfahrung und hervorragenden Beurteilungen), **Anfänger** (Lehrkräfte im ersten Berufsjahr) und **Anwärter** (Ingenieure/Naturwissenschaftler ohne pädagogische Ausbildung).
+- **Darbietung & Simulation:**
+    1. *Wahrnehmung von Unterrichtsszenen:* Dias von Unterrichtssituationen wurden kurz für 1 bis 3 Sekunden gezeigt oder als Bildserie vorgeführt.
+    2. *Verarbeitung von Schülerinformationen:* Die Probanden sollten anhand von Schülerakten, Noten, Tests und Lehrbüchern in 40 Minuten die Übernahme einer fremden Klasse vorbereiten; anschließend folgte ein Gedächtnistest zu Schülerdetails.
+
+### Die Ergebnisse:
+- **Wahrnehmung von Unterrichtsdias:**
+    - **Anfänger und Anwärter** beschrieben visuelle **Oberflächendetails** wie Haarfarbe, Geschlecht, Raumausstattung oder die genaue Sitzordnung.
+    - **Experten** nutzten **abstraktere pädagogische Begriffe** (sahen z. B. „Gruppenarbeit" statt bloß „miteinander redender Schüler"). Sie erkannten sofort typische vs. untypische Unterrichtsstrukturen und fokussierten sich auf die Schüleraktivitäten und den Unterrichtsfluss.
+- **Verarbeitung schriftlicher Schülerdaten:**
+    - **Anfänger und Anwärter** behielten nach der Vorbereitung sehr viele **demographische Fakten und Einzeldetails** über Schüler im Gedächtnis.
+    - **Experten** schnitten beim Behalten isolierter demographischer Schülerdetails schlecht ab. Sie filterten unwichtige Fakten und verschmolzen die Einzeldaten zu einem handlungsrelevanten **Gesamtbild der Klasse („Kollektiver Schüler")**. Zudem richteten sie ihre Aufmerksamkeit stark auf den Stand der Stoffentwicklung und fachdidaktische Techniken.
+
+### Theoretische Erklärung:
+Berliner erklärt die Befunde durch Unterschiede in der **kategorialen Wahrnehmung**. Experten verfügen im Langzeitgedächtnis über **Schemata und Prototypen typischer Unterrichtsereignisse (»Aktivitätsszenarien«)**. Begriffe über Schüler sind bei Experten eng an situative Handlungskontexte gebunden (Erfahrungs- und Situationsbezug), wodurch sie relevante von irrelevanten Informationen für die Erfordernisse der Klassenführung trennen können.
+
+:::{.footer}
+:::
+
+## Einschätzung
+> Angenommen es gibt Expert:innen Noviz:innen im Lehrer:innenberuf. Wie stark unterscheiden sich die Leistungen deren Schüler:innen?  Bearbeiten Sie die [folgende Einschätzung {{< iconify iconamoon:link-external-bold >}}](../apps/effsize-teacherqual.html)
+
+[![](../images/thumbnail-effsizeteacher.png){width=60%}](../apps/effsize-teacherqual.html)
+
+## Ihre Ergebnisse
+
+```{r}
+#| echo: false
+#| label: fig-ps-histogramm
+library(googlesheets4)
+library(ggplot2)
+
+gs4_deauth()
+antw <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1Gk6aRTdfF_KftuLhukly7VUd7gwxOdejypDEe_2CWsU/edit?usp=sharing",
+  sheet = "Antworten"
+)
+
+n_bal <- sum(antw$PS > 0.8 & antw$PS <= 0.85)
+
+ggplot(antw, aes(PS)) +
+  geom_histogram(binwidth = 0.05, boundary = 0, fill = "#A51E37", colour = "white") +
+  annotate("text", x = 0.4, y = 30, hjust = 0, vjust = 1, size = 5, colour = "#32414B",
+           lineheight = 0.95,
+           label = sprintf("%s Studierende schätzen die PS\nzwischen 0,8 und 0,85 ein", n_bal)) +
+  annotate("curve", x = 0.72, y = 26, xend = 0.815, yend = n_bal + 0.5, curvature = -0.3,
+           colour = "#32414B", linewidth = 0.5,
+           arrow = arrow(length = unit(2.5, "mm"), type = "closed")) +
+  scale_x_continuous(breaks = seq(0, 1, 0.1)) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
+  coord_cartesian(xlim = c(0, 1.02)) +
+  labs(x = "Probability of Superiority", y = "Anzahl Ihrer Einschätzungen",
+       caption = paste(strwrap("Wahrscheinlichkeit eines/einer zufällig gewählten Schüler:in der starken Lehrkraft, mehr Punkte in der Klassenarbeit zu bekommen.", 85), collapse = "\n")) +
+  theme_minimal(base_size = 14) +
+  theme(
+    text = element_text(colour = "#32414B"),
+    plot.background = element_rect(fill = "#F3F4F4", colour = NA),
+    panel.background = element_rect(fill = "#F3F4F4", colour = NA),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line.x = element_line(colour = "#32414B"),
+    plot.caption = element_text(hjust = 0, size = 10),
+    plot.caption.position = "plot"
+  )
+
+```
+
+## Ergebnisse klassischer Teacher-Added Value Studien
+:::{style="font-size: 86%;"}
+Entgegen Ihrer Annahme, dass Lehrer:innenexpertise die Schüler:innenleistung sehr, sehr stark beeinflusst, zeigen klassische Teacher-Added Value Studien, dass der Effekt von Lehrer:innenmerkmalen auf die Schüler:innenleistung eher gering ist (siehe für einen Überblick). Die Grundidee der Modelle [@hanushek1971teacher] ist Schüler:innenleistung am Ende eines Schuljahres statistisch um Vortestleistungen, sozioökonomischen Status etc. zu adjustieren, um dann die Abweichung eines Klassenmittelwertes von der erwarteten Leistung zu betrachten. Diese Abweichung wird dann als Effekt der Lehrkraft interpretiert. Sehr grob abgeschätzt, kann man von einem Unterschied von ca. 3 Lernmonaten ausgehen, wenn Klassen von Lehrkräften am oberen Mittelfeld versus Lehrkräfte am unteren Mittelfeld unterrichtet werden [@neugebauer2013lehrer]
+
+> Welche Kritik an der internen & externen Validität der klassischen Teacher-Added Value Studien können Sie sich vorstellen? Formulieren Sie Ihre Ideen unter [https://bab.si/biwi-merk-2627](https://bab.si/biwi-merk-2627) (🙏🏽🙏🏽 biddebidde in ganzen Sätzen 😳) und »voten« Sie die Vorschläge Ihrer Kommiliton:innen.
+
+:::
+
+# 2. Ansatz: Topologien von Wissen/Kompetenzen
 ##  Topologische Ansätze
 :::{style="font-size: 80%;"}
-Seit den 70er Jahren untersuchen Bildungswissenschaftler:innen [@bromme2008d], in welchem Ausmaß sich Unterrichtserfolge (meist Schüler:innenleistung) durch Merkmale der Lehrer:innen prädizieren lassen. Diese Merkmale werden dann entlang psychologischer Theorien {{< glossary "Topologie" display="topologisiert">}} [@baumert2006; @shulman1986]. Weil angenommen wird, dass die (topologisierten) Merkmale bei höherer Ausprägung die erfolgreiche Bewältigung charakteristischer Anforderungen der Profession wahrscheinlicher machen, werden die topologischen Ansätze auch als kompetenztheoretische Ansätze bezeichnet.
+Während Teacher Added Value Studien Lehrer:inneneffekte als Blackbox betrachten, analysieren topologische Ansätze die strukturellen Zusammenhänge zwischen Lehrer:innen**merkmalen** und Unterrichtserfolg. Diese Merkmale werden dann entlang psychologischer Theorien {{< glossary "Topologie" display="topologisiert">}} [@baumert2006; @shulman1986]. Weil angenommen wird, dass die (topologisierten) Merkmale bei höherer Ausprägung die erfolgreiche Bewältigung charakteristischer Anforderungen der Profession wahrscheinlicher machen, werden die topologischen Ansätze auch als kompetenztheoretische Ansätze bezeichnet.
 :::
 ```{typst}
 //| label: fig-topologie
@@ -283,6 +544,56 @@ Seit den 70er Jahren untersuchen Bildungswissenschaftler:innen [@bromme2008d], i
 :::footer
 :::
 
+## Kompetenztheoretischer Ansatz
+### Professionswissen: Illustration
+* Fachwissen: Wissen über die fachwissenschaftlichen Grundlagen des Unterrichtsfaches (»*Warum ist 0,9999... = 1*«, »*Was sind Plosivlaute*«)
+* Fachdidaktisches Wissen: Wissen über die Vermittlung des Unterrichtsfaches (»*Welche Fehlkonzepte von Beweisen liegen typischerweise vor?*«, »*Welche Rechtschreibstrategien sind wofür effektiv?*«)
+* Pädagogisches Wissen: Wissen über die Vermittlung von Unterrichtsinhalten und die Gestaltung von Lernprozessen (»*Wie kann ich eine Klasse motivieren?*«, »*Wie kann ich mit Störungen umgehen?*«)
+
+> Schätzen Sie die Relevanz der Komponenten unter [https://bab.si/biwi-merk-2627](https://bab.si/biwi-merk-2627) ein.
+
+
+## Kompetenztheoretischer Ansatz
+### Professionswissen: Empirische Befunde
+:::{style="font-size: 80%;"}
+* **COACTIV** [@baumert2011b]: Fach- und fachdidaktisches Wissen von 181 Mathematiklehrkräften sagen den Lernzuwachs von 4.353 Schüler:innen (Klasse 9→10) vorher; der stärkere Effekt geht vom fachdidaktischen Wissen aus (39 % der Zwischen-Klassen-Varianz)
+* Schüler:innen niedrigerer Sekundarschulformen profitieren besonders von fachdidaktischem Wissen – ihre Lehrkräfte verfügen aber über deutlich geringeres Wissen (Differenz zu Gymnasiallehrkräften: 1,26 SD Fachwissen; 0,43 SD fachdidaktisches Wissen)
+* Internationale Studien: positive, aber teils kleine Effekte (+1 SD Lehrkräftewissen → +0,03 bis +0,09 SD Lernzuwachs in Mathematik; für Lesen schwächer bzw. uneinheitlich)
+* **Pädagogisches Wissen**: Hinweise auf positive Effekte, aber kaum direkte Messung im Zusammenhang mit Schüler:innenleistung
+* **Proxy-Variablen** (Abschluss, Kurse, Erfahrung): kleine, inkonsistente Effekte; Erfahrung wirkt nur in den ersten 2–5 Berufsjahren
+* Direkte, theoriegeleitete Messung von Professionswissen ist aussagekräftiger als Proxys
+:::
+
+## Kompetenztheoretischer Ansatz
+### Motivationale Orientierungen: Empirische Befunde
+:::{style="font-size: 95%;"}
+* Annahme: Der Lehrberuf erfordert dauerhaft Konzentration, Umgang mit Misserfolgen und die Bereitschaft zu langfristigem Engagement – neben kognitiven Fähigkeiten braucht es also auch motivationale Bereitschaft
+* Häufig untersuchte Konstrukte: Studien- und Berufswahlmotive, Enthusiasmus bzw. intrinsische Motivation beim Unterrichten, Zielorientierungen
+* Kaum Studien zum Zusammenhang mit Lernzuwächsen; Ausnahme **COACTIV**: positiver Effekt des Enthusiasmus für das Unterrichten (nicht des Fachenthusiasmus) auf den Lernzuwachs
+* Schüler:innen enthusiastischer bzw. intrinsisch motivierter Lehrkräfte zeigen höhere Motivation und mehr Interesse
+* Insgesamt: Bedeutsamkeit plausibel, Zusammenhang mit Lernzuwächsen aber nicht eindeutig geklärt [@neugebauer2013lehrer]
+:::
+
+
+## Kompetenztheoretischer Ansatz
+### *Selbstregulationsfähigkeit*: Empirische Befunde
+:::{style="font-size: 90%;"}
+* Selbstregulation: angemessenes berufliches Engagement bei gleichzeitiger Distanzierungsfähigkeit und Schonung eigener Ressourcen
+* Motivation der Forschung: ca. 10–60% der Lehrkräfte in Deutschland [@weber2004fruehinvaliditaet] scheiden vorzeitig aus gesundheitlichen Gründen aus dem Dienst aus (im Schnitt ca. 10 Jahre vor der Regelaltersgrenze)
+* Vier Typen nach Schaarschmidt anhand von Widerstandsfähigkeit und Engagement: Gesundheitstyp, Schontyp, Risikotyp A, Risikotyp B
+* Kein Nachweis eines Zusammenhangs mit Lernzuwächsen; aber **COACTIV**: Gesundheitstyp unterrichtet kognitiv aktivierender, in angemesserem Tempo und mit mehr konstruktiver Unterstützung, und weist weniger emotionale Erschöpfung sowie höhere Arbeitszufriedenheit auf
+* Nur 18% (Potsdamer Lehrerstudie) bzw. 24–31% (COACTIV) der Lehrkräfte entsprechen dem Gesundheitstyp [@neugebauer2013lehrer]
+:::
+
+## Kompetenztheoretischer Ansatz
+### *Werthaltungen und Überzeugungen*: Empirische Befunde
+
+* Annahme (COACTIV): Subjektive Werthaltungen und Überzeugungen steuern das Unterrichtshandeln und damit die Lernzuwächse
+    * Z.B.: Lehrkräfte mit stärker **transmissiver Überzeugung** (Lehrkraft sendet, Schüler:in empfängt) unterrichten weniger kognitiv aktivierend [@dubberke2008]
+* Lehrkräfte, die Wissensaufbau als **Diskurs** zwischen Lehrkraft und Schüler:innen verstehen, erzielen vergleichsweise bessere Lernergebnisse [@voss2011a]
+* Kritik: Das Konzept Überzeugungen ist messy – viele Autoren fassen Wissen als Spezialform von Überzeugung (»*justified true belief*«) auf [@neugebauer2013lehrer]
+
+
 ## Leuchtturmprojekte ✨
 ### Topologischer/Kompetenztheoretischer Forschung
 
@@ -322,6 +633,7 @@ Seit den 70er Jahren untersuchen Bildungswissenschaftler:innen [@bromme2008d], i
 ::::
 :::
 
+# 3. Ansatz: Strukturtheorie
 ## Strukturtheoretischer Ansatz {.lightbox}
 Der Strukturtheoretische Ansatz ist stark von qualitativ forschenden Soziolog:innen geprägt und fokussiert Rollenerwartungen und soziale Gefüge.
 
@@ -412,9 +724,6 @@ Der Strukturtheoretische Ansatz ist stark von qualitativ forschenden Soziolog:in
 
 ::::
 :::
-
-## Einblicke in Forschungsergebnisse
-
 
 
 ## Literatur
