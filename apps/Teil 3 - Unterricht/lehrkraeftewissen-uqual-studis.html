@@ -56,12 +56,27 @@ th:first-child,td:first-child{text-align:left}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 @media (max-width:640px){.grid4{grid-template-columns:1fr}}
 @media (max-width:520px){.ctl{grid-template-columns:1fr 48px}.ctl label{grid-column:1/3}}
+
+.send-row{display:flex;align-items:center;gap:12px}
+#send{display:inline-flex;align-items:center;gap:.5rem;padding:.375rem .75rem;font:inherit;color:#fff;background:#A51E37;border:1px solid #A51E37;border-radius:0;cursor:pointer}
+#send:hover{filter:brightness(.9)}
+#send svg{width:1em;height:1em;fill:currentColor}
+#send:disabled{opacity:.5;cursor:not-allowed;filter:none}
+#send.busy{opacity:.8;cursor:progress}
+#send .spinner{display:none;width:1em;height:1em;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite}
+#send.busy .spinner{display:inline-block}
+#send.busy svg{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+dialog#danke{max-width:min(90vw,480px);padding:1.5rem;border:1px solid var(--ink);border-radius:0;background:var(--bg);color:var(--ink);font:16px/1.5 Arial,Helvetica,sans-serif}
+dialog#danke::backdrop{background:rgba(50,65,75,.5)}
+dialog#danke p{color:var(--ink);margin:0}
+dialog#danke button{margin-top:1rem;padding:.375rem .75rem;font:inherit;color:#fff;background:#A51E37;border:1px solid #A51E37;border-radius:0;cursor:pointer}
 </style>
 </head>
 <body>
 <main>
 <h1>Wie hängt das Wissen von Lehrkräften mit der Unterrichtsqualität zusammen?</h1>
-<p style="max-width:none">Voss et al. (2022) erfassten bei N = 210 Refrendar:innen das Pädagogische/Psychologische Wissen mit einem standardisierten Test (39 Items) und ließen etwa zwei Jahre später deren Schüler:innen (Klasse 7–10; 4.671 Befragte in 379 Klassen, je Lehrkraft bis zu fünf Klassen) die Unterrichtsqualität per Fragebogen einschätzen. Stellen Sie die Korrelation zwischen dem Pädagogischen/Psychologischen Wissen (x-Achse) und jeder der vier Dimensionen (y-Achse) so ein, wie Sie sie erwarten. Jeder Punkt enspricht einer Lehrkraft bzw. einem Klassenmittelwert der Unterrichtsqualitätsdimension.</p>
+<p style="max-width:none">Voss et al. (2022) erfassten bei N = 210 Refrendar:innen das Pädagogische/Psychologische Wissen mit einem standardisierten Test (39 Items) und ließen etwa zwei Jahre später deren Schüler:innen (Klasse 7–10; 4.671 Befragte in 379 Klassen) die Unterrichtsqualität per Fragebogen einschätzen. Stellen Sie die Korrelation zwischen dem Pädagogischen/Psychologischen Wissen (x-Achse) und jeder der vier Dimensionen (y-Achse) so ein, wie Sie sie erwarten. Jeder Punkt enspricht einer Lehrkraft bzw. einem Klassenmittelwert der Unterrichtsqualitätsdimension.</p>
 
 <div class="panel">
   <div id="ctls"></div>
@@ -71,7 +86,22 @@ th:first-child,td:first-child{text-align:left}
   <div class="grid4" id="plots"></div>
   <div class="legend"><span>Linie: Regressionsgerade</span><span>Klassenstörungen: höhere Werte = mehr Störungen</span></div>
 </div>
+
+<div class="panel">
+  <div class="send-row">
+    <button id="send" type="button">
+      <span class="spinner" aria-hidden="true"></span>
+      <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.3c0-4 1.5-7.8 4.2-10.8L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+      <span class="label">Einschätzung abschicken</span>
+    </button>
+  </div>
+</div>
 </main>
+<dialog id="danke">
+  <p>Danke für die Einschätzung. Ihre Angaben wurden anonym gespeichert.</p>
+  <button type="button" id="danke-ok">OK</button>
+</dialog>
+
 <script>
 (function(){
 var N=210,W=400,H=400,L=40,R=10,T=10,B=40;
@@ -118,6 +148,50 @@ function drawAll(){for(var k=0;k<4;k++)plot(k);
 }
 DIMS.forEach(function(d,k){$("s"+k).addEventListener("input",function(){plot(k)})});
 drawAll();
+})();
+</script>
+<script>
+(function () {
+  "use strict";
+  // URL der Apps-Script-Web-App (endet auf /exec)
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycbyalzKP4RU4su2tJ62Bv-8XyyjlHyswB2Gzop2gTyk_ZHeqST2Bpf1Q3BHUP8GnAcI1/exec";
+  const APP = "lehrkraeftewissen-uqual-studis";
+  const IDS = ["s0","s1","s2","s3"];
+  const CONSENT_KEY = "einschaetzung_id";
+  const sendBtn = document.getElementById("send");
+  const danke = document.getElementById("danke");
+
+  // Zufällige ID ohne Personenbezug, nur im localStorage dieses Browsers
+  function getOrCreateId() {
+    let id = localStorage.getItem(CONSENT_KEY);
+    if (!id) {
+      id = crypto.randomUUID ? crypto.randomUUID() :
+        Date.now().toString(36) + Math.random().toString(36).slice(2);
+      localStorage.setItem(CONSENT_KEY, id);
+    }
+    return id;
+  }
+
+  sendBtn.addEventListener("click", function () {
+    const payload = { app: APP, id: getOrCreateId(), timestamp: new Date().toISOString() };
+    IDS.forEach(function (k) { payload[k] = +document.getElementById(k).value; });
+    sendBtn.disabled = true;
+    sendBtn.classList.add("busy");
+    // text/plain und no-cors vermeiden den CORS-Preflight von Apps Script
+    fetch(SHEET_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    })
+      .catch(function (err) { console.error("Speichern fehlgeschlagen:", err); })
+      .finally(function () {
+        sendBtn.classList.remove("busy");
+        sendBtn.disabled = false;
+        danke.showModal();
+      });
+  });
+  document.getElementById("danke-ok").addEventListener("click", function () { danke.close(); });
 })();
 </script>
 </body>
