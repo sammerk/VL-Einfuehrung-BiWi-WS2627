@@ -2,10 +2,15 @@
 title: "Glossar"
 ---
 
-Hier finden Sie alphabetisch sortiert die Glossareinträge aus den Folien.
+Hier finden Sie die Glossareinträge aus den Folien, nach Teilen gegliedert und darin alphabetisch sortiert.
+
+## Teil 1
 
 ### Allokationsfunktion:
 Die Funktion von Bildungssystemen, gesellschaftliche Positionen und Chancen (z. B. Schulabschlüsse, Studienplätze, Berufswege) nach bestimmten Kriterien zuzuteilen. Schule wirkt dabei nicht nur bildend, sondern auch selektierend. ✨
+
+### Consequential Validity:
+Angemessenheit der Konsequenzen einer Messung. ✨
 
 ### Constructive alignment:
 Der Prozess der Gestaltung von Lernerfahrungen und Leistungsüberprüfungen, die auf die angestrebten Lernergebnisse abgestimmt sind. ✨
@@ -19,9 +24,6 @@ Wiederholung einer Studie mit denselben Methoden, Materialien und Operationalisi
 ### Disziplinär:
 Bezieht sich auf eine akademische oder wissenschaftliche Disziplin (z. B. Psychologie, Soziologie, Erziehungswissenschaft). Disziplinäre Perspektiven bringen jeweils eigene Theorien, Methoden und Fragestellungen mit. ✨
 
-### emergent:
-Bezeichnet Eigenschaften oder Ordnungen, die nicht vorab festgelegt sind, sondern erst aus dem Handeln und Zusammenwirken der beteiligten Entitäten entstehen. ✨
-
 ### Erziehungswissenschaft:
 Die Wissenschaft, die sich mit Erziehung, Bildung und Lernen befasst. Sie untersucht Ziele, Methoden und Bedingungen von Erziehungs- und Lernprozessen aus historischer, systematischer und praktischer Perspektive. ✨
 
@@ -30,6 +32,9 @@ Studien, in denen Forschende eine unabhängige (beeinflussende) Variable gezielt
 
 ### Explorative Erkenntnisinteressen:
 Erkenntnisinteressen, die potentielle Ursachen eingrenzen wollen. ✨
+
+### Externe Validität:
+Ausmaß der Generalisierbarkeit über Units, Treatments, Observations und Settings. ✨
 
 ### Fachdidaktiken:
 Wissenschaftliche Disziplinen, die sich damit beschäftigen, wie man ein Fach (z. B. Mathematik, Geschichte, Deutsch) lehrt und lernt. Sie verbinden Fachwissen mit Erkenntnissen über Lernprozesse und Vermittlungsmethoden. ✨
@@ -49,17 +54,23 @@ Stichproben mit einer hohen Fallzahl, deren Zusammensetzung die Grundgesamtheit 
 ### Institutionell:
 Bezieht sich auf die Strukturen, Regeln und Organisationen von Institutionen (z. B. Schulen, Universitäten). Institutionelle Fragen in der Bildung betreffen etwa Gesetze, Curricula, Verwaltung und organisatorische Rahmenbedingungen. ✨
 
+### Interne Validität:
+Ausmaß kausaler Interpretierbarkeit eines STudienergebnisses. ✨
+
 ### Kausale (explanative) Erkenntnisinteressen:
 Erkenntnisinteressen, die prüfen, ob eine Hypothese, dass eine Größe eine andere beeinflusst, zutrifft. ✨
 
 ### Konnotiert:
 Mit Nebenbedeutungen oder emotionalen Bedeutungen aufgeladen. ✨
 
-### Konzeptuelle Replikationsstudien:
-Wiederholung eines Befunds mit anderen Methoden, Operationalisierungen oder Stichproben. Sie prüfen, ob die zugrunde liegende theoretische Aussage über unterschiedliche Umsetzungen hinweg gilt. ✨
+### Konstruktvalidität:
+Angemessenheit der Interpretation eines Messwertes (misst ein Instrument was es messen soll?). ✨
 
 ### Kontroll- und Vergleichsgruppen:
 Gruppen, die keine Intervention (Kontrollgruppe) oder eine andere Intervention (Vergleichsgruppe) erhalten. ✨
+
+### Konzeptuelle Replikationsstudien:
+Wiederholung eines Befunds mit anderen Methoden, Operationalisierungen oder Stichproben. Sie prüfen, ob die zugrunde liegende theoretische Aussage über unterschiedliche Umsetzungen hinweg gilt. ✨
 
 ### Laborstudien:
 Untersuchungen in einer kontrollierten, künstlichen Umgebung, in der Störeinflüsse weitgehend ausgeschaltet werden können (z. B. Lehr-Lernlabor). ✨
@@ -70,8 +81,17 @@ Studien, in denen dieselben Personen oder Einheiten zu mehreren Zeitpunkten unte
 ### Matching-Studien:
 Nicht-randomisierte Studien, in denen (z. B.) für jede teilnehmende Person eine »statistische Zwillingsperson« zugeordnet wird, die sich in relevanten Merkmalen (z. B. Alter, Vorwissen) möglichst ähnlich ist. ✨
 
+### Matching-Studien:
+Nicht-randomisierte Studien, in denen (z. B.) für jede teilnehmende Person eine »statistische Zwillingsperson« zugeordnet wird, die sich in relevanten Merkmalen (z. B. Alter, Vorwissen) möglichst ähnlich ist. ✨
+
+### Mediatorvariable (MeV):
+Variable, die den Zusammenhang zwischen einer unabhängigen und einer abhängigen Variable vermittelt. Sie wird durch die unabhängige Variable beeinflusst und beeinflusst ihrerseits die abhängige Variable (z. B. Zeit auf Aufgaben als Weg, wie Klassenführung den Lernerfolg fördert). ✨
+
 ### Metaanalysen:
 Verfahren, das die Ergebnisse mehrerer Studien zu einer Fragestellung quantitativ zusammenfasst, um eine gemeinsame Effektgröße zu schätzen. ✨
+
+### Ökologische Validität:
+»Natürlichkeit« der verwendeten Materialien und Kontexte in einer Studie. ✨
 
 ### Paradigmen:
 Ein Paradigma ist eine thematische, methodische und erkenntnisbezogene Gemeinsamkeit einer Scientific Community. ✨
@@ -91,6 +111,9 @@ Zufällige Zuweisung der Teilnehmenden zu den Versuchsbedingungen. Sie sorgt daf
 ### Soziologie:
 Die Wissenschaft der Gesellschaft und sozialer Prozesse. In Bildungswissenschaften relevant etwa für die Analyse von Ungleichheit, Sozialisation, Institutionen und gesellschaftlichen Bedingungen von Bildung. ✨
 
+### Statistische Validität:
+Stärke und Angemessenheit der statistischen Verfahren. ✨
+
 ### Studienverlaufsdaten:
 Daten, die den Verlauf eines Studiums abbilden — z. B. Studienfachwechsel, Studienform (Vollzeit/Teilzeit), Studiendauer, Leistungspunkte, Prüfungsversuche, Unterbrechungen oder Studienabbruch. ✨
 
@@ -99,3 +122,118 @@ Maßnahme, bei der Teilnehmende (Single-Blind) und gegebenenfalls auch Versuchsl
 
 ### Zufallsstichproben:
 Stichproben, bei denen jede Einheit der Grundgesamtheit die gleiche Auswahlwahrscheinlichkeit besitzt (z. B. Losung aus dem Einwohnermelderegister). ✨
+
+## Teil 2
+
+### Bildungswissenschaftliches Wissen:
+Wissen über Erziehung, Bildung, Lernen und Schule, das aus den Bildungswissenschaften stammt (z. B. Erkenntnisse der Psychologie, Soziologie und Erziehungswissenschaft). ✨
+
+### Chunk:
+Im Langzeitgedächtnis gespeicherte Bedeutungseinheit, die ein Muster typischer Konstellationen umfasst. Experten erfassen dadurch Informationen (z. B. eine Schachstellung) nicht als Einzelteile, sondern in zusammenhängenden Mustern. ✨
+
+### emergent:
+Bezeichnet Eigenschaften oder Ordnungen, die nicht vorab festgelegt sind, sondern erst aus dem Handeln und Zusammenwirken der beteiligten Entitäten entstehen. ✨
+
+### Epistemische Überzeugungen:
+Überzeugungen von Lehrkräften darüber, was Wissen ist, wie es entsteht und wie es gerechtfertigt wird. ✨
+
+### Fachdidaktisches Wissen:
+Wissen über die Vermittlung des Unterrichtsfaches, z. B. typische Fehlkonzepte oder wirksame Lernstrategien. ✨
+
+### Fachwissen:
+Wissen über die fachwissenschaftlichen Grundlagen des Unterrichtsfaches. ✨
+
+### Gesundheitstyp:
+Lehrkräfte mit hohem Engagement und hoher Widerstandsfähigkeit gegenüber beruflichen Belastungen (nach Schaarschmidt). ✨
+
+### Konklusion:
+Die Schlussfolgerung eines Arguments, die aus den Prämissen folgt. ✨
+
+### Lehr-lerntheoretische Überzeugungen:
+Überzeugungen von Lehrkräften darüber, wie Lehren und Lernen funktionieren. ✨
+
+### Pädagogisches Wissen:
+Wissen über die Vermittlung von Unterrichtsinhalten und die Gestaltung von Lernprozessen, z. B. zur Motivation einer Klasse oder zum Umgang mit Störungen. Siehe auch [Bildungswissenschaftliches Wissen](#bildungswissenschaftliches-wissen). ✨
+
+### Prämisse:
+Eine Annahme, aus der in einem Argument eine Konklusion abgeleitet wird. ✨
+
+### Profession:
+Aus berufssoziologischer Perspektive ein besonderer, herausgehobener Beruf. Zugleich wird eine Profession als Beruf verstanden, der durch Risiken und Ungewissheit in der Ausübung durch die Professionellen (Berufsinhabenden) gekennzeichnet ist. ✨
+
+### Professionalisierung:
+Der Begriff wird in zwei Bedeutungen verwendet. Bezogen auf die Berufe meint er den Wandel eines gewöhnlichen Berufs hin zur Profession (Professionwerdung). Bezogen auf die Berufstätigen meint er das individuelle Hervorbringen von Professionalität (Professionellwerden). Heute wird darunter überwiegend die individuelle Entwicklung von Professionalität verstanden. ✨
+
+### Professionalismus:
+Das, was eine Profession (emergent und kollektiv) unter Professionalität versteht. ✨
+
+### Professionalität:
+Die spezifische Qualität des beruflichen Handelns. ✨
+
+### Proxy-Variablen:
+Leicht erhebbare Merkmale (z. B. Abschluss, besuchte Kurse oder Berufserfahrung), die stellvertretend für ein schwer messbares Konstrukt verwendet werden, etwa für Professionswissen. ✨
+
+### Quasiexperiment:
+Studien, in denen eine unabhängige Variable zwar variiert wird, die Teilnehmenden aber nicht zufällig den Bedingungen zugeteilt werden, sondern etwa vorgegebene Gruppen (z. B. Expertise oder Desinteresse) bilden. ✨
+
+### Risikotyp A:
+Lehrkräfte mit hohem Engagement, aber geringer Widerstandsfähigkeit gegenüber beruflichen Belastungen (nach Schaarschmidt). ✨
+
+### Risikotyp B:
+Lehrkräfte mit geringem Engagement und geringer Widerstandsfähigkeit gegenüber beruflichen Belastungen (nach Schaarschmidt). ✨
+
+### Schontyp:
+Lehrkräfte mit geringem Engagement, aber hoher Widerstandsfähigkeit gegenüber beruflichen Belastungen (nach Schaarschmidt). ✨
+
+### Teacher Value-Added:
+Studien, die den Einfluss einzelner Lehrkräfte auf den Lernfortschritt ihrer Schüler:innen schätzen, meist unter Kontrolle des Vorwissens. Sie betrachten den Lehrkrafteffekt als Blackbox und erklären nicht, welche Lehrkraftmerkmale ihn bewirken. ✨
+
+### Topologie:
+Ordnung von Entitäten (z.B. Merkmalen) in Ober- und Untermengen. ✨
+
+### transmissive Überzeugung:
+Subjektive Überzeugung, nach der Lehren als Übertragung von Wissen verstanden wird: Die Lehrkraft sendet, die Schüler:in empfängt. ✨
+
+### trivial:
+Etwas, das keine neue Erkenntnis liefert, weil die Aussage bereits in ihren Voraussetzungen enthalten ist. ✨
+
+### Überzeugungen:
+Subjektive Annahmen von Lehrkräften über Wissen, Lehren und Lernen. Zusammen mit Werthaltungen bilden sie einen Bestandteil der Lehrkraftpersönlichkeit, der das Unterrichtshandeln steuern kann. ✨
+
+## Teil 3
+
+### Abhängige Variable (AV):
+Die Variable, deren Ausprägung durch andere Variablen erklärt werden soll (z. B. Lernerfolg). ✨
+
+### Didaktik bzw. Curriculum Studies:
+Beschäftigen sich primär mit der Frage, anhand welcher Prinzipien die Auswahl von Unterrichtsinhalten gerechtfertigt erfolgen und wie Unterrichtsabläufe geplant werden können. ✨
+
+### Klassenführung:
+Classroom Management: Effektive Störungsprävention durch Allgegenwärtigkeit und Reibungslosigkeit (nach Kounin) sowie die Maximierung der aktiven Lernzeit (*time on task*). ✨
+
+### Kognitive Aktivierung:
+Anregung zu vertieftem Nachdenken (*higher order thinking*), Anknüpfen an Vorwissen und Auseinandersetzung mit kognitiven Konflikten (Deep Learning). ✨
+
+### Konstruktive Unterstützung:
+Wertschätzende Lehr-Lern-Beziehung, individuelle Hilfestellungen bei Verständnisproblemen und eine förderliche Fehlerkultur (Lernklima). ✨
+
+### Methodik:
+Fragen konkreter, beobachtbarer unterrichtlicher Maßnahmen wie Raumgestaltung, Sozialformen, Medien etc. ✨
+
+### Pädagogischer Takt:
+Nach Herbart die intuitive, situationssensible Urteilskraft von Lehrkräften im Augenblick des Handelns. Sie vermittelt zwischen allgemeiner Theorie und konkreter Unterrichtspraxis, die die Theorie nicht vollständig erfasst. ✨
+
+### Positivistisch:
+Wissenschaftsauffassung, die sich auf beobachtbare, empirisch überprüfbare Aussagen beschränkt und normative Fragen ausklammert. In der Didaktik wurde lehrtheoretischen Ansätzen der Positivismus-Vorwurf gemacht, weil sie Unterricht zweckrational und empirisch erfassen wollten. ✨
+
+### Sichtstrukturen:
+Beobachtbare Methoden, Sozialformen und Medien bilden den äußeren Rahmen des Unterrichts. Sie haben im Angebots-Nutzungs-Modell nur eine geringe Erklärungsleistung für den Lernerfolg. ✨
+
+### Tiefenstrukturen:
+Merkmale, die die Qualität der Verstehens- und Informationsverarbeitungsprozesse im Unterricht steuern. ✨
+
+### Unabhängige Variable (UV):
+Die Variable, von der angenommen wird, dass sie eine andere Variable beeinflusst (z. B. Klassenführung). ✨
+
+### Unterrichtsqualitätsforschung/Lehr-Lernforschung:
+Befasst sich mit dem Zusammenhang von abstrahierten Unterrichtsmerkmalen (z. B. »kognitive Aktivierung« oder »Reibungslosigkeit«) und Outcomes (z. B. Lernzuwachs, Motivation oder Wohlbefinden). ✨

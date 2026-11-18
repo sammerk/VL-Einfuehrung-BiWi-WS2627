@@ -1,0 +1,57 @@
+```{r sampling}
+#| include: false
+library(exams)
+
+items <- data.frame(
+  dimension = c(rep("Kognitive Aktivierung", 4),
+                rep("Konstruktive Unterstützung", 4),
+                rep("Strukturierte Klassenführung", 3)),
+  merkmal = c(
+    "Verständnisorientierung", "Ermittlung Denkweisen", "Herausforderung", "Engagement der SuS",
+    "Qualität des Feedbacks", "Unterstützung", "Wertschätzung & Respekt", "Klassenklima",
+    "Störungen durch SuS", "Monitoring", "Zeitnutzung"
+  )
+)
+
+optionen <- c("Kognitive Aktivierung", "Konstruktive Unterstützung", "Strukturierte Klassenführung")
+
+# Feste Zufallsreihenfolge (über alle Kopien gleich); jede Kopie zieht ein Fenster
+# von 3 aufeinanderfolgenden Positionen. Da 3 und 11 teilerfremd sind, decken die
+# 11 Fenster alle Items ab, bevor sich eines wiederholt.
+alter_seed <- if (exists(".Random.seed", globalenv())) get(".Random.seed", globalenv())
+set.seed(4187)
+reihenfolge <- sample(nrow(items))
+if (is.null(alter_seed)) rm(".Random.seed", envir = globalenv()) else assign(".Random.seed", alter_seed, globalenv())
+
+n_items <- nrow(items)
+iter <- exams::match_exams_iteration()
+k <- if (is.null(iter)) sample(n_items, 1) else ((iter - 1) %% n_items) + 1
+start <- ((k - 1) * 3) %% n_items
+ziehung <- reihenfolge[(start + 0:2) %% n_items + 1]
+wahl <- items[ziehung, ]
+loesung <- wahl$dimension
+```
+
+Question
+========
+> Welcher Basisdimension von Unterrichtsqualität ist das jeweilige Merkmal zuzuordnen?
+
+1. Merkmal „`r wahl$merkmal[1]`“: `r add_cloze(loesung[1], optionen)`
+2. Merkmal „`r wahl$merkmal[2]`“: `r add_cloze(loesung[2], optionen)`
+3. Merkmal „`r wahl$merkmal[3]`“: `r add_cloze(loesung[3], optionen)`
+
+`r format_metainfo("answerlist")`
+
+Solution
+========
+```{r solutiontext, echo = FALSE, results = "asis"}
+cat(sprintf("%d. Merkmal „%s“: *%s*\n", 1:3, wahl$merkmal, loesung), sep = "\n")
+```
+
+Meta-information
+================
+exname: Merkmale den Basisdimensionen von Unterrichtsqualität zuordnen
+extype: cloze
+exclozetype: `r format_metainfo("type")`
+exsolution: `r format_metainfo("solution")`
+exshuffle: TRUE

@@ -1,0 +1,15 @@
+{
+  "hash": "2d91535599c8c2dde0286ab086a841d8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "Question\n========\nWelche Aussagen zu Qualitätskriterien von Studien sind korrekt?\n\n\\begin{answerlist}\n  \\item Eine Erhöhung der internen Validität führt nicht zwangsläufig zu einer Erhöhung der externen Validität, eher im Gegenteil.\n  \\item PISA stellt eine Trendstudie dar\n  \\item Durch die Erhöhung der Stichprobengröße in einer Untersuchung erhöht sich tendenziell die externe Validität.\n\\end{answerlist}\n\nSolution\n========\n\n\n::: {.cell}\n\n:::\n\n\n\n\nMeta-information\n================\nexname: Guetekriterien_MC_gemischt\nextype: mchoice\nexsolution: 111\nexshuffle: 3\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

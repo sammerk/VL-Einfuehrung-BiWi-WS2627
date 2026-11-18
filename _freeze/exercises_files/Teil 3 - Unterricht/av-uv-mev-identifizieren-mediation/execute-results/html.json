@@ -1,0 +1,15 @@
+{
+  "hash": "f6fcd79d172c38baa981f71f808ccbec",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n\n:::\n\n\nQuestion\n========\nEine Forscherin interessiert sich für die Variablen »Klassenführung«, »Aktive Lernzeit (Time-on-task)« und »Fachliche Leistung«. Sie erhebt die entsprechenden Daten bei einer Stichprobe von 2372 Schülerinnen und Schülern. Sie vermutet, dass »Klassenführung« sich über »Aktive Lernzeit (Time-on-task)« auf »Fachliche Leistung« auswirkt.\n\n> Welche der folgenden Zuordnungen von Unabhängiger Variable (UV), Mediatorvariable (MeV) und Abhängiger Variable (AV) entspricht dem vermuteten Wirkzusammenhang?\n\n\\begin{answerlist}\n  \\item Unabhängige Variable = Klassenführung<br/>Mediatorvariable = Aktive Lernzeit (Time-on-task)<br/>Abhängige Variable = Fachliche Leistung\n  \\item Unabhängige Variable = Klassenführung<br/>Mediatorvariable = Fachliche Leistung<br/>Abhängige Variable = Aktive Lernzeit (Time-on-task)\n  \\item Unabhängige Variable = Aktive Lernzeit (Time-on-task)<br/>Mediatorvariable = Klassenführung<br/>Abhängige Variable = Fachliche Leistung\n  \\item Unabhängige Variable = Aktive Lernzeit (Time-on-task)<br/>Mediatorvariable = Fachliche Leistung<br/>Abhängige Variable = Klassenführung\n  \\item Unabhängige Variable = Fachliche Leistung<br/>Mediatorvariable = Klassenführung<br/>Abhängige Variable = Aktive Lernzeit (Time-on-task)\n  \\item Unabhängige Variable = Fachliche Leistung<br/>Mediatorvariable = Aktive Lernzeit (Time-on-task)<br/>Abhängige Variable = Klassenführung\n\\end{answerlist}\n\nSolution\n========\n\nDie Mediatorvariable liegt in der Wirkkette *zwischen* Unabhängiger und Abhängiger Variable: Die UV (»Klassenführung«) wirkt auf die MeV (»Aktive Lernzeit (Time-on-task)«), und diese wirkt auf die AV (»Fachliche Leistung«). Die Nennreihenfolge im Aufgabentext ist dafür unerheblich.\n\n\\begin{answerlist}\n  \\item Richtig.\n  \\item Falsch.\n  \\item Falsch.\n  \\item Falsch.\n  \\item Falsch.\n  \\item Falsch.\n\\end{answerlist}\n\nMeta-information\n================\nexname: AV UV & MeV identifizieren (Mediation)\nextype: schoice\nexsolution: 100000\nexshuffle: true\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

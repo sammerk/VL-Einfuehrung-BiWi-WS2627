@@ -1,0 +1,135 @@
+```{r data generation, echo = FALSE, results = "hide"}
+library(exams)
+library(ggplot2)
+
+klassen <- LETTERS[1:5]
+K <- 5
+N <- 10
+
+# Einstellungen der App "Teacher Added Value"
+tau <- 1.25  # Streuung der Lehrkrafteffekte (SD)
+sig <- 0.30  # Residualstreuung (SD)
+b   <- 0.70  # Steigung Vortest -> Test
+mu  <- 1.25  # Unterschiede im Vortest-Niveau der Klassen
+sl  <- 0.30  # Unterschiede in den Steigungen
+
+# Normalquantile mit SD = 1 (wie distNormal() in der App)
+dist_normal <- function(n) {
+  o <- if (n <= 10) 3 / 8 else 0.5
+  q <- qnorm((seq_len(n) - o) / (n + 1 - 2 * o))
+  q / sqrt(mean(q^2))
+}
+
+simulate_tav <- function() {
+  # Klassenebene: Effekte so zugeordnet, dass sie untereinander unkorreliert sind
+  q5 <- dist_normal(K)
+  zm <- sample(q5)
+  zu <- q5
+  zs <- q5
+  best <- 9
+  for (t in 1:3000) {
+    u <- sample(q5)
+    s <- sample(q5)
+    f <- cor(zm, u)^2 + cor(zm, s)^2 + cor(u, s)^2
+    if (f < best) {
+      best <- f
+      zu <- u
+      zs <- s
+    }
+  }
+  # Schülerebene: Residuum unkorreliert zum Vortest
+  q10 <- dist_normal(N)
+  x <- vector("list", K)
+  e <- vector("list", K)
+  for (j in 1:K) {
+    x[[j]] <- sample(q10)
+    be <- q10
+    bf <- 9
+    for (t in 1:3000) {
+      cc <- sample(q10)
+      f <- abs(cor(x[[j]], cc))
+      if (f < bf) {
+        bf <- f
+        be <- cc
+      }
+    }
+    e[[j]] <- be
+  }
+
+  X <- lapply(1:K, function(j) mu * zm[j] + 0.85 * x[[j]])
+  X <- lapply(X, function(v) pmax(-2.9, pmin(2.9, v - mean(unlist(X)))))
+  d <- do.call(rbind, lapply(1:K, function(j) {
+    data.frame(klasse = klassen[j], vortest = X[[j]],
+               test = (b + sl * zs[j]) * X[[j]] + tau * zu[j] + sig * e[[j]])
+  }))
+  d$test <- d$test - mean(d$test)
+  d
+}
+
+# Neu ziehen, bis die beste Klasse eindeutig ist
+repeat {
+  d <- simulate_tav()
+  gesamt <- coef(lm(test ~ vortest, d))
+  fits <- sapply(klassen, function(k) coef(lm(test ~ vortest, d[d$klasse == k, ])))
+  # Zusatzwert: Abstand der Klassengeraden zur Gesamtgeraden bei durchschnittlichem Vortest
+  zusatz <- fits[1, ] - gesamt[1]
+  beste <- names(which.max(zusatz))
+  if (diff(sort(zusatz, decreasing = TRUE)[2:1]) > 0.3) break
+}
+richtig_genannt <- runif(1) < 0.5
+
+genannt <- if (richtig_genannt) beste else sample(setdiff(klassen, beste), 1)
+# Je Variante wird die Aussage spiegelbildlich formuliert (Wahrheitswert bleibt gleich)
+variante2 <- sample(1:2, 1)
+variante4 <- sample(1:2, 1)
+# Item 2: vertikaler Abstand (richtig) bzw. horizontaler Abstand (falsch)
+loesung <- c(variante2 == 1, genannt == beste, FALSE)
+```
+
+Question
+========
+Die Abbildung zeigt schematisch für fünf Klassen (je 10 Schüler:innen) den Zusammenhang zwischen der Vortestleistung und der Testleistung (beides am Mittelwert zentriert). Die farbigen Geraden sind die Regressionsgeraden der einzelnen Klassen (Klassenausgleichsgeraden), die gestrichelte Linie ist die Regressionsgerade über alle Schüler:innen, die gepunktete vertikale Linie markiert die durchschnittliche Vortestleistung und die durchgezogene horizontale Linie die durchschnittliche Testleistung. Damit kann aus der Abbildung der sog. Teacher Added Value abgelesen werden. Welche der folgenden Aussagen sind korrekt?
+
+```{r plot, echo = FALSE, results = "hide", fig.width = 7, fig.height = 4.5, fig.path = "tav-"}
+ggplot(d, aes(vortest, test, colour = klasse)) +
+  geom_point(size = 2, alpha = 0.8) +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE, linewidth = 1) +
+  geom_vline(xintercept = 0, linetype = "dotted") +
+  geom_hline(yintercept = 0) +
+  geom_abline(intercept = gesamt[1], slope = gesamt[2], linetype = "dashed") +
+  scale_colour_manual(values = c(A = "#A51E37", B = "#B4A069", C = "#32414B",
+                                 D = "#4C9F70", E = "#7B6CB5")) +
+  labs(x = "Vortestleistung", y = "Testleistung",
+       colour = "Klasse") +
+  theme_minimal(base_size = 13) +
+  theme(axis.text = element_blank())
+```
+
+
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(c(
+  if (variante2 == 1) "Der vertikale Abstand der (evt. verlängerten) Klassenausgleichsgeraden an der gepunkteten Linie zu der gestrichelten Linie stellt den Teacher Added Value dar."
+  else "Der horizontale Abstand der (evt. verlängerten) Klassenausgleichsgeraden an der durchgezogenen Linie zu der gepunkteten Linie stellt den Teacher Added Value dar.",
+  paste0("Klasse ", genannt, " hat die stärkste Lehrkraft."),
+  if (variante4 == 1) "Klassen, deren Gerade rechts der gepunkteten Linie liegt, haben überdurchschnittliche Lehrer:innen."
+  else "Klassen, deren Gerade links der gepunkteten Linie liegt, haben unterdurchschnittliche Lehrer:innen."),
+  markup = "markdown")
+```
+
+Solution
+========
+Der Teacher Added Value ist der Anteil der Testleistung, der nicht durch die Vortestleistung erklärt wird: Er entspricht dem vertikalen Abstand der Klassengeraden zur Gesamtgeraden (gestrichelt) bei durchschnittlicher Vortestleistung. Liegt die Klassengerade dort darüber, ist die Lehrkraft überdurchschnittlich wirksam. Ein horizontaler Abstand zur gepunkteten Linie beschreibt dagegen nur, wie weit die Klasse bei der Testleistung vom Durchschnitt der Vortestleistung entfernt ist, und ist kein Maß für den Teacher Added Value.
+
+Die stärkste Lehrkraft hat die Klasse mit dem größten Abstand ihrer Geraden zur gestrichelten Linie bei durchschnittlicher Vortestleistung (Teacher Added Value). Das ist hier Klasse `r beste`. Klassen rechts der gepunkteten Linie haben lediglich eine höhere durchschnittliche Vortestleistung (z. B. durch die Zusammensetzung der Schülerschaft); über die Lehrkraft sagt das nichts aus. Die Steigung einer Geraden oder ihre Lage bei extremen Vortestwerten ist dafür nicht entscheidend.
+
+```{r solutionlist, echo = FALSE, results = "asis"}
+answerlist(ifelse(loesung, "Richtig", "Falsch"), markup = "markdown")
+```
+
+Meta-information
+================
+exname: teacher-added-value-lesen
+extype: mchoice
+exsolution: `r mchoice2string(loesung)`
+exshuffle: TRUE

@@ -1,0 +1,31 @@
+---
+title: "Interaktive Apps"
+---
+
+## Teil 2 - Professionalität
+
+### Schätzung: Leistungsunterschiede durch Lehrkraftqualität
+
+[![](images/apps/app5.png){width=60%}](apps/Teil%202%20-%20Professionalität/effsize-teacherqual.html){target="_blank"}
+
+### Teacher Added Value
+
+[![](images/apps/app6.png){width=60%}](apps/Teil%202%20-%20Professionalität/teacher-added-value.html){target="_blank"}
+
+## Teil 3 - Unterricht
+
+### Wo steckt die Varianz? Schule, Klasse, Schüler:in
+
+[![](images/apps/app1.png){width=60%}](apps/Teil%203%20-%20Unterricht/wo-steckt-die-varianz.html){target="_blank"}
+
+### Wo steckt die Uqual?
+
+[![](images/apps/app3.png){width=60%}](apps/Teil%203%20-%20Unterricht/wo-steckt-die-uqual.html){target="_blank"}
+
+### Wie hängt Lehrkräftewissen mit Uqual zusammen? (Studis)
+
+[![](images/apps/app4.png){width=60%}](apps/Teil%203%20-%20Unterricht/lehrkraeftewissen-uqual-studis.html){target="_blank"}
+
+### Wie hängt Lehrkräftewissen mit Uqual zusammen? (Dozent:in)
+
+[![](images/apps/app2.png){width=60%}](apps/Teil%203%20-%20Unterricht/lehrkraeftewissen-uqual-dozentin.html){target="_blank"}

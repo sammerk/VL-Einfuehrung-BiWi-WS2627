@@ -8,7 +8,7 @@ title: "Übungsaufgaben"
 ```{r quiz1, echo = FALSE, message = FALSE, results = "asis"}
 library("exams2forms")
 exams2forms(
-  "exercises_files/disziplinen.Rmd",
+  "exercises_files/Teil 1 - a mess/disziplinen.Rmd",
   n = 3,
   converter = "pandoc"
 )
@@ -16,12 +16,12 @@ exams2forms(
 
 ### Erkenntnisinteressen in den Bildungswissenschaften
 ```{r quiz2, echo = FALSE, message = FALSE, results = "asis"}
-exams2forms("exercises_files/erkenntnisinteressen.Rmd", n = 15, converter = "pandoc")
+exams2forms("exercises_files/Teil 1 - a mess/erkenntnisinteressen.Rmd", n = 15, converter = "pandoc")
 ```
 
 ### Gütekriterien quantitativer Studien erkennen
 ```{r quiz3, echo = FALSE, message = FALSE, results = "asis"}
-exams2forms("exercises_files/quantiguetekrit-erkennen.Rmd",
+exams2forms("exercises_files/Teil 1 - a mess/quantiguetekrit-erkennen.Rmd",
   n = 19,
   converter = "pandoc"
 )
@@ -29,19 +29,19 @@ exams2forms("exercises_files/quantiguetekrit-erkennen.Rmd",
 
 ### Experimente in den Bildungswissenschaften
 ```{r quiz4, echo = FALSE, message = FALSE, results = "asis"}
-exams2forms("exercises_files/exp_quasiexp_nichtexp_studien_r.Rmd", n = 9, converter = "pandoc")
+exams2forms("exercises_files/Teil 1 - a mess/exp_quasiexp_nichtexp_studien_r.Rmd", n = 9, converter = "pandoc")
 ```
 
 ### Fragen zu Gütekriterien und Experimenten
 ```{r quiz5, echo = FALSE, message = FALSE, results = "asis"}
-exams2forms("exercises_files/guetekriterien-gemischt-mc.Rmd", n = 9, converter = "pandoc")
+exams2forms("exercises_files/Teil 1 - a mess/guetekriterien-gemischt-mc.Rmd", n = 9, converter = "pandoc")
 ```
 
 
 ### Fragen zur Validität von Beispielstudien
 ```{r quiz6, echo = FALSE, message = FALSE, results = "asis"}
 exams2forms(
-  "exercises_files/dem-design-interne-validitaet-zuordnen.Rmd",
+  "exercises_files/Teil 1 - a mess/dem-design-interne-validitaet-zuordnen.Rmd",
   n = 9,
   converter = "pandoc"
 )
@@ -50,7 +50,7 @@ exams2forms(
 ### Fragen zur Steigerung der internen Validität
 ```{r quiz7, echo = FALSE, message = FALSE, results = "asis"}
 exams2forms(
-  "exercises_files/steigerung-interne-validitaet.Rmd",
+  "exercises_files/Teil 1 - a mess/steigerung-interne-validitaet.Rmd",
   n = 9,
   converter = "pandoc"
 )
@@ -60,7 +60,7 @@ exams2forms(
 ### Fragen zur Steigerung der externen Validität
 ```{r quiz8, echo = FALSE, message = FALSE, results = "asis"}
 exams2forms(
-  "exercises_files/steigerung-externe-validitaet.Rmd",
+  "exercises_files/Teil 1 - a mess/steigerung-externe-validitaet.Rmd",
   n = 9,
   converter = "pandoc"
 )
@@ -71,7 +71,7 @@ exams2forms(
 ### Charakteristika von Unterricht nach Doyle erkennen
 ```{r quiz10, echo = FALSE, message = FALSE, results = "asis"}
 exams2forms(
-  "exercises_files/doyle-charakteristika-erkennen.Rmd",
+  "exercises_files/Teil 2 - Professionalitaet/doyle-charakteristika-erkennen.Rmd",
   n = 8,
   converter = "pandoc"
 )
@@ -81,7 +81,7 @@ exams2forms(
 ### Profession, Professionalität, Professionalismus und Professionalisierung unterscheiden
 ```{r quiz9, echo = FALSE, message = FALSE, results = "asis"}
 exams2forms(
-  "exercises_files/professionprofessionaliteatetcerkennen.Rmd",
+  "exercises_files/Teil 2 - Professionalitaet/professionprofessionaliteatetcerkennen.Rmd",
   n = 4,
   converter = "pandoc"
 )
@@ -90,7 +90,7 @@ exams2forms(
 ### Professionalitätsansätze zuordnen
 ```{r quiz11, echo = FALSE, message = FALSE, results = "asis"}
 exams2forms(
-  "exercises_files/professionalitaetsansatz-zuordnen.Rmd",
+  "exercises_files/Teil 2 - Professionalitaet/professionalitaetsansatz-zuordnen.Rmd",
   n = 6,
   converter = "pandoc"
 )
@@ -99,10 +99,50 @@ exams2forms(
 ### Aspekte professioneller Kompetenz nennen
 ```{r quiz12, echo = FALSE, message = FALSE, results = "asis"}
 exams2forms(
-  "exercises_files/kompetenzaspekte-nennen.Rmd",
+  "exercises_files/Teil 2 - Professionalitaet/kompetenzaspekte-nennen.Rmd",
   n = 4,
   regex = TRUE,
   usecase = FALSE,
+  converter = "pandoc"
+)
+```
+
+## Aufgaben zu Teil 3: Unterricht
+
+### Perspektiven auf Unterricht erkennen
+```{r quiz13, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/Teil 3 - Unterricht/perspektive-erkennen.Rmd",
+  n = 8,
+  converter = "pandoc"
+)
+```
+
+### Erkenntnisinteressen den Perspektiven auf Unterricht zuordnen
+```{r quiz14, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/Teil 3 - Unterricht/erkenntnisinteressen-perspektiven-zuordnen.Rmd",
+  n = 4,
+  converter = "pandoc"
+)
+```
+
+### Merkmale von Unterrichtsqualität den Basisdimensionen zuordnen
+```{r quiz15, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/Teil 3 - Unterricht/dimensionen-merkmal-regex.Rmd",
+  n = 11,
+  regex = TRUE,
+  usecase = FALSE,
+  converter = "pandoc"
+)
+```
+
+### Unabhängige, mediierende und abhängige Variablen identifizieren
+```{r quiz-mediation, echo = FALSE, message = FALSE, results = "asis"}
+exams2forms(
+  "exercises_files/Teil 3 - Unterricht/av-uv-mev-identifizieren-mediation.Rmd",
+  n = 9,
   converter = "pandoc"
 )
 ```

@@ -1,0 +1,15 @@
+{
+  "hash": "b6a8515921dc75d243f6dfe4c929549b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n::: {.cell}\n\n:::\n\n\nQuestion\n========\nDie Abbildung zeigt schematisch für fünf Klassen (je 10 Schüler:innen) den Zusammenhang zwischen der Vortestleistung und der Testleistung (beides am Mittelwert zentriert). Die farbigen Geraden sind die Regressionsgeraden der einzelnen Klassen (Klassenausgleichsgeraden), die gestrichelte Linie ist die Regressionsgerade über alle Schüler:innen, die gepunktete vertikale Linie markiert die durchschnittliche Vortestleistung und die durchgezogene horizontale Linie die durchschnittliche Testleistung. Damit kann aus der Abbildung der sog. Teacher Added Value abgelesen werden. Welche der folgenden Aussagen sind korrekt?\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](tav-plot-1.png){width=672}\n:::\n:::\n\n\n\n\n\\begin{answerlist}\n  \\item Der vertikale Abstand der (evt. verlängerten) Klassenausgleichsgeraden an der gepunkteten Linie zu der gestrichelten Linie stellt den Teacher Added Value dar.\n  \\item Klasse D hat die stärkste Lehrkraft.\n  \\item Klassen, deren Gerade rechts der gepunkteten Linie liegt, haben überdurchschnittliche Lehrer:innen.\n\\end{answerlist}\n\nSolution\n========\nDer Teacher Added Value ist der Anteil der Testleistung, der nicht durch die Vortestleistung erklärt wird: Er entspricht dem vertikalen Abstand der Klassengeraden zur Gesamtgeraden (gestrichelt) bei durchschnittlicher Vortestleistung. Liegt die Klassengerade dort darüber, ist die Lehrkraft überdurchschnittlich wirksam. Ein horizontaler Abstand zur gepunkteten Linie beschreibt dagegen nur, wie weit die Klasse bei der Testleistung vom Durchschnitt der Vortestleistung entfernt ist, und ist kein Maß für den Teacher Added Value.\n\nDie stärkste Lehrkraft hat die Klasse mit dem größten Abstand ihrer Geraden zur gestrichelten Linie bei durchschnittlicher Vortestleistung (Teacher Added Value). Das ist hier Klasse D. Klassen rechts der gepunkteten Linie haben lediglich eine höhere durchschnittliche Vortestleistung (z. B. durch die Zusammensetzung der Schülerschaft); über die Lehrkraft sagt das nichts aus. Die Steigung einer Geraden oder ihre Lage bei extremen Vortestwerten ist dafür nicht entscheidend.\n\n\\begin{answerlist}\n  \\item Richtig\n  \\item Richtig\n  \\item Falsch\n\\end{answerlist}\n\nMeta-information\n================\nexname: teacher-added-value-lesen\nextype: mchoice\nexsolution: 110\nexshuffle: TRUE\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

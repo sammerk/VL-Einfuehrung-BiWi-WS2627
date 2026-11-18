@@ -1,0 +1,49 @@
+```{r sampling}
+#| include: false
+library(exams)
+
+dimensionen <- list(
+  "Kognitive Aktivierung" = c("Verständnisorientierung", "Ermittlung Denkweisen", "Herausforderung", "Engagement der SuS"),
+  "Konstruktive Unterstützung" = c("Qualität des Feedbacks", "Unterstützung", "Wertschätzung & Respekt", "Klassenklima"),
+  "Strukturierte Klassenführung" = c("Störungen durch SuS", "Monitoring", "Zeitnutzung")
+)
+
+items <- data.frame(
+  dimension = rep(names(dimensionen), lengths(dimensionen)),
+  merkmal = unlist(dimensionen, use.names = FALSE)
+)
+
+# Feste Zufallsreihenfolge der Items (über alle Kopien gleich)
+alter_seed <- if (exists(".Random.seed", globalenv())) get(".Random.seed", globalenv())
+set.seed(5863)
+reihenfolge <- sample(nrow(items))
+if (is.null(alter_seed)) rm(".Random.seed", envir = globalenv()) else assign(".Random.seed", alter_seed, globalenv())
+
+iter <- exams::match_exams_iteration()
+k <- if (is.null(iter)) sample(nrow(items), 1) else ((iter - 1) %% nrow(items)) + 1
+wahl <- items[reihenfolge[k], ]
+
+# Schlüsselbegriffe je Dimension; ein Treffer irgendwo im Antworttext genügt
+schluessel <- list(
+  "Kognitive Aktivierung" = c("cog", "kog", "akt", "act"),
+  "Konstruktive Unterstützung" = c("Unterst", "supp", "konstr", "constr"),
+  "Strukturierte Klassenführung" = c("class", "eff", "strukt", "führ", "manag", "klass")
+)
+
+# Regulärer Ausdruck für die Basisdimension (unverankert, Groß-/Kleinschreibung über ignorecase)
+sol <- paste(schluessel[[wahl$dimension]], collapse = "|")
+```
+
+Question
+========
+Welcher Basisdimension von Unterrichtsqualität ist das Merkmal „`r wahl$merkmal`“ zuzuordnen? Geben Sie den Namen der Basisdimension an.
+
+Solution
+========
+Das Merkmal „`r wahl$merkmal`“ gehört zur Basisdimension „`r wahl$dimension`“.
+
+Meta-information
+================
+exname: Basisdimension eines Merkmals nennen (Regex)
+extype: string
+exsolution: `r sol`

@@ -1,0 +1,15 @@
+{
+  "hash": "064499ee02f765a270d8de723de7787c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n\nQuestion\n========\nWelcher Basisdimension von Unterrichtsqualität ist das Merkmal „Zeitnutzung“ zuzuordnen? Geben Sie den Namen der Basisdimension an.\n\nSolution\n========\nDas Merkmal „Zeitnutzung“ gehört zur Basisdimension „Strukturierte Klassenführung“.\n\nMeta-information\n================\nexname: Basisdimension eines Merkmals nennen (Regex)\nextype: string\nexsolution: class|eff|strukt|führ|manag|klass\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

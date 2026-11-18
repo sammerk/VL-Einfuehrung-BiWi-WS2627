@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Teacher Added Value – interaktiv</title>
+
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#EEE9DD;--card:#fff;--tx:#32414B;--mut:#5f6d77;--grid:#e3e0d6;--axis:#7b8790;--acc:#A51E37;--band:#A51E37;--gold:#B4A069;
+--c0:#0069AA;--c1:#D29600;--c2:#7DA54B;--c3:#AF6E96;--c4:#916946;color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c262d;--card:#26333c;--tx:#EEE9DD;--mut:#a9b3ba;--grid:#364550;--axis:#7f8d97;--acc:#e8667f;--band:#A51E37;--gold:#B4A069;
+--c0:#4aa3dc;--c1:#e0ad2e;--c2:#96c15f;--c3:#c78bb1;--c4:#b8906a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c262d;--card:#26333c;--tx:#EEE9DD;--mut:#a9b3ba;--grid:#364550;--axis:#7f8d97;--acc:#e8667f;--band:#A51E37;--gold:#B4A069;--c0:#4aa3dc;--c1:#e0ad2e;--c2:#96c15f;--c3:#c78bb1;--c4:#b8906a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Arial,Helvetica,sans-serif}
+.top{background:var(--band);color:#fff;padding:20px 16px;border-bottom:4px solid var(--gold)}.top div{max-width:1000px;margin:0 auto}.top h1{color:#fff;margin:0}.top small{opacity:.85;font-size:.85rem}
+main{max-width:1000px;margin:0 auto;padding:20px 16px 40px}
+h1{font-family:"Trajan Pro",Cinzel,"Times New Roman",serif;font-size:1.6rem;font-weight:400;letter-spacing:.03em;margin:0 0 4px}
+p.lead{color:var(--mut);margin:0 0 16px}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:16px}
+@media(max-width:820px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--grid);border-radius:0;padding:14px}
+svg{width:100%;height:auto;display:block}
+.ctrl{margin-bottom:14px}
+.ctrl label{display:flex;justify-content:space-between;font-size:.92rem;font-weight:600}
+.ctrl label span{font-variant-numeric:tabular-nums;color:var(--acc)}
+.ctrl small{color:var(--mut);display:block;font-size:.8rem;line-height:1.35}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.chk{display:flex;gap:8px;align-items:center;font-size:.9rem;margin:6px 0}
+button{font:inherit;padding:7px 12px;border-radius:999px;border:1px solid var(--band);background:var(--band);color:#fff;cursor:pointer;padding:7px 18px}
+button:hover{filter:brightness(1.12)}
+.row{display:flex;align-items:center;gap:8px;font-size:.88rem;margin:5px 0;cursor:pointer}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.bar{flex:1;height:10px;position:relative;background:var(--grid)}
+.bar i{position:absolute;top:0;height:100%}
+.bar b{position:absolute;left:50%;top:-2px;width:1px;height:14px;background:var(--axis)}
+.num{width:46px;text-align:right;font-variant-numeric:tabular-nums}
+.stat{display:flex;justify-content:space-between;font-size:.9rem;padding:3px 0}
+.expl{margin-top:16px;font-size:.93rem}
+.expl code{background:var(--grid);padding:1px 6px}
+</style>
+</head>
+<body>
+<main>
+<p class="lead">5 Klassen à 10 Schüler:innen. Jede Klasse hat einen eigenen „Zusatzwert“ – eine Verschiebung des Testergebnisses, die sich nicht durch die Vortestleistung erklären lässt.</p>
+
+<div class="grid">
+  <div class="card" style="background:color-mix(in srgb,var(--card) 12%,transparent)">
+    <svg id="plot" viewBox="0 0 640 470" role="img" aria-label="Streudiagramm Vortest gegen Test mit Regressionsgeraden je Klasse"></svg>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:16px">
+      <div class="ctrl"><label>Streuung der Lehrkrafteffekte (SD) <span id="vTau"></span></label>
+        <input type="range" id="tau" min="0" max="1.5" step="0.05" value="0.9">
+        <small>Between-Varianz τ² = <b id="vTau2"></b> (Random Effect der Klasse)</small></div>
+      <div class="ctrl"><label>Residualstreuung (SD) <span id="vSig"></span></label>
+        <input type="range" id="sig" min="0.1" max="1.5" step="0.05" value="0.6">
+        <small>Within-Varianz σ² innerhalb der Klassen</small></div>
+      <div class="ctrl"><label>Steigung Vortest → Test <span id="vB"></span></label>
+        <input type="range" id="b" min="0" max="1" step="0.05" value="0.7"></div>
+      <div class="ctrl"><label>Unterschiede im Vortest-Niveau der Klassen <span id="vMu"></span></label>
+        <input type="range" id="mu" min="0" max="1.5" step="0.05" value="0.9">
+        <small>Klassen starten unterschiedlich stark (Zusammensetzung der Schülerschaft)</small></div>
+      <div class="ctrl"><label>Unterschiede in den Steigungen <span id="vSl"></span></label>
+        <input type="range" id="sl" min="0" max="0.5" step="0.05" value="0.2">
+        <small>Klassen fördern schwächere bzw. stärkere Schüler:innen unterschiedlich (Random Slope)</small></div>
+      <label class="chk"><input type="checkbox" id="showAll" checked> Gesamtgerade zeigen</label>
+      <label class="chk"><input type="checkbox" id="showRes"> Abweichung der Klassenmitte zeigen</label>
+      <button id="redraw">Neue Stichprobe ziehen</button>
+    </div>
+    <div class="card">
+      <div class="stat"><span>Intraklassenkorrelation</span><b id="icc"></b></div>
+      <div class="stat" style="margin-bottom:6px"><span>Empirische SD der Klassenverschiebung</span><b id="emp"></b></div>
+      <div style="font-size:.82rem;color:var(--mut);margin-bottom:4px">Geschätzter Zusatzwert je Klasse (Klick hebt hervor)</div>
+      <div id="rows"></div>
+    </div>
+  </div>
+</div>
+
+</main>
+<script>
+const NS="http://www.w3.org/2000/svg",K=5,N=10;
+const W=640,H=470,L=50,R=16,T=14,B=44,X0=-3,X1=3,Y0=-4,Y1=4;
+const sx=v=>L+(v-X0)/(X1-X0)*(W-L-R), sy=v=>H-B-(v-Y0)/(Y1-Y0)*(H-T-B);
+let seed=7,Z,sel=-1;
+function rng(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function gauss(r){let u=0,v=0;while(!u)u=r();v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+// Inverse Normalverteilung (Acklam) und near-perfect Normalverteilung wie bayestestR::distribution_normal()
+function qnorm(p){
+  const a=[-39.69683028665376,220.9460984245205,-275.9285104469687,138.357751867269,-30.66479806614716,2.506628277459239],
+  b=[-54.47609879822406,161.5858368580409,-155.6989798598866,66.80131188771972,-13.28068155288572],
+  c=[-.007784894002430293,-.3223964580411365,-2.400758277161838,-2.549732539343734,4.374664141464968,2.938163982698783],
+  d=[.007784695709041462,.3224671290700398,2.445134137142996,3.754408661907416];
+  if(p<.02425){const q=Math.sqrt(-2*Math.log(p));return(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}
+  if(p>1-.02425){const q=Math.sqrt(-2*Math.log(1-p));return-(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}
+  const q=p-.5,t=q*q;return(((((a[0]*t+a[1])*t+a[2])*t+a[3])*t+a[4])*t+a[5])*q/(((((b[0]*t+b[1])*t+b[2])*t+b[3])*t+b[4])*t+1)}
+function distNormal(n){ // qnorm(ppoints(n)), auf SD = 1 skaliert
+  const o=n<=10?3/8:.5,q=Array.from({length:n},(_,i)=>qnorm((i+1-o)/(n+1-2*o)));
+  const s=Math.sqrt(q.reduce((a,v)=>a+v*v,0)/n);return q.map(v=>v/s)}
+function shuf(a,r){a=a.slice();for(let i=a.length-1;i>0;i--){const k=Math.floor(r()*(i+1));[a[i],a[k]]=[a[k],a[i]]}return a}
+function cor(a,b){const n=a.length,ma=a.reduce((p,q)=>p+q)/n,mb=b.reduce((p,q)=>p+q)/n;let s=0,x=0,y=0;
+  for(let i=0;i<n;i++){s+=(a[i]-ma)*(b[i]-mb);x+=(a[i]-ma)**2;y+=(b[i]-mb)**2}return s/Math.sqrt(x*y)}
+function draw(){
+  const r=rng(seed);
+  // Klassenebene: 5 Normalquantile, so zugeordnet, dass Effekte untereinander unkorreliert sind
+  const q5=distNormal(K),zm=shuf(q5,r);let zu=q5,zs=q5,best=9;
+  for(let t=0;t<3000;t++){const u=shuf(q5,r),s=shuf(q5,r),f=cor(zm,u)**2+cor(zm,s)**2+cor(u,s)**2;if(f<best){best=f;zu=u;zs=s}}
+  // Schülerebene: je Klasse 10 Normalquantile für Vortest und Residuum, Residuum unkorreliert zum Vortest
+  const q10=distNormal(N),x=[],e=[];
+  for(let j=0;j<K;j++){x.push(shuf(q10,r));let be=q10,bf=9;
+    for(let t=0;t<3000;t++){const c=shuf(q10,r),f=Math.abs(cor(x[j],c));if(f<bf){bf=f;be=c}}e.push(be)}
+  Z={zu,x,e,zm,zs};
+}
+const $=id=>document.getElementById(id);
+function ols(xs,ys){const n=xs.length,mx=xs.reduce((a,b)=>a+b)/n,my=ys.reduce((a,b)=>a+b)/n;
+  let sxy=0,sxx=0;xs.forEach((v,i)=>{sxy+=(v-mx)*(ys[i]-my);sxx+=(v-mx)**2});const b=sxy/sxx;return{b,a:my-b*mx}}
+function el(n,a,p){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+let svg;
+function render(){
+  svg=$("plot");svg.innerHTML="";
+  const tau=+$("tau").value,sig=+$("sig").value,b=+$("b").value;
+  $("vTau").textContent=tau.toFixed(2);$("vTau2").textContent=(tau*tau).toFixed(2);
+  $("vSig").textContent=sig.toFixed(2);$("vB").textContent=b.toFixed(2);
+  $("icc").textContent=(tau*tau+sig*sig>0?tau*tau/(tau*tau+sig*sig):0).toFixed(2);
+  const mu=+$("mu").value,sl=+$("sl").value;
+  $("vMu").textContent=mu.toFixed(2);$("vSl").textContent=sl.toFixed(2);
+  let X=Z.x.map((a,j)=>a.map(v=>mu*Z.zm[j]+0.85*v));
+  const mxx=X.flat().reduce((p,q)=>p+q)/(K*N);
+  X=X.map(a=>a.map(v=>Math.max(-2.9,Math.min(2.9,v-mxx))));
+  const D=[];for(let j=0;j<K;j++){D.push(X[j].map((xv,i)=>({x:xv,y:(b+sl*Z.zs[j])*xv+tau*Z.zu[j]+sig*Z.e[j][i]})))}
+  const all=D.flat(),ym=all.reduce((a,p)=>a+p.y,0)/all.length;
+  all.forEach(p=>p.y-=ym);                       // Test am Gesamtmittel zentrieren
+  const clip=v=>Math.max(Y0+.1,Math.min(Y1-.1,v));
+  // Gitter + Achsen
+  for(let v=X0;v<=X1;v++){el("line",{x1:sx(v),x2:sx(v),y1:T,y2:H-B,stroke:v?"var(--grid)":"var(--axis)","stroke-width":v?1:1.5});
+    const t=el("text",{x:sx(v),y:H-B+16,"text-anchor":"middle","font-size":12,fill:"var(--mut)"});t.textContent=v}
+  for(let v=Y0;v<=Y1;v+=2){el("line",{x1:L,x2:W-R,y1:sy(v),y2:sy(v),stroke:v?"var(--grid)":"var(--axis)","stroke-width":v?1:1.5});
+    const t=el("text",{x:L-8,y:sy(v)+4,"text-anchor":"end","font-size":12,fill:"var(--mut)"});t.textContent=v}
+  let t=el("text",{x:(L+W-R)/2,y:H-8,"text-anchor":"middle","font-size":13,fill:"var(--tx)"});t.textContent="Vortestleistung (zentriert, 0 = Mittelwert)";
+  t=el("text",{transform:`translate(14 ${(T+H-B)/2}) rotate(-90)`,"text-anchor":"middle","font-size":13,fill:"var(--tx)"});t.textContent="Testleistung (zentriert, 0 = Mittelwert)";
+  // Gesamtgerade
+  const g=ols(all.map(p=>p.x),all.map(p=>p.y));
+  if($("showAll").checked){
+    el("line",{x1:sx(X0),x2:sx(X1),y1:sy(g.a+g.b*X0),y2:sy(g.a+g.b*X1),stroke:"var(--tx)","stroke-width":2,"stroke-dasharray":"7 5",opacity:.7});
+  }
+  const fits=D.map(d=>ols(d.map(p=>p.x),d.map(p=>p.y)));
+  fits.forEach((f,j)=>{
+    const dim=sel>=0&&sel!==j,c=`var(--c${j})`,xs=D[j].map(p=>p.x),a=Math.min(...xs),z=Math.max(...xs);
+    el("line",{x1:sx(a),x2:sx(z),y1:sy(clip(f.a+f.b*a)),y2:sy(clip(f.a+f.b*z)),stroke:c,"stroke-width":sel===j?4:2.6,"stroke-linecap":"round",opacity:dim?.2:1});
+    D[j].forEach(p=>el("circle",{cx:sx(p.x),cy:sy(clip(p.y)),r:4.2,fill:c,"fill-opacity":dim?.15:.75,stroke:"var(--card)","stroke-width":1}));
+    if($("showRes").checked){
+      const d=f.a-g.a;
+      el("line",{x1:sx(0),x2:sx(0),y1:sy(g.a),y2:sy(f.a),stroke:c,"stroke-width":4,opacity:dim?.2:.9});
+      el("circle",{cx:sx(0),cy:sy(f.a),r:5,fill:"var(--card)",stroke:c,"stroke-width":2.5,opacity:dim?.2:1});
+    }
+  });
+  // Liste
+  const eff=fits.map(f=>f.a-g.a),em=eff.reduce((a,b)=>a+b)/K;
+  $("emp").textContent=Math.sqrt(eff.reduce((a,v)=>a+(v-em)**2,0)/K).toFixed(2);
+  const mx=Math.max(1,...eff.map(Math.abs));
+  $("rows").innerHTML=eff.map((v,j)=>{const w=Math.abs(v)/mx*50;
+    return `<div class="row" data-j="${j}" style="opacity:${sel>=0&&sel!==j?.4:1}"><span class="dot" style="background:var(--c${j})"></span><span>Kl. ${j+1}</span>
+    <span class="bar"><b></b><i style="background:var(--c${j});width:${w}%;left:${v<0?50-w:50}%"></i></span><span class="num">${v>0?"+":""}${v.toFixed(2)}</span></div>`}).join("");
+  document.querySelectorAll(".row").forEach(r=>r.onclick=()=>{const j=+r.dataset.j;sel=sel===j?-1:j;render()});
+}
+["tau","sig","b","mu","sl","showAll","showRes"].forEach(i=>$(i).addEventListener("input",render));
+$("redraw").onclick=()=>{seed=Math.floor(Math.random()*1e6);draw();render()};
+draw();render();
+</script>
+</body>
+</html>

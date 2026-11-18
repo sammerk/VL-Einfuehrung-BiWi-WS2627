@@ -1,0 +1,15 @@
+{
+  "hash": "77ebadd0b47a61743063e19670c5bf96",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n::: {.cell}\n\n:::\n\n\nQuestion\n========\nNach dem Modell professioneller Kompetenz im Lehrer:innenberuf gibt es vier Aspekte professioneller Kompetenz. Einem dieser Aspekte werden die folgenden Facetten zugeordnet:\n\n* Epistemische Überzeugungen\n* Lehr-Lerntheoretische Überzeugungen\n\nWie heißt dieser Aspekt professioneller Kompetenz?\n\nSolution\n========\nDie Facetten Epistemische Überzeugungen, Lehr-Lerntheoretische Überzeugungen gehören zum Aspekt **Überzeugungen und Werthaltungen**.\n\nDie vier Aspekte professioneller Kompetenz sind: Professionswissen, Motivationale Orientierungen, Selbstregulative Fähigkeiten, Überzeugungen und Werthaltungen.\n\nMeta-information\n================\nexname: kompetenzaspekte-nennen\nextype: string\nexsolution: ^((Ü|Ue)berzeugung(en)? (und|&|u\\.) Werthaltung(en)?|(Ü|Ue)berzeugungen|Werthaltungen)$\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

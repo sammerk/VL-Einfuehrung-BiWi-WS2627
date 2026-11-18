@@ -1,6 +1,9 @@
 Allokationsfunktion: |
   Die Funktion von Bildungssystemen, gesellschaftliche Positionen und Chancen (z. B. Schulabschlüsse, Studienplätze, Berufswege) nach bestimmten Kriterien zuzuteilen. Schule wirkt dabei nicht nur bildend, sondern auch selektierend. ✨
 
+Chunk: |
+  Im Langzeitgedächtnis gespeicherte Bedeutungseinheit, die ein Muster typischer Konstellationen umfasst. Experten erfassen dadurch Informationen (z. B. eine Schachstellung) nicht als Einzelteile, sondern in zusammenhängenden Mustern. ✨
+
 Constructive alignment: |
   Der Prozess der Gestaltung von Lernerfahrungen und Leistungsüberprüfungen, die auf die angestrebten Lernergebnisse abgestimmt sind. ✨
 
@@ -36,6 +39,9 @@ Feldstudien: |
 
 Funktionale Analphabeten: |
   Erwachsene, die zwar lesen und schreiben können, dies aber nicht ausreichend beherrschen, um am gesellschaftlichen, beruflichen oder alltagsbezogenen Schriftsprachgebrauch teilzuhaben — etwa keine zusammenhängenden Texte verstehen oder einfache schriftliche Aufgaben selbstständig bewältigen. ✨
+
+Gesundheitstyp: |
+  Lehrkräfte mit hohem Engagement und hoher Widerstandsfähigkeit gegenüber beruflichen Belastungen (nach Schaarschmidt). ✨
 
 Große, möglichst repräsentative Stichproben: |
   Stichproben mit einer hohen Fallzahl, deren Zusammensetzung die Grundgesamtheit möglichst gut abbildet, also dieselbe Verteilung in möglichst vielen Variablen hat. ✨
@@ -82,17 +88,38 @@ Prämisse: |
 Präskriptive/normative Erkenntnisinteressen: |
   Erkenntnisinteressen, die fragen, wie etwas sein sollte. Sie begründen Ziele, Werte und Normen, etwa was Schule leisten soll, und können nicht allein empirisch entschieden werden. ✨
 
+Proxy-Variablen: |
+  Leicht erhebbare Merkmale (z. B. Abschluss, besuchte Kurse oder Berufserfahrung), die stellvertretend für ein schwer messbares Konstrukt verwendet werden, etwa für Professionswissen. ✨
+
 Psychologie: |
   Die Wissenschaft des menschlichen Verhaltens und der psychischen Prozesse. In Bildungswissenschaften relevant etwa als Entwicklungspsychologie, Lernpsychologie oder Pädagogische Psychologie. ✨
 
+Quasiexperiment: |
+  Studien, in denen eine unabhängige Variable zwar variiert wird, die Teilnehmenden aber nicht zufällig den Bedingungen zugeteilt werden, sondern etwa vorgegebene Gruppen (z. B. Expertise oder Desinteresse) bilden. ✨
+
 Randomisierung: |
   Zufällige Zuweisung der Teilnehmenden zu den Versuchsbedingungen. Sie sorgt dafür, dass sich die Gruppen vor dem Treatment (im Mittel) in allen Variablen (auch in den nicht erfassten/gemessenen) nicht unterscheiden. Wenn nach dem Treatment ein Unterschied zwischen den Gruppen (im Mittel) festgestellt wird, kann dieser deshalb als kausaler Effekt des Treatments interpretiert werden. ✨
+
+Risikotyp A: |
+  Lehrkräfte mit hohem Engagement, aber geringer Widerstandsfähigkeit gegenüber beruflichen Belastungen (nach Schaarschmidt). ✨
+
+Risikotyp B: |
+  Lehrkräfte mit geringem Engagement und geringer Widerstandsfähigkeit gegenüber beruflichen Belastungen (nach Schaarschmidt). ✨
+
+Schontyp: |
+  Lehrkräfte mit geringem Engagement, aber hoher Widerstandsfähigkeit gegenüber beruflichen Belastungen (nach Schaarschmidt). ✨
 
 Soziologie: |
   Die Wissenschaft der Gesellschaft und sozialer Prozesse. In Bildungswissenschaften relevant etwa für die Analyse von Ungleichheit, Sozialisation, Institutionen und gesellschaftlichen Bedingungen von Bildung. ✨
 
 Studienverlaufsdaten: |
   Daten, die den Verlauf eines Studiums abbilden — z. B. Studienfachwechsel, Studienform (Vollzeit/Teilzeit), Studiendauer, Leistungspunkte, Prüfungsversuche, Unterbrechungen oder Studienabbruch. ✨
+
+Teacher Value-Added: |
+  Studien, die den Einfluss einzelner Lehrkräfte auf den Lernfortschritt ihrer Schüler:innen schätzen, meist unter Kontrolle des Vorwissens. Sie betrachten den Lehrkrafteffekt als Blackbox und erklären nicht, welche Lehrkraftmerkmale ihn bewirken. ✨
+
+transmissive Überzeugung: |
+  Subjektive Überzeugung, nach der Lehren als Übertragung von Wissen verstanden wird: Die Lehrkraft sendet, die Schüler:in empfängt. ✨
 
 trivial: |
   Offensichtlich oder inhaltsleer. ✨
@@ -105,3 +132,24 @@ Verblindung: |
 
 Zufallsstichproben: |
   Stichproben, bei denen jede Einheit der Grundgesamtheit die gleiche Auswahlwahrscheinlichkeit besitzt (z. B. Losung aus dem Einwohnermelderegister). ✨
+
+Didaktik bzw. Curriculum Studies: |
+  Beschäftigen sich primär mit der Frage, anhand welcher Prinzipien die Auswahl von Unterrichtsinhalten gerechtfertigt erfolgen und wie Unterrichtsabläufe geplant werden können. ✨
+
+Methodik: |
+  Fragen konkreter, beobachtbarer unterrichtlicher Maßnahmen wie Raumgestaltung, Sozialformen, Medien etc. ✨
+
+Unterrichtsqualitätsforschung/Lehr-Lernforschung: |
+  Befasst sich mit dem Zusammenhang von abstrahierten Unterrichtsmerkmalen (z. B. »kognitive Aktivierung« oder »Reibungslosigkeit«) und Outcomes (z. B. Lernzuwachs, Motivation oder Wohlbefinden). ✨
+
+Pädagogischer Takt: |
+  Nach Herbart die intuitive, situationssensible Urteilskraft von Lehrkräften im Augenblick des Handelns. Sie vermittelt zwischen allgemeiner Theorie und konkreter Unterrichtspraxis, die die Theorie nicht vollständig erfasst. ✨
+
+Abhängige Variable (AV): |
+  Die Variable, deren Ausprägung durch andere Variablen erklärt werden soll (z. B. Lernerfolg). ✨
+
+Unabhängige Variable (UV): |
+  Die Variable, von der angenommen wird, dass sie eine andere Variable beeinflusst (z. B. Klassenführung). ✨
+
+Mediatorvariable (MeV): |
+  Variable, die den Zusammenhang zwischen einer unabhängigen und einer abhängigen Variable vermittelt. Sie wird durch die unabhängige Variable beeinflusst und beeinflusst ihrerseits die abhängige Variable (z. B. Zeit auf Aufgaben als Weg, wie Klassenführung den Lernerfolg fördert). ✨

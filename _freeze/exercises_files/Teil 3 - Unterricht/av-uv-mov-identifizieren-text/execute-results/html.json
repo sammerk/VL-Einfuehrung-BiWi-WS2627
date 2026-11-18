@@ -1,0 +1,15 @@
+{
+  "hash": "f0c4ed0b24f0142a54f4f83709093126",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n::: {.cell}\n\n:::\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\nQuestion\n========\nEine Forscherin interessiert sich für die Variablen »Soziale Unterstützung (So)«, »Individueller Stresslevel (In)« und »Lebensqualität (Le)«. Sie erhebt die entsprechenden Daten bei einer repräsentativen Stichprobe von 4224 SchülerInnen.  Sie vermutet dabei, dass der Effekt der Variable »Individueller Stresslevel« auf die Variable »Lebensqualität« umso kleiner ist, je kleiner die Variable »Soziale Unterstützung« ausgeprägt ist.\n\n\n\n\n::: {.cell}\n\n:::\n\n\n > Welche der folgenden Zuordnungen entspricht dem vermuteten Kausalzusammenhang?\n\n\n\\begin{answerlist}\n  \\item Abhängige Variable =  Lebensqualität / Unabhängige Variable =  Individueller Stresslevel / Moderatorvariable =  Soziale Unterstützung\n  \\item Abhängige Variable =  Lebensqualität / Unabhängige Variable =  Soziale Unterstützung / Moderatorvariable =  Individueller Stresslevel\n  \\item Abhängige Variable =  Individueller Stresslevel / Unabhängige Variable =  Lebensqualität / Moderatorvariable =  Soziale Unterstützung\n  \\item Abhängige Variable =  Individueller Stresslevel / Unabhängige Variable =  Soziale Unterstützung / Moderatorvariable =  Lebensqualität\n  \\item Abhängige Variable =  Soziale Unterstützung / Unabhängige Variable =  Individueller Stresslevel / Moderatorvariable =  Lebensqualität\n  \\item Abhängige Variable =  Soziale Unterstützung / Unabhängige Variable =  Lebensqualität / Moderatorvariable =  Individueller Stresslevel\n\\end{answerlist}\n\nSolution\n========\n\n\n::: {.cell}\n\n:::\n\n\n\nMeta-information\n================\nexname: AV UV & MoV identifizieren\nextype: schoice\nexsolution: 100000\nexshuffle: true",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

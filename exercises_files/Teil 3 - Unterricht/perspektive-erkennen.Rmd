@@ -1,0 +1,69 @@
+
+```{r, echo=FALSE, results='hide', message=FALSE}
+library(exams)
+
+perspektiven <- c(
+  "Historischer Zugang",
+  "Didaktik/Curriculum Studies",
+  "Methodik",
+  "Unterrichtsqualitätsforschung/Lehr-Lernforschung"
+)
+
+beispiele <- list(
+  list(
+    perspektive = 1,
+    text = "Pestalozzi fordert, Lernen auf unmittelbarer sinnlicher Anschauung aufzubauen. Begriffe, Zahlen und Regeln sollen nicht vorab auswendig gelernt, sondern aus konkreten Gegenständen entwickelt werden. Ziel ist die gleichmäßige Bildung von Kopf, Herz und Hand bei allen Kindern, unabhängig von ihrer sozialen Herkunft. Lernen gilt dabei als tätiger Prozess, in dem Kinder Dinge betasten, zählen und abzeichnen. Kritiker bemängeln, dass ein solcher Unterricht unruhig und wenig geordnet wirke. Befürworter verweisen darauf, dass Kinder Inhalte dadurch tatsächlich verstehen, statt sie nur nachzusprechen. Die Auffassung beeinflusst bis heute Vorstellungen von Grundschulpädagogik und Anschauungsunterricht. Sie wird vor allem über Lehrbücher und Schriften einzelner Pädagogen verbreitet, die sich auf praktische Erfahrungen in Armenschulen stützen. Eine systematische Begründung dieser Methode findet sich in Schriften, die die Erfahrungen aus Armenschulen auswerten. Die Autoren betonen, dass Lernen nur dann nachhaltig sei, wenn Kinder Zusammenhänge selbst erkennen. Die Schulpraxis dieser Zeit ist jedoch weitgehend von Auswendiglernen und Abfragen geprägt.✨"
+  ),
+  list(
+    perspektive = 1,
+    text = "Bruner fordert, dass alle Kinder unabhängig von Geschlecht und sozialer Herkunft eine allgemeine Bildung erhalten. Wissen soll in einer festen Abfolge vermittelt werden, ausgehend von der Sinneswahrnehmung hin zur Begriffsbildung. Anschauliche Bilder und Lehrbücher in der Muttersprache gelten als Voraussetzung dafür, dass auch Kinder ohne Vorwissen lernen können. Die Autoren kritisieren das mechanische Auswendiglernen ihrer Zeit, das keinen Sinn erschließe. Die Begründung ist theologisch: Bildung dient der Vervollkommnung des Menschen, die Schule ist dafür der zentrale Ort. Die Schrift wird in mehrere Sprachen übersetzt und beeinflusst die Schulplanung in Europa über Jahrhunderte. Sie gilt als frühes Beispiel für die Forderung nach allgemeiner Schulpflicht und systematischer Unterrichtsplanung. Einzelne Schulreformen der folgenden Jahrhunderte berufen sich ausdrücklich auf ihre Grundgedanken. Eine ausführliche Begründung findet sich in Lehrbüchern, die Gliederung und Methoden für Schulen vorschlagen. Die Schulpflicht ist in ihrer Zeit noch nicht durchgesetzt, sodass die Vorschläge zunächst vor allem als Programm gelten.✨"
+  ),
+  list(
+    perspektive = 2,
+    text = "Trotz breiter politischer Unterstützung für digitalisierten Unterricht bleibt unklar, wie digitale Kompetenzen tatsächlich in Lehrplänen der Sekundarstufe verankert und im Alltag umgesetzt werden. Die vorliegende Studie untersucht, welche digitalen Kompetenzen in den Lehrplänen dreier Bundesländer vorgesehen sind und wie Lehrkräfte diese Vorgaben in ihrem Unterricht interpretieren. Es wurden 27 Lehrplandokumente inhaltsanalytisch ausgewertet und halbstrukturierte Interviews mit 18 Lehrkräften geführt. Die Auswertung erfolgte qualitativ nach thematischer Kodierung. Die Lehrpläne betonen überwiegend technische Fertigkeiten, während kritische Medienreflexion, Datenschutz und ethische Fragen weniger systematisch verankert sind. Lehrkräfte ergänzen diese Bereiche häufig eigenständig, jedoch je nach Schultyp und Fortbildungsressourcen sehr unterschiedlich. Die Befunde sprechen für eine stärkere curriculare Verbindlichkeit kritisch-reflexiver digitaler Kompetenzen sowie für koordinierte Fortbildungsangebote und schulinterne Curriculum-Entwicklung.✨"
+  ),
+  list(
+    perspektive = 2,
+    text = "*Debates on mindfulness in education often oscillate between therapeutic affirmation and ideological critique while largely neglecting questions of epistemic and normative justification. This article develops an alternative framework grounded in analytic philosophy of education. Drawing on Metzinger’s (2024) account of mindfulness as epistemic openness, Bowell, Cowan, and Kemp's (2020) critical thinking framework, and a reasons-responsive account of normative justification informed by Scanlon (1998) and Parfit (2011), it examines when school-based mindfulness practices of decentring can be educationally justified. Mindful decentring, understood as a weakened identification with one’s own thoughts, may support openness, self-correction, and reduced self-bias. Yet it also risks epistemic and normative fallacies when non-judgemental awareness is detached from standards of truth, justification, and good judgement. Mindfulness is therefore presented not as an alternative to critical thinking, but as a practice that may support reason-responsive inquiry, moral reflection, and epistemic and moral virtues in school.* (Harant, 2026)✨"
+  ),
+  list(
+    perspektive = 3,
+    text = "Stationenlernen ist eine Unterrichtsmethode, bei der Schüler:innen fünf Stationen mit Aufgabenkarten, Material und einem Lösungsblatt zur Selbstkontrolle bearbeiten. Die Reihenfolge wird über eine Laufkarte vorgegeben, das Arbeitstempo ist frei. Die Tische stehen in Gruppen zu je vier Plätzen. Ein Signal für Ruhe und Piktogramme auf den Karten unterstützen die Orientierung, auch für Kinder mit Deutsch als Zweitsprache. Jede Station ist auf etwa zehn Minuten angelegt, abschließend folgt eine Auswertung im Plenum. Vor Beginn werden Materialort, Gruppenwechsel und das Vorgehen bei Fragen erklärt. Nach der Stunde wird notiert, welche Stationen Schwierigkeiten bereitet haben, um die Materialien zu überarbeiten. Die Methode eignet sich für Inhalte, die sich in klar abgegrenzte Aufgaben zerlegen lassen. Die Lehrkraft beobachtet während der Stunde, an welchen Stationen Gruppen länger verweilen. Die Ergebnisse dieser Beobachtung fließen in die Auswahl der nächsten Aufgaben ein und ermöglichen eine gezielte Differenzierung. Die Lehrkraft beobachtet während der Stunde, an welchen Stationen Gruppen länger verweilen. Die Ergebnisse dieser Beobachtung fließen in die Auswahl der nächsten Aufgaben ein und ermöglichen eine gezielte Differenzierung. Ein Protokoll dient der Dokumentation des Verlaufs für die weitere Planung.✨"
+  ),
+  list(
+    perspektive = 3,
+    text = "Think-Pair-Share ist eine Sozialform, in der Schüler:innen eine Frage zunächst zwei Minuten allein bearbeiten und ihre Antwort notieren. Anschließend tauschen sie sich mit einer Partnerin oder einem Partner aus, wobei abwechselnd gesprochen und zugehört wird. Danach präsentieren ausgewählte Paare ihre Ergebnisse im Plenum. Die Lehrkraft wählt sie so aus, dass unterschiedliche Lösungswege sichtbar werden, und fasst die Ideen an der Tafel zusammen. Satzanfänge unterstützen zurückhaltende Lernende beim Formulieren. Die Methode soll verhindern, dass wenige Schüler:innen die Diskussion dominieren. Die Sitzordnung erlaubt den Paaren, sich gut zu sehen und zu hören. Zum Abschluss wird notiert, wie viele Lernende sich beteiligt haben. Die Methode wird in unterschiedlichen Fächern eingesetzt, etwa im Deutschunterricht bei der Interpretation von Texten. Die Lehrkraft achtet darauf, dass auch Schüler:innen mit geringer Redebereitschaft Gelegenheit erhalten, ihre Gedanken zu äußern. Die Methode wird in unterschiedlichen Fächern eingesetzt, etwa im Deutschunterricht bei der Interpretation von Texten. Die Lehrkraft achtet darauf, dass auch Schüler:innen mit geringer Redebereitschaft Gelegenheit erhalten, ihre Gedanken zu äußern. Die Stunde wird nach Abschluss kurz besprochen, um die Abläufe für die nächste Stunde anzupassen.✨"
+  ),
+  list(
+    perspektive = 4,
+    text = "Feedback kann in summatives und formatives Feedack unterscheiden werden. Während summatives Feedback nach Abschluss einer Lernphase, z.B. nach einer Klassenarbeit, abgegeben wird und zusammenfassend über den Erfolg vergangenen Lernens Auskunft gibt, dient formatives Feedback der kontinuierlichen Verbesserung des Lernprozesses. Es wird deshalb während des Lernprozesses gegeben mit dem Ziel möglichst informativ für die Planung zukünftiger Lernschritte zu sein. Meta-Analysen zeigen, dass formatives Feedback eine vergleichsweise starke positive Wirkung auf die Lernleistung hat. Im Unterricht zeigt sich der Unterschied daran, wann und wozu Rückmeldungen gegeben werden. Formatives Feedback wird dort eingesetzt, wo Lernende noch Entscheidungen über ihr weiteres Vorgehen treffen, etwa bei Hausaufgaben oder Zwischenaufgaben. Lehrkräfte planen dafür kurze Rückmeldephasen im Unterrichtsverlauf ein. Summatives Feedback hingegen wird am Ende einer Lernphase gegeben und fasst den erreichten Stand zusammen, etwa in Form einer Note oder einer Bewertung nach einer Klassenarbeit. Es dient der Rechenschaft und der Auswahl, lässt aber wenig Raum für konkrete Hinweise zur Verbesserung. Die Lehrkraft wählt die Form je nach Zweck, wobei beide Formen im Unterricht nebeneinander vorkommen.✨"
+  ),
+  list(
+    perspektive = 4,
+    text = "In einer Untersuchung wird der Anteil aktiver Lernzeit in zwei Parallelklassen über ein Halbjahr per Video erfasst. In Klasse A verbringen die Schüler:innen im Durchschnitt etwa 60 Prozent der Stunde mit der Lernaufgabe, in Klasse B etwa 40 Prozent. Organisation, Wartezeiten und Störungen beanspruchen die übrige Zeit. Leistungen in Klassenarbeiten werden erfasst und um das Vorwissen der Klassen bereinigt. Die Klasse mit höherem Anteil aktiver Lernzeit erzielt im Mittel bessere Ergebnisse. Der Befund beschreibt einen Zusammenhang, erlaubt aber keine Aussage darüber, ob die Lehrkraft die Zeit gezielt gesteuert hat. Auch die Zusammensetzung der Schüler:innen und die Lage der Schulen kommen als Erklärung infrage. Belastbare Aussagen erfordern Studien mit mehr Klassen, bei denen Bedingungen zufällig zugeordnet werden. Die Forschenden berichten außerdem, dass die Unterschiede zwischen beiden Klassen über das gesamte Halbjahr konstant bleiben. Ein Vergleich über mehrere Schuljahre würde zeigen, ob sich dieses Muster bestätigt. Die Forschenden berichten außerdem, dass die Unterschiede zwischen beiden Klassen über das gesamte Halbjahr konstant bleiben. Ein Vergleich über mehrere Schuljahre würde zeigen, ob sich dieses Muster bestätigt. Die Ergebnisse werden als Grundlage für Empfehlungen an Schulleitungen aufbereitet.✨"
+  )
+)
+
+iter <- exams::match_exams_iteration()
+nth <- if (is.null(iter)) sample(seq_along(beispiele), 1) else iter
+```
+
+
+Question
+========
+Lesen Sie das folgende Beispiel aus dem Unterricht:
+
+> `r beispiele[[nth]]$text`
+
+Um welche Perspektive auf Unterricht handelt es sich?
+
+```{r questionlist, echo = FALSE, results='asis'}
+answerlist(perspektiven, markup = "markdown")
+```
+
+
+Meta-information
+================
+exname: Perspektiven auf Unterricht erkennen
+extype: schoice
+exsolution: `r mchoice2string(seq_along(perspektiven) == beispiele[[nth]]$perspektive)`

@@ -1,0 +1,15 @@
+{
+  "hash": "05c13640a6456187742c3027c6dbeca0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n\nQuestion\n========\n> Welches Erkenntnisinteresse verfolgt die jeweilige Perspektive auf Unterricht?\n\n1. Die Perspektive **Unterrichtsqualitätsforschung/Lehr-Lernforschung** verfolgt das folgende Erkenntnisinteresse: ##ANSWER1##\n\n2. Die Perspektive **Didaktik (im engeren Sinne)** verfolgt das folgende Erkenntnisinteresse: ##ANSWER2##\n\n\\begin{answerlist}\n  \\item Explanatives Erkenntnisinteresse\n  \\item Emanzipatives Erkenntnisinteresse\n  \\item Deskriptives Erkenntnisinteresse\n  \\item Explanatives Erkenntnisinteresse\n  \\item Deskriptives Erkenntnisinteresse\n  \\item Prädiktives Erkenntnisinteresse\n  \\item Emanzipatives Erkenntnisinteresse\n\\end{answerlist}\n\nSolution\n========\n1. **Unterrichtsqualitätsforschung/Lehr-Lernforschung:** Explanatives Erkenntnisinteresse. Es prüft, ob eine Hypothese zutrifft, dass eine Größe (z. B. kognitive Aktivierung) eine andere (Lernerfolg) beeinflusst.\n\n2. **Didaktik (im engeren Sinne):** Emanzipatives Erkenntnisinteresse. Es zielt darauf, Abhängigkeiten und Benachteiligungen aufzudecken und Beteiligte zu befähigen, ihre Situation selbstbestimmt zu verändern.\n\nMeta-information\n================\nexname: Erkenntnisinteressen den Perspektiven auf Unterricht zuordnen\nextype: cloze\nexclozetype: schoice|schoice\nexsolution: 100|0001\nexshuffle: TRUE\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

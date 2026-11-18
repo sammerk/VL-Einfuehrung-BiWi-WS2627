@@ -1,0 +1,15 @@
+{
+  "hash": "d5081decd2e197b4ad2c601f0504df2b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n\nQuestion\n========\n> Welcher Basisdimension von Unterrichtsqualität ist das jeweilige Merkmal zuzuordnen?\n\n1. Merkmal „Monitoring“: ##ANSWER1##\n2. Merkmal „Herausforderung“: ##ANSWER2##\n3. Merkmal „Wertschätzung & Respekt“: ##ANSWER3##\n\n\\begin{answerlist}\n  \\item Kognitive Aktivierung\n  \\item Konstruktive Unterstützung\n  \\item Strukturierte Klassenführung\n  \\item Kognitive Aktivierung\n  \\item Konstruktive Unterstützung\n  \\item Strukturierte Klassenführung\n  \\item Kognitive Aktivierung\n  \\item Konstruktive Unterstützung\n  \\item Strukturierte Klassenführung\n\\end{answerlist}\n\nSolution\n========\n1. Merkmal „Monitoring“: *Strukturierte Klassenführung*\n\n2. Merkmal „Herausforderung“: *Kognitive Aktivierung*\n\n3. Merkmal „Wertschätzung & Respekt“: *Konstruktive Unterstützung*\n\nMeta-information\n================\nexname: Merkmale den Basisdimensionen von Unterrichtsqualität zuordnen\nextype: cloze\nexclozetype: schoice|schoice|schoice\nexsolution: 001|100|010\nexshuffle: TRUE\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

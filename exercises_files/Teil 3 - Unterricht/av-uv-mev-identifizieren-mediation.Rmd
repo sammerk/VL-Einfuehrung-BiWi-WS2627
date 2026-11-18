@@ -1,0 +1,102 @@
+```{r permutations, echo = FALSE, results = "hide"}
+# eigene Hilfsfunktion, keine zusätzliche Paketabhängigkeit
+permutations <- function(n) {
+  if (n == 1) return(matrix(1))
+  sub <- permutations(n - 1)
+  do.call(rbind, lapply(seq_len(n), function(i) {
+    cbind(i, ifelse(sub >= i, sub + 1, sub))
+  }))
+}
+```
+
+```{r data generation, echo = FALSE, results = "hide", message = FALSE, warning = FALSE}
+library(tidyverse)
+library(exams)
+
+# UV = Basisdimension, MeV = Lerngelegenheit/Nutzung, AV = Outcome
+szenarien <- tribble(
+  ~UV,                           ~MeV,                                  ~AV,
+  "Kognitive Aktivierung",       "Intensität der Verarbeitungstiefe",   "Fachliche Leistung",
+  "Klassenführung",              "Aktive Lernzeit (Time-on-task)",      "Fachliche Leistung",
+  "Konstruktive Unterstützung",  "Erleben von Bedürfnisbefriedigung",   "Motivation",
+  "Kognitive Aktivierung",       "Intensität der Verarbeitungstiefe",   "Motivation",
+  "Klassenführung",              "Aktive Lernzeit (Time-on-task)",      "Motivation",
+  "Konstruktive Unterstützung",  "Erleben von Bedürfnisbefriedigung",   "Fachliche Leistung",
+  "Elterliches Bildungsniveau",  "Häusliche Lernunterstützung",         "Schulische Leistung",
+  "Lehrkräftefortbildung",       "Qualität des Unterrichtsangebots",    "Leistung der Lernenden",
+  "Medienkompetenzkurs",         "Häufigkeit der Übungszeit",           "Medienkompetenz"
+)
+
+# Feste Zufallsreihenfolge der Szenarien (über alle Kopien gleich)
+alter_seed <- if (exists(".Random.seed", globalenv())) get(".Random.seed", globalenv())
+set.seed(4817)
+reihenfolge_szenarien <- sample(nrow(szenarien))
+if (is.null(alter_seed)) rm(".Random.seed", envir = globalenv()) else assign(".Random.seed", alter_seed, globalenv())
+
+iter <- exams::match_exams_iteration()
+k <- if (is.null(iter)) sample(nrow(szenarien), 1) else ((iter - 1) %% nrow(szenarien)) + 1
+s <- szenarien[reihenfolge_szenarien[k], ]
+
+# Gleiche Wirkkette in unterschiedlicher Nennreihenfolge, damit sie nicht verrät
+# welche Rolle welche Variable hat
+reihenfolge <- sample(c("UV", "MeV", "AV"))
+nennung <- paste0("»", unlist(s[reihenfolge]), "«")
+nennung <- paste0(
+  nennung[1], ", ", nennung[2], " und ", nennung[3]
+)
+
+wirkkette <- sample(c(
+  paste0("Sie vermutet, dass »", s$UV, "« die Variable »", s$MeV,
+         "« beeinflusst und diese wiederum »", s$AV, "« beeinflusst."),
+  paste0("Sie vermutet, dass »", s$UV, "« sich über »", s$MeV,
+         "« auf »", s$AV, "« auswirkt."),
+  paste0("Sie vermutet, dass sich der Zusammenhang zwischen »", s$UV,
+         "« und »", s$AV, "« dadurch erklärt, dass »", s$UV,
+         "« zunächst »", s$MeV, "« verändert.")
+), 1)
+
+frage <- paste0(
+  "Eine Forscherin interessiert sich für die Variablen ", nennung,
+  ". Sie erhebt die entsprechenden Daten bei einer Stichprobe von ",
+  sample(501:7654, 1), " Schülerinnen und Schülern. ", wirkkette
+)
+
+# Alle sechs Rollenzuordnungen; die erste ist korrekt
+rollen <- c("Unabhängige Variable", "Mediatorvariable", "Abhängige Variable")
+werte <- c(s$UV, s$MeV, s$AV)
+
+antworten <- permutations(3) |>
+  apply(1, \(p) paste0(
+    "Unabhängige Variable = ", werte[p[1]],
+    "<br/>Mediatorvariable = ", werte[p[2]],
+    "<br/>Abhängige Variable = ", werte[p[3]]
+  ))
+
+ex_solution <- c(TRUE, rep(FALSE, 5))
+```
+
+Question
+========
+`r frage`
+
+> Welche der folgenden Zuordnungen von Unabhängiger Variable (UV), Mediatorvariable (MeV) und Abhängiger Variable (AV) entspricht dem vermuteten Wirkzusammenhang?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(antworten, markup = "markdown")
+```
+
+Solution
+========
+
+Die Mediatorvariable liegt in der Wirkkette *zwischen* Unabhängiger und Abhängiger Variable: Die UV (»`r s$UV`«) wirkt auf die MeV (»`r s$MeV`«), und diese wirkt auf die AV (»`r s$AV`«). Die Nennreihenfolge im Aufgabentext ist dafür unerheblich.
+
+```{r solutionlist, echo = FALSE, results = "asis"}
+answerlist(ifelse(ex_solution, "Richtig.", "Falsch."), markup = "markdown")
+```
+
+Meta-information
+================
+exname: AV UV & MeV identifizieren (Mediation)
+extype: schoice
+exsolution: `r mchoice2string(ex_solution)`
+exshuffle: true

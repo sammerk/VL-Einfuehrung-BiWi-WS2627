@@ -1,0 +1,34 @@
+```{r sampling}
+#| include: false
+library(exams)
+
+optionen_1 <- c("Explanatives Erkenntnisinteresse", "Emanzipatives Erkenntnisinteresse", "Deskriptives Erkenntnisinteresse")
+optionen_2 <- c("Explanatives Erkenntnisinteresse", "Deskriptives Erkenntnisinteresse", "Prädiktives Erkenntnisinteresse", "Emanzipatives Erkenntnisinteresse")
+
+loesung_1 <- "Explanatives Erkenntnisinteresse"
+loesung_2 <- "Emanzipatives Erkenntnisinteresse"
+```
+
+Question
+========
+> Welches Erkenntnisinteresse verfolgt die jeweilige Perspektive auf Unterricht?
+
+1. Die Perspektive **Unterrichtsqualitätsforschung/Lehr-Lernforschung** verfolgt das folgende Erkenntnisinteresse: `r add_cloze(loesung_1, optionen_1)`
+
+2. Die Perspektive **Didaktik (im engeren Sinne)** verfolgt das folgende Erkenntnisinteresse: `r add_cloze(loesung_2, optionen_2)`
+
+`r format_metainfo("answerlist")`
+
+Solution
+========
+1. **Unterrichtsqualitätsforschung/Lehr-Lernforschung:** Explanatives Erkenntnisinteresse. Es prüft, ob eine Hypothese zutrifft, dass eine Größe (z. B. kognitive Aktivierung) eine andere (Lernerfolg) beeinflusst.
+
+2. **Didaktik (im engeren Sinne):** Emanzipatives Erkenntnisinteresse. Es zielt darauf, Abhängigkeiten und Benachteiligungen aufzudecken und Beteiligte zu befähigen, ihre Situation selbstbestimmt zu verändern.
+
+Meta-information
+================
+exname: Erkenntnisinteressen den Perspektiven auf Unterricht zuordnen
+extype: cloze
+exclozetype: `r format_metainfo("type")`
+exsolution: `r format_metainfo("solution")`
+exshuffle: TRUE

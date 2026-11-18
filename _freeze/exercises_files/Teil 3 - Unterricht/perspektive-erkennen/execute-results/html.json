@@ -1,0 +1,15 @@
+{
+  "hash": "48b75b97d3913b0eb65733955bed3f41",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n\n::: {.cell}\n\n:::\n\n\n\nQuestion\n========\nLesen Sie das folgende Beispiel aus dem Unterricht:\n\n> Bruner fordert, dass alle Kinder unabhängig von Geschlecht und sozialer Herkunft eine allgemeine Bildung erhalten. Wissen soll in einer festen Abfolge vermittelt werden, ausgehend von der Sinneswahrnehmung hin zur Begriffsbildung. Anschauliche Bilder und Lehrbücher in der Muttersprache gelten als Voraussetzung dafür, dass auch Kinder ohne Vorwissen lernen können. Die Autoren kritisieren das mechanische Auswendiglernen ihrer Zeit, das keinen Sinn erschließe. Die Begründung ist theologisch: Bildung dient der Vervollkommnung des Menschen, die Schule ist dafür der zentrale Ort. Die Schrift wird in mehrere Sprachen übersetzt und beeinflusst die Schulplanung in Europa über Jahrhunderte. Sie gilt als frühes Beispiel für die Forderung nach allgemeiner Schulpflicht und systematischer Unterrichtsplanung. Einzelne Schulreformen der folgenden Jahrhunderte berufen sich ausdrücklich auf ihre Grundgedanken. Eine ausführliche Begründung findet sich in Lehrbüchern, die Gliederung und Methoden für Schulen vorschlagen. Die Schulpflicht ist in ihrer Zeit noch nicht durchgesetzt, sodass die Vorschläge zunächst vor allem als Programm gelten.✨\n\nUm welche Perspektive auf Unterricht handelt es sich?\n\n\\begin{answerlist}\n  \\item Historischer Zugang\n  \\item Didaktik/Curriculum Studies\n  \\item Methodik\n  \\item Unterrichtsqualitätsforschung/Lehr-Lernforschung\n\\end{answerlist}\n\n\nMeta-information\n================\nexname: Perspektiven auf Unterricht erkennen\nextype: schoice\nexsolution: 1000\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

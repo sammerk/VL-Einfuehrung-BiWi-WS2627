@@ -265,7 +265,69 @@ Hervorbringen von Professionalität (Professionellwerden). Heute wird unter Prof
 
 
 ::: {.column width="42%"}
-Angenommen in einem Quasiexperiment schauen **50 Fußballexpert:innen** und **50 Fußballdesinteressierte** 5 Sekunden lang auf entweder Abbildung 1 oder Abbildung 2 und müssen danach die Aufstellung der Spieler rekonstruieren. Welche Daten würden Sie erwarten? Weshalb machen [diese Daten](../images/dotplot-erwartung.png) Sinn?
+
+```{r}
+#| include: false
+library(ggplot2)
+set.seed(7316)
+
+lev <- c("Expert:innen", "Desinteressierte")
+daten <- expand.grid(
+  id = 1:25,
+  gruppe = lev,
+  abbildung = c("Abbildung 1 (sinnvoll)", "Abbildung 2 (vertauscht)")
+)
+daten$p <- with(daten, ifelse(
+  abbildung == "Abbildung 1 (sinnvoll)",
+  ifelse(gruppe == "Expert:innen", 0.80, 0.30),
+  ifelse(gruppe == "Expert:innen", 0.28, 0.27)
+))
+daten$richtig <- rbinom(nrow(daten), size = 11, prob = daten$p)
+d2 <- transform(daten, gruppe = factor(gruppe, levels = lev))
+
+n_exp <- sum(d2$gruppe == "Expert:innen" & d2$abbildung == "Abbildung 1 (sinnvoll)" & d2$richtig == 8)
+n_des <- sum(d2$gruppe == "Desinteressierte" & d2$abbildung == "Abbildung 2 (vertauscht)" & d2$richtig == 5)
+d <- 0.135
+anno <- data.frame(
+  gruppe = factor(lev, levels = lev),
+  abbildung = c("Abbildung 1 (sinnvoll)", "Abbildung 2 (vertauscht)"),
+  x_txt = c(-0.3, 6.2), y_txt = c(1.0, 1.05),
+  x_start = c(4.2, 6.9), y_start = c(0.62, 0.5),
+  x_dot = c(7.6, 5.4), y_dot = c(n_exp, n_des) * d - d / 2,
+  label = c(sprintf("%s Expert:innen haben\n8 Spieler korrekt aus\nAbb. 1 rekonstruiert", n_exp),
+            sprintf("%s Desinteressierte\nhaben 5 Spieler\nkorrekt aus Abb. 2\nrekonstruiert", n_des))
+)
+
+p <- ggplot(d2, aes(richtig, fill = gruppe)) +
+  geom_dotplot(binwidth = 1, stackgroups = TRUE, binpositions = "all",
+               method = "histodot", dotsize = 0.9, colour = "white") +
+  geom_text(data = anno, aes(x_txt, y_txt, label = label),
+            hjust = 0, vjust = 1, size = 3.3, colour = "#32414B", lineheight = 0.95,
+            inherit.aes = FALSE) +
+  geom_curve(data = anno[1, ], aes(x = x_start, y = y_start, xend = x_dot, yend = y_dot),
+             curvature = 0.3, colour = "#32414B", linewidth = 0.5,
+             arrow = arrow(length = unit(2.5, "mm"), type = "closed"), inherit.aes = FALSE) +
+  geom_curve(data = anno[2, ], aes(x = x_start, y = y_start, xend = x_dot, yend = y_dot),
+             curvature = -0.4, colour = "#32414B", linewidth = 0.5,
+             arrow = arrow(length = unit(2.5, "mm"), type = "closed"), inherit.aes = FALSE) +
+  facet_grid(gruppe ~ abbildung, axes = "all_x", axis.labels = "all") +
+  scale_fill_manual(values = c("Expert:innen" = "#A51E37", "Desinteressierte" = "#B4A069")) +
+  scale_x_continuous(limits = c(-0.5, 11.5), breaks = 0:11) +
+  scale_y_continuous(NULL, breaks = NULL, limits = c(0, 1.1)) +
+  labs(x = "Korrekt rekonstruierte Spieler (von 11)", fill = NULL) +
+  theme_minimal(base_size = 13) +
+  theme(
+    text = element_text(colour = "#32414B"),
+    panel.grid = element_blank(),
+    axis.line.x = element_line(colour = "#32414B"),
+    strip.text = element_text(face = "bold", colour = "#32414B"),
+    legend.position = "none"
+  )
+
+ggsave("../images/dotplot-erwartung.svg", p, width = 7, height = 5, dpi = 200, bg = "white")
+```
+
+Angenommen in einem {{< glossary "Quasiexperiment" >}} schauen **50 Fußballexpert:innen** und **50 Fußballdesinteressierte** 5 Sekunden lang auf entweder Abbildung 1 oder Abbildung 2 und müssen danach die Aufstellung der Spieler rekonstruieren. Welche Daten würden Sie erwarten? Weshalb machen [diese Daten](../images/dotplot-erwartung.svg) Sinn?
 :::
 
 :::
@@ -300,7 +362,7 @@ In berühmten Experimenten von Adriaan de Groot [@degroot1965], William Chase un
 
 ### Theoretische Erklärung
 Chase und Simon folgerten aus den Ergebnissen, dass Schachmeister weder über ein generell besseres Kurzzeitgedächtnis noch über eine höhere allgemeine Gedächtniskapazität verfügen. De Groot stellte zudem fest, dass Meister nicht wesentlich mehr Züge vorausdenken (etwa 2–3 Züge) oder mehr Alternativen erwägen (30–50 bei einer schwierigen Stellung) als schwächere Spieler.
-Der entscheidende Vorteil liegt in der visuell-perzeptiven Wahrnehmung: Experten verfügen über ein im Langzeitgedächtnis gespeichertes Repertoire an typischen Konstellationen und Bedeutungseinheiten (sogenannten »Chunks«). Sie erfassen das Brett nicht als Ansammlung einzelner Figuren, sondern in dicht gepackten Mustern. Längere Pausen beim Aufstellen der Figuren (über 2 Sekunden) gaben den Forschern dabei Aufschluss über die Grenzen zwischen diesen einzelnen Chunks.
+Der entscheidende Vorteil liegt in der visuell-perzeptiven Wahrnehmung: Experten verfügen über ein im Langzeitgedächtnis gespeichertes Repertoire an typischen Konstellationen und Bedeutungseinheiten (sogenannten {{< glossary "Chunk" display="Chunks" >}}). Sie erfassen das Brett nicht als Ansammlung einzelner Figuren, sondern in dicht gepackten Mustern. Längere Pausen beim Aufstellen der Figuren (über 2 Sekunden) gaben den Forschern dabei Aufschluss über die Grenzen zwischen diesen einzelnen Chunks.
 
 :::{.footer}
 :::
@@ -343,9 +405,9 @@ Berliner erklärt die Befunde durch Unterschiede in der **kategorialen Wahrnehmu
 :::
 
 ## Einschätzung
-> Angenommen es gibt Expert:innen Noviz:innen im Lehrer:innenberuf. Wie stark unterscheiden sich die Leistungen deren Schüler:innen?  Bearbeiten Sie die [folgende Einschätzung {{< iconify iconamoon:link-external-bold >}}](../apps/effsize-teacherqual.html)
+> Angenommen es gibt Expert:innen Noviz:innen im Lehrer:innenberuf. Wie stark unterscheiden sich die Leistungen deren Schüler:innen?  Bearbeiten Sie die [folgende Einschätzung {{< iconify iconamoon:link-external-bold >}}](../apps/Teil%202%20-%20Professionalität/effsize-teacherqual.html)
 
-[![](../images/thumbnail-effsizeteacher.png){width=60%}](../apps/effsize-teacherqual.html)
+[![](../images/thumbnail-effsizeteacher.png){width=60%}](../apps/Teil%202%20-%20Professionalität/effsize-teacherqual.html)
 
 ## Ihre Ergebnisse
 
@@ -390,18 +452,18 @@ ggplot(antw, aes(PS)) +
 
 ```
 
-## Ergebnisse klassischer Teacher-Added Value Studien
+## Ergebnisse klassischer Teacher Value-Added Studien
 :::{style="font-size: 86%;"}
-Entgegen Ihrer Annahme, dass Lehrer:innenexpertise die Schüler:innenleistung sehr, sehr stark beeinflusst, zeigen klassische Teacher-Added Value Studien, dass der Effekt von Lehrer:innenmerkmalen auf die Schüler:innenleistung eher gering ist (siehe für einen Überblick). Die Grundidee der Modelle [@hanushek1971teacher] ist Schüler:innenleistung am Ende eines Schuljahres statistisch um Vortestleistungen, sozioökonomischen Status etc. zu adjustieren, um dann die Abweichung eines Klassenmittelwertes von der erwarteten Leistung zu betrachten. Diese Abweichung wird dann als Effekt der Lehrkraft interpretiert. Sehr grob abgeschätzt, kann man von einem Unterschied von ca. 3 Lernmonaten ausgehen, wenn Klassen von Lehrkräften am oberen Mittelfeld versus Lehrkräfte am unteren Mittelfeld unterrichtet werden [@neugebauer2013lehrer]
+Entgegen Ihrer Annahme, dass Lehrer:innenexpertise die Schüler:innenleistung sehr, sehr stark beeinflusst, zeigen klassische {{< glossary "Teacher Value-Added" display="Teacher Value-Added" >}} Studien, dass der Effekt von Lehrer:innenmerkmalen auf die Schüler:innenleistung eher gering ist (siehe für einen Überblick). Die Grundidee der Modelle [@hanushek1971teacher] ist Schüler:innenleistung am Ende eines Schuljahres statistisch um Vortestleistungen, sozioökonomischen Status etc. zu adjustieren, um dann die Abweichung eines Klassenmittelwertes von der erwarteten Leistung zu betrachten. Diese Abweichung wird dann als Effekt der Lehrkraft interpretiert. Sehr grob abgeschätzt, kann man von einem Unterschied von ca. 3 Lernmonaten ausgehen, wenn Klassen von Lehrkräften am oberen Mittelfeld versus Lehrkräfte am unteren Mittelfeld unterrichtet werden [@neugebauer2013lehrer]
 
-> Welche Kritik an der internen & externen Validität der klassischen Teacher-Added Value Studien können Sie sich vorstellen? Formulieren Sie Ihre Ideen unter [https://bab.si/biwi-merk-2627](https://bab.si/biwi-merk-2627) (🙏🏽🙏🏽 biddebidde in ganzen Sätzen 😳) und »voten« Sie die Vorschläge Ihrer Kommiliton:innen.
+> Welche Kritik an der internen & externen Validität der klassischen Teacher Value-Added Studien können Sie sich vorstellen? Formulieren Sie Ihre Ideen unter [https://bab.si/biwi-merk-2627](https://bab.si/biwi-merk-2627) (🙏🏽🙏🏽 biddebidde in ganzen Sätzen 😳) und »voten« Sie die Vorschläge Ihrer Kommiliton:innen.
 
 :::
 
 # 2. Ansatz: Topologien von Wissen/Kompetenzen
 ##  Topologische Ansätze
 :::{style="font-size: 80%;"}
-Während Teacher Added Value Studien Lehrer:inneneffekte als Blackbox betrachten, analysieren topologische Ansätze die strukturellen Zusammenhänge zwischen Lehrer:innen**merkmalen** und Unterrichtserfolg. Diese Merkmale werden dann entlang psychologischer Theorien {{< glossary "Topologie" display="topologisiert">}} [@baumert2006; @shulman1986]. Weil angenommen wird, dass die (topologisierten) Merkmale bei höherer Ausprägung die erfolgreiche Bewältigung charakteristischer Anforderungen der Profession wahrscheinlicher machen, werden die topologischen Ansätze auch als kompetenztheoretische Ansätze bezeichnet.
+Während Teacher Value-Added Studien Lehrer:inneneffekte als Blackbox betrachten, analysieren topologische Ansätze die strukturellen Zusammenhänge zwischen Lehrer:innen**merkmalen** und Unterrichtserfolg. Diese Merkmale werden dann entlang psychologischer Theorien {{< glossary "Topologie" display="topologisiert">}} [@baumert2006; @shulman1986]. Weil angenommen wird, dass die (topologisierten) Merkmale bei höherer Ausprägung die erfolgreiche Bewältigung charakteristischer Anforderungen der Profession wahrscheinlicher machen, werden die topologischen Ansätze auch als kompetenztheoretische Ansätze bezeichnet.
 :::
 ```{typst}
 //| label: fig-topologie
@@ -560,8 +622,8 @@ Während Teacher Added Value Studien Lehrer:inneneffekte als Blackbox betrachten
 * Schüler:innen niedrigerer Sekundarschulformen profitieren besonders von fachdidaktischem Wissen – ihre Lehrkräfte verfügen aber über deutlich geringeres Wissen (Differenz zu Gymnasiallehrkräften: 1,26 SD Fachwissen; 0,43 SD fachdidaktisches Wissen)
 * Internationale Studien: positive, aber teils kleine Effekte (+1 SD Lehrkräftewissen → +0,03 bis +0,09 SD Lernzuwachs in Mathematik; für Lesen schwächer bzw. uneinheitlich)
 * **Pädagogisches Wissen**: Hinweise auf positive Effekte, aber kaum direkte Messung im Zusammenhang mit Schüler:innenleistung
-* **Proxy-Variablen** (Abschluss, Kurse, Erfahrung): kleine, inkonsistente Effekte; Erfahrung wirkt nur in den ersten 2–5 Berufsjahren
-* Direkte, theoriegeleitete Messung von Professionswissen ist aussagekräftiger als Proxys
+* **{{< glossary "Proxy-Variablen" >}}** (Abschluss, Kurse, Erfahrung): kleine, inkonsistente Effekte; Erfahrung wirkt nur in den ersten 2–5 Berufsjahren
+* Direkte, theoriegeleitete Messung von Professionswissen ist aussagekräftiger als Proxy-Variablen
 :::
 
 ## Kompetenztheoretischer Ansatz
@@ -580,7 +642,7 @@ Während Teacher Added Value Studien Lehrer:inneneffekte als Blackbox betrachten
 :::{style="font-size: 90%;"}
 * Selbstregulation: angemessenes berufliches Engagement bei gleichzeitiger Distanzierungsfähigkeit und Schonung eigener Ressourcen
 * Motivation der Forschung: ca. 10–60% der Lehrkräfte in Deutschland [@weber2004fruehinvaliditaet] scheiden vorzeitig aus gesundheitlichen Gründen aus dem Dienst aus (im Schnitt ca. 10 Jahre vor der Regelaltersgrenze)
-* Vier Typen nach Schaarschmidt anhand von Widerstandsfähigkeit und Engagement: Gesundheitstyp, Schontyp, Risikotyp A, Risikotyp B
+* Vier Typen nach Schaarschmidt anhand von Widerstandsfähigkeit und Engagement: {{< glossary "Gesundheitstyp" >}}, {{< glossary "Schontyp" >}}, {{< glossary "Risikotyp A" >}}, {{< glossary "Risikotyp B" >}}
 * Kein Nachweis eines Zusammenhangs mit Lernzuwächsen; aber **COACTIV**: Gesundheitstyp unterrichtet kognitiv aktivierender, in angemesserem Tempo und mit mehr konstruktiver Unterstützung, und weist weniger emotionale Erschöpfung sowie höhere Arbeitszufriedenheit auf
 * Nur 18% (Potsdamer Lehrerstudie) bzw. 24–31% (COACTIV) der Lehrkräfte entsprechen dem Gesundheitstyp [@neugebauer2013lehrer]
 :::
@@ -589,7 +651,7 @@ Während Teacher Added Value Studien Lehrer:inneneffekte als Blackbox betrachten
 ### *Werthaltungen und Überzeugungen*: Empirische Befunde
 
 * Annahme (COACTIV): Subjektive Werthaltungen und Überzeugungen steuern das Unterrichtshandeln und damit die Lernzuwächse
-    * Z.B.: Lehrkräfte mit stärker **transmissiver Überzeugung** (Lehrkraft sendet, Schüler:in empfängt) unterrichten weniger kognitiv aktivierend [@dubberke2008]
+    * Z.B.: Lehrkräfte mit stärker {{< glossary "transmissive Überzeugung" >}} (Lehrkraft sendet, Schüler:in empfängt) unterrichten weniger kognitiv aktivierend [@dubberke2008]
 * Lehrkräfte, die Wissensaufbau als **Diskurs** zwischen Lehrkraft und Schüler:innen verstehen, erzielen vergleichsweise bessere Lernergebnisse [@voss2011a]
 * Kritik: Das Konzept Überzeugungen ist messy – viele Autoren fassen Wissen als Spezialform von Überzeugung (»*justified true belief*«) auf [@neugebauer2013lehrer]
 

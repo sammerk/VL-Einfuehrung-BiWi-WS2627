@@ -8,6 +8,9 @@ project:
 
 lang: de
 
+execute:
+  freeze: auto
+
 extensions:
   iconify:
     style: "color:#A51E37;"
@@ -28,6 +31,8 @@ website:
         text: Startseite
       - href: folien.qmd
         text: Folien
+      - href: interaktive-apps.qmd
+        text: Interaktive Apps
       - href: uebungsaufgaben.qmd
         text: Übungsaufgaben
       - href: glossar.qmd
