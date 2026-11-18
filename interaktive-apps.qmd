@@ -18,14 +18,10 @@ title: "Interaktive Apps"
 
 [![](images/apps/app1.png){width=60%}](apps/Teil%203%20-%20Unterricht/wo-steckt-die-varianz.html){target="_blank"}
 
-### Wo steckt die Uqual?
-
-[![](images/apps/app3.png){width=60%}](apps/Teil%203%20-%20Unterricht/wo-steckt-die-uqual.html){target="_blank"}
-
-### Wie hängt Lehrkräftewissen mit Uqual zusammen? (Studis)
+### Wie hängt Lehrkräftewissen mit Uqual zusammen?
 
 [![](images/apps/app4.png){width=60%}](apps/Teil%203%20-%20Unterricht/lehrkraeftewissen-uqual-studis.html){target="_blank"}
 
-### Wie hängt Lehrkräftewissen mit Uqual zusammen? (Dozent:in)
+### Wo steckt die Uqual?
 
-[![](images/apps/app2.png){width=60%}](apps/Teil%203%20-%20Unterricht/lehrkraeftewissen-uqual-dozentin.html){target="_blank"}
+[![](images/apps/app3.png){width=60%}](apps/Teil%203%20-%20Unterricht/wo-steckt-die-uqual.html){target="_blank"}

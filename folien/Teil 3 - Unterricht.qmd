@@ -250,7 +250,7 @@ Sehr stark zusammenfassend kann der Blick der Bildungswissenschaften auf »Unter
 ## {.center}
 ### Perspektiven auf Unterrichtsqualität und deren Erkenntnisinteressen {{< iconify fa7-solid:dumbbell >}}{.center}
 
-> Übung: Ordnen Sie [in dieser Übungsaufgabe](../uebungsaufgaben.qmd#erkenntnisinteressen-den-perspektiven-auf-unterricht-zuordnen) ausgewählten bildungswissenschaftlichen Perspektiven Erkenntnisinteressen zu.
+> Übung: Ordnen Sie [in dieser Übungsaufgabe {{< iconify iconamoon:link-external-bold >}}](../uebungsaufgaben.qmd#erkenntnisinteressen-den-perspektiven-auf-unterricht-zuordnen) ausgewählten bildungswissenschaftlichen Perspektiven Erkenntnisinteressen zu.
 
 ## Herkunft und Bedeutung der Basisdimensionen {.scrollable}
 * Die Basisdimensionen entstammen einem langjährigen Forschungsprogramm, begonnen mit der Pythagoras-Videostudie [@klieme2006]
@@ -348,7 +348,7 @@ Sehr stark zusammenfassend kann der Blick der Bildungswissenschaften auf »Unter
 ## Die drei Basisdimensionen {{< iconify fa7-solid:dumbbell >}} {.center}
 ### Übungen
 
-> Barbeiten Sie die Übungsaufgabe [»*Merkmale von Unterrichtsqualität den Basisdimensionen zuordnen*«](../uebungsaufgaben.qmd#merkmale-von-unterrichtsqualität-den-basisdimensionen-zuordnen).
+> Barbeiten Sie die Übungsaufgabe [»*Merkmale von Unterrichtsqualität den Basisdimensionen zuordnen*« {{< iconify iconamoon:link-external-bold >}}](../uebungsaufgaben.qmd#merkmale-von-unterrichtsqualität-den-basisdimensionen-zuordnen).
 
 ## Die drei Basisdimensionen
 ### Tiefenstrukturen und Nutzungsverschränkung
@@ -447,7 +447,7 @@ Die links dargestellten Mediationszusammenhänge (Basisdimensionen als {{< gloss
 
 ## Die drei Basisdimensionen {{< iconify fa7-solid:dumbbell >}} {.center}
 
-> Bearbeiten Sie die Übungsaufgabe [»*Unabhängige, mediierende und abhängige Variablen identifizieren*«](../uebungsaufgaben.qmd#unabhängige-mediierende-und-abhängige-variablen-identifizieren)
+> Bearbeiten Sie die Übungsaufgabe [»*Unabhängige, mediierende und abhängige Variablen identifizieren*« {{< iconify iconamoon:link-external-bold >}}](../uebungsaufgaben.qmd#unabhängige-mediierende-und-abhängige-variablen-identifizieren)
 
 
 ## Die drei Basisdimensionen
@@ -465,8 +465,10 @@ Moderne empirische Unterrichtsqualitätsforschung geht davon aus, dass Unterrich
 
 ## Die drei Basisdimensionen
 ### Schüler- und Lehrer:innenreprozität einschätzen
-> Korrelation von UnterrichtsqualitätPädagogischem/Psychologischem Wissen: Nehmen Sie auf der App []() eine Einschätzung vor
-* Korrelation von Unterrichtsqualität bei gleichen Klassen und unterschiedlichen/gleichen Lehrkräften
+> Korrelation von Unterrichtsqualität und Pädagogischem/Psychologischem Wissen: Nehmen Sie auf der App [Wie hängt Lehrkräftewissen mit Uqual zusammen? {{< iconify iconamoon:link-external-bold >}}](../apps/Teil%203%20-%20Unterricht/lehrkraeftewissen-uqual-studis.html) eine Einschätzung vor
+
+
+> Korrelation von Unterrichtsqualität bei gleichen Klassen und unterschiedlichen/gleichen Lehrkräften: Nehmen Sie auf der App [Wo steckt die Uqual? {{< iconify iconamoon:link-external-bold >}}](../apps/Teil%203%20-%20Unterricht/wo-steckt-die-uqual.html) eine Einschätzung vor.
 
 
 
